@@ -1,0 +1,380 @@
+{% extends "base.html" %}
+{% block title %}Weather Disease Risk — AI Crop Advisor{% endblock %}
+{% block content %}
+
+<div class="section-header">
+    <h1><i class="fas fa-cloud-rain" style="font-size:1.8rem;margin-right:.5rem"></i> Weather Disease Risk &amp; What-If Simulator</h1>
+    <p>Predict crop disease vulnerability from meteorological patterns with actionable preventive guidelines and SHAP insights</p>
+</div>
+
+<div class="alert alert-warning" style="margin-bottom:1.5rem;font-size:.88rem">
+    <i class="fas fa-triangle-exclamation"></i>
+    <strong>Domain Notice:</strong> This model estimates rice disease risk/classes from weather conditions learned from historical research data. Results indicate model-based environmental susceptibility and are not a confirmed disease diagnosis.
+</div>
+
+<!-- Presets & Simulator Switch -->
+<div class="card" style="margin-bottom:1.5rem;padding:1rem 1.5rem">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+        <div>
+            <span style="font-size:.85rem;color:var(--text-muted);font-weight:600;margin-right:.75rem">
+                <i class="fas fa-sliders"></i> Weather Presets:
+            </span>
+            <button type="button" class="btn btn-outline" style="font-size:.78rem;padding:.35rem .7rem"
+                    onclick="applyWeatherPreset({temperature:29.0, humidity:94.0, rainfall:28.0, wind_speed:8.0})">
+                <i class="fas fa-cloud-showers-heavy"></i> Monsoon / High Humidity
+            </button>
+            <button type="button" class="btn btn-outline" style="font-size:.78rem;padding:.35rem .7rem"
+                    onclick="applyWeatherPreset({temperature:22.0, humidity:92.0, rainfall:40.0, wind_speed:22.0})">
+                <i class="fas fa-wind"></i> Cool &amp; Wet Storm
+            </button>
+            <button type="button" class="btn btn-outline" style="font-size:.78rem;padding:.35rem .7rem"
+                    onclick="applyWeatherPreset({temperature:34.0, humidity:45.0, rainfall:0.0, wind_speed:12.0})">
+                <i class="fas fa-sun"></i> Hot &amp; Dry Sunny
+            </button>
+            <button type="button" class="btn btn-primary" id="liveWeatherBtn" style="font-size:.78rem;padding:.35rem .75rem"
+                    onclick="detectAndFillLiveWeather()">
+                <i class="fas fa-location-crosshairs"></i> 📍 Detect Live Weather
+            </button>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:.5rem">
+            <label for="weatherSimToggle" style="font-size:.85rem;font-weight:600;cursor:pointer">
+                <i class="fas fa-wand-magic-sparkles" style="color:var(--amber-400)"></i> Real-Time What-If Mode:
+            </label>
+            <input type="checkbox" id="weatherSimToggle" style="cursor:pointer;width:1.2rem;height:1.2rem">
+        </div>
+    </div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start">
+
+<!-- Form -->
+<div class="card">
+    <h2 class="card-title"><i class="fas fa-cloud-sun"></i> Weather Conditions</h2>
+
+    <form id="weatherForm">
+        <div class="form-grid">
+            <div class="form-group">
+                <div style="display:flex;justify-content:space-between">
+                    <label for="temperature">Temperature (°C)</label>
+                    <span id="val_temperature" style="font-size:.82rem;color:var(--amber-400);font-weight:600">28.5°C</span>
+                </div>
+                <input type="range" id="slider_temperature" min="0" max="50" step="0.5" value="28.5" style="display:none" oninput="syncWeatherField('temperature', this.value)">
+                <input type="number" id="temperature" name="temperature" min="0" max="50" step="0.1" value="28.5" placeholder="e.g. 28.5" required oninput="syncWeatherSlider('temperature', this.value)">
+                <span class="form-hint">0–50 °C</span>
+            </div>
+
+            <div class="form-group">
+                <div style="display:flex;justify-content:space-between">
+                    <label for="humidity">Relative Humidity (%)</label>
+                    <span id="val_humidity" style="font-size:.82rem;color:var(--amber-400);font-weight:600">85.0%</span>
+                </div>
+                <input type="range" id="slider_humidity" min="0" max="100" step="1" value="85" style="display:none" oninput="syncWeatherField('humidity', this.value)">
+                <input type="number" id="humidity" name="humidity" min="0" max="100" step="0.1" value="85.0" placeholder="e.g. 85.0" required oninput="syncWeatherSlider('humidity', this.value)">
+                <span class="form-hint">0–100 %</span>
+            </div>
+
+            <div class="form-group">
+                <div style="display:flex;justify-content:space-between">
+                    <label for="rainfall">Daily Rainfall (mm)</label>
+                    <span id="val_rainfall" style="font-size:.82rem;color:var(--amber-400);font-weight:600">15.0 mm</span>
+                </div>
+                <input type="range" id="slider_rainfall" min="0" max="200" step="1" value="15" style="display:none" oninput="syncWeatherField('rainfall', this.value)">
+                <input type="number" id="rainfall" name="rainfall" min="0" max="200" step="0.1" value="15.0" placeholder="e.g. 15.0" required oninput="syncWeatherSlider('rainfall', this.value)">
+                <span class="form-hint">0–200 mm/day</span>
+            </div>
+
+            <div class="form-group">
+                <div style="display:flex;justify-content:space-between">
+                    <label for="wind_speed">Wind Speed (km/h)</label>
+                    <span id="val_wind_speed" style="font-size:.82rem;color:var(--amber-400);font-weight:600">12.0 km/h</span>
+                </div>
+                <input type="range" id="slider_wind_speed" min="0" max="100" step="1" value="12" style="display:none" oninput="syncWeatherField('wind_speed', this.value)">
+                <input type="number" id="wind_speed" name="wind_speed" min="0" max="100" step="0.1" value="12.0" placeholder="e.g. 12.0" required oninput="syncWeatherSlider('wind_speed', this.value)">
+                <span class="form-hint">0–100 km/h</span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="weatherBtn" style="margin-top:1.5rem;width:100%;justify-content:center">
+            <i class="fas fa-magnifying-glass-chart"></i> Estimate Disease Risk
+        </button>
+    </form>
+
+    <div class="loading-overlay" id="weatherLoading">
+        <div class="spinner"></div>
+        <p style="margin-top:1rem">Evaluating weather patterns through SVM classifier…</p>
+    </div>
+</div>
+
+<!-- Results -->
+<div id="weatherResults" style="display:none">
+    <div class="result-card">
+        <div class="result-header">
+            <div class="result-icon" style="background:rgba(245,158,11,0.15);color:var(--amber-400)">
+                <i class="fas fa-virus"></i>
+            </div>
+            <div>
+                <div class="result-title">Highest Risk Identified</div>
+                <div class="result-value" id="riskDisease">—</div>
+            </div>
+        </div>
+
+        <!-- Confidence -->
+        <div style="margin-bottom:1rem">
+            <div style="display:flex;justify-content:space-between;margin-bottom:.4rem">
+                <span style="font-size:.85rem;color:var(--text-muted)">Risk Probability</span>
+                <span id="riskPct" style="font-weight:600"></span>
+            </div>
+            <div class="confidence-bar">
+                <div class="confidence-fill" id="riskFill" style="width:0%;background:linear-gradient(90deg,#b45309,#fbbf24)"></div>
+            </div>
+        </div>
+
+        <!-- Preventive Action Plan Card -->
+        <div id="preventiveCard" class="card" style="margin-top:1.25rem;background:rgba(255,255,255,0.02);border:1px solid var(--border)">
+            <h3 class="card-title" style="font-size:1rem;margin-bottom:.5rem">
+                <i class="fas fa-shield-virus" style="color:var(--amber-400)"></i>
+                Preventive Farm Action Plan
+            </h3>
+            <div style="font-size:.85rem;color:var(--text-muted);margin-bottom:.75rem">
+                <strong>Weather Driver:</strong> <span id="weatherDriver" style="color:var(--text)">—</span>
+            </div>
+            <div>
+                <strong style="font-size:.85rem">Recommended Preventive Measures:</strong>
+                <ul id="preventiveActions" style="margin:.35rem 0 0 1.25rem;padding:0;font-size:.85rem;line-height:1.5"></ul>
+            </div>
+        </div>
+
+        <!-- All probabilities -->
+        <div style="margin-top:1.25rem">
+            <div style="font-size:.85rem;font-weight:600;color:var(--text-muted);margin-bottom:.5rem">All Pathogen Risk Distribution</div>
+            <div id="allProbs" class="factors-grid"></div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div id="weatherError" class="alert alert-error" style="display:none;margin-top:1rem"></div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+let weatherDebounce = null;
+
+function syncWeatherField(name, val) {
+    document.getElementById(name).value = val;
+    updateWeatherDisplay(name, val);
+    triggerWeatherSimulator();
+}
+
+function syncWeatherSlider(name, val) {
+    const s = document.getElementById('slider_' + name);
+    if (s) s.value = val;
+    updateWeatherDisplay(name, val);
+    triggerWeatherSimulator();
+}
+
+function updateWeatherDisplay(name, val) {
+    const el = document.getElementById('val_' + name);
+    if (!el) return;
+    const units = {temperature:'°C', humidity:'%', rainfall:' mm', wind_speed:' km/h'};
+    el.textContent = val + (units[name] || '');
+}
+
+function applyWeatherPreset(data) {
+    Object.entries(data).forEach(([k, v]) => {
+        document.getElementById(k).value = v;
+        syncWeatherSlider(k, v);
+    });
+    runWeatherPrediction();
+}
+
+const wSimToggle = document.getElementById('weatherSimToggle');
+wSimToggle.addEventListener('change', function() {
+    const isSim = this.checked;
+    ['temperature','humidity','rainfall','wind_speed'].forEach(f => {
+        const slider = document.getElementById('slider_' + f);
+        if (slider) slider.style.display = isSim ? 'block' : 'none';
+    });
+    document.getElementById('weatherBtn').style.display = isSim ? 'none' : 'flex';
+    if (isSim) runWeatherPrediction();
+});
+
+function triggerWeatherSimulator() {
+    if (!document.getElementById('weatherSimToggle').checked) return;
+    clearTimeout(weatherDebounce);
+    weatherDebounce = setTimeout(() => {
+        runWeatherPrediction(true);
+    }, 250);
+}
+
+document.getElementById('weatherForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    runWeatherPrediction();
+});
+
+async function runWeatherPrediction(isSilent = false) {
+    const btn = document.getElementById('weatherBtn');
+    const results = document.getElementById('weatherResults');
+    const err = document.getElementById('weatherError');
+    const loading = document.getElementById('weatherLoading');
+
+    if (!isSilent) {
+        btn.disabled = true;
+        loading.classList.add('active');
+        err.style.display = 'none';
+    }
+
+    const data = Object.fromEntries(new FormData(document.getElementById('weatherForm')));
+    try {
+        const resp = await fetch('/api/weather/predict', {
+            method: 'POST',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify(data)
+        });
+        const json = await resp.json();
+        if (!json.success) throw new Error(json.error);
+
+        const r = json.result;
+        document.getElementById('riskDisease').textContent = r.predicted_disease;
+        const pct = (r.probability * 100).toFixed(1);
+        document.getElementById('riskPct').textContent = pct + '%';
+        document.getElementById('riskFill').style.width = pct + '%';
+
+        // Preventive advice
+        if (json.advice) {
+            const adv = json.advice;
+            document.getElementById('weatherDriver').textContent = adv.weather_driver || '—';
+            document.getElementById('preventiveActions').innerHTML =
+                (adv.preventive_actions || []).map(a => `<li>${a}</li>`).join('');
+            document.getElementById('preventiveCard').style.display = 'block';
+        }
+
+        const allProbs = (r && r.all_probs) ? r.all_probs : {};
+        const sorted = Object.entries(allProbs).sort((a,b) => b[1]-a[1]);
+        document.getElementById('allProbs').innerHTML = sorted.map(([disease, prob]) =>
+            `<div class="factor-row">
+                <span class="factor-name" style="font-size:.85rem">${disease}</span>
+                <div style="display:flex;align-items:center;gap:.75rem">
+                    <div style="width:80px;height:6px;border-radius:3px;background:var(--border);overflow:hidden">
+                        <div style="height:100%;width:${(prob*100).toFixed(1)}%;background:linear-gradient(90deg,var(--green-700),var(--green-400))"></div>
+                    </div>
+                    <span class="factor-val" style="font-size:.85rem;min-width:40px;text-align:right">${(prob*100).toFixed(1)}%</span>
+                </div>
+            </div>`).join('');
+
+        // SHAP Explainability
+        if (json.explanation && !json.explanation.error && Array.isArray(json.explanation.feature_names) && Array.isArray(json.explanation.shap_values)) {
+            const fields = {temperature: 'Temperature', humidity: 'Humidity', rainfall: 'Rainfall', wind_speed: 'Wind Speed'};
+            let shapHtml = `<div class="card" style="margin-top:1.5rem">
+                <h3 class="card-title" style="font-size:.95rem"><i class="fas fa-brain"></i> AI Risk Explainability (SHAP)</h3>
+                <p style="font-size:.8rem;color:var(--text-muted);margin-bottom:1rem">${json.explanation.note}</p>
+                <div class="factors-grid">`;
+
+            const feats = json.explanation.feature_names;
+            const vals = json.explanation.shap_values;
+            const maxVal = vals.length ? (Math.max(...vals.map(Math.abs)) || 1) : 1;
+
+            feats.forEach((f, i) => {
+                const val = vals[i];
+                const width = Math.abs(val) / maxVal * 100;
+                const color = val >= 0 ? 'var(--amber-500)' : 'var(--green-500)';
+                const icon = val >= 0 ? 'fa-arrow-up' : 'fa-arrow-down';
+                shapHtml += `
+                    <div class="factor-row" style="display:flex; flex-direction:column; align-items:stretch; gap:0.25rem;">
+                        <div style="display:flex; justify-content:space-between; font-size:.85rem;">
+                            <span>${fields[f]||f}</span>
+                            <span style="color:${color}"><i class="fas ${icon}"></i> ${Math.abs(val).toFixed(2)}</span>
+                        </div>
+                        <div style="width:100%; height:4px; background:var(--border); border-radius:2px;">
+                            <div style="width:${width}%; height:100%; background:${color}; border-radius:2px; ${val < 0 ? 'margin-left:auto;' : ''}"></div>
+                        </div>
+                    </div>`;
+            });
+            shapHtml += `</div></div>`;
+
+            const existingShap = document.getElementById('shapContainerWeather');
+            if (existingShap) existingShap.remove();
+
+            const shapContainer = document.createElement('div');
+            shapContainer.id = 'shapContainerWeather';
+            shapContainer.innerHTML = shapHtml;
+            document.getElementById('weatherResults').appendChild(shapContainer);
+        }
+
+        results.style.display = 'block';
+    } catch(ex) {
+        err.textContent = 'Error: ' + ex.message;
+        err.style.display = 'block';
+    } finally {
+        if (!isSilent) {
+            btn.disabled = false;
+            loading.classList.remove('active');
+        }
+    }
+}
+
+function detectAndFillLiveWeather() {
+    const btn = document.getElementById('liveWeatherBtn');
+    if (!navigator.geolocation) {
+        alert("Geolocation is not supported by your browser.");
+        return;
+    }
+    if (btn) btn.innerHTML = "<i class='fas fa-spinner fa-spin'></i> Detecting...";
+    navigator.geolocation.getCurrentPosition(
+        async (pos) => {
+            try {
+                const resp = await fetch("/weather", {
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify({
+                        latitude: pos.coords.latitude,
+                        longitude: pos.coords.longitude
+                    })
+                });
+                const data = await resp.json();
+                if (data.error) throw new Error(data.error);
+                const cur = data.current;
+                applyWeatherPreset({
+                    temperature: cur.temperature_2m,
+                    humidity: cur.relative_humidity_2m,
+                    rainfall: cur.precipitation,
+                    wind_speed: cur.wind_speed_10m
+                });
+                if (btn) btn.innerHTML = "<i class='fas fa-circle-check'></i> 📍 Live Weather Applied";
+                setTimeout(() => {
+                    if (btn) btn.innerHTML = "<i class='fas fa-location-crosshairs'></i> 📍 Detect Live Weather";
+                }, 3000);
+            } catch(e) {
+                alert("Failed to fetch live weather: " + e.message);
+                if (btn) btn.innerHTML = "<i class='fas fa-location-crosshairs'></i> 📍 Detect Live Weather";
+            }
+        },
+        (err) => {
+            alert("Could not detect location: " + err.message);
+            if (btn) btn.innerHTML = "<i class='fas fa-location-crosshairs'></i> 📍 Detect Live Weather";
+        }
+    );
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("autofill") === "true") {
+        const t = parseFloat(params.get("temperature"));
+        const h = parseFloat(params.get("humidity"));
+        const r = parseFloat(params.get("rainfall"));
+        const w = parseFloat(params.get("wind_speed"));
+        if (!isNaN(t) && !isNaN(h)) {
+            applyWeatherPreset({
+                temperature: t,
+                humidity: h,
+                rainfall: isNaN(r) ? 0 : r,
+                wind_speed: isNaN(w) ? 0 : w
+            });
+        }
+    }
+});
+</script>
+{% endblock %}

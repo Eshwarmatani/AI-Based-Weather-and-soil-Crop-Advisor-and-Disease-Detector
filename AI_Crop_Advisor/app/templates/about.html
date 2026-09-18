@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}About — AI Crop Advisor{% endblock %}
+{% block content %}
+
+<div class="section-header">
+    <h1>About This Project</h1>
+    <p>AI-Based Weather and Soil Crop Advisor with Plant Disease Detection</p>
+</div>
+
+<div class="card" style="max-width:860px;margin:0 auto">
+    <h2 class="card-title"><i class="fas fa-graduation-cap"></i> University ML Final Project</h2>
+    <p style="color:var(--text-muted);margin-bottom:1.25rem">
+        This system integrates three independently trained machine learning models
+        to provide agriculture decision support. All predictions are from real models
+        with documented datasets, preprocessing, and evaluation metrics.
+    </p>
+
+    <h3 style="color:var(--text-main);font-size:1rem;margin-bottom:.75rem">ML Models</h3>
+    <div class="factors-grid" style="margin-bottom:1.5rem">
+        <div class="factor-row">
+            <span class="factor-name">Crop Recommendation</span>
+            <span class="factor-val">Random Forest (F1 = 99.5%)</span>
+        </div>
+        <div class="factor-row">
+            <span class="factor-name">Plant Disease Detection</span>
+            <span class="factor-val">MobileNetV2 Transfer Learning</span>
+        </div>
+        <div class="factor-row">
+            <span class="factor-name">Weather Disease Risk</span>
+            <span class="factor-val">SVM (F1 = 80.1%)</span>
+        </div>
+    </div>
+
+    <h3 style="color:var(--text-main);font-size:1rem;margin-bottom:.75rem">Datasets</h3>
+    <div class="factors-grid" style="margin-bottom:1.5rem">
+        <div class="factor-row">
+            <span class="factor-name">Crop Recommendation</span>
+            <span style="font-size:.82rem;color:var(--text-muted)">atharvaingle/crop-recommendation-dataset (2,200 rows)</span>
+        </div>
+        <div class="factor-row">
+            <span class="factor-name">Plant Disease</span>
+            <span style="font-size:.82rem;color:var(--text-muted)">emmarex/plantdisease — PlantVillage (20,638 images)</span>
+        </div>
+        <div class="factor-row">
+            <span class="factor-name">Rice Disease</span>
+            <span style="font-size:.82rem;color:var(--text-muted)">anshulm257/rice-disease-dataset (3,829 images)</span>
+        </div>
+    </div>
+
+    <div class="alert alert-warning">
+        <i class="fas fa-triangle-exclamation"></i>
+        <strong>Important Limitation:</strong> This system is for educational purposes.
+        Predictions are model estimates and should not substitute professional agricultural advice.
+        Weather risk prediction is specific to rice diseases in the training dataset.
+    </div>
+</div>
+{% endblock %}

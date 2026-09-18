@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ self.description() if self.description is defined else 'AI-Based Smart Crop Advisor — Agriculture Intelligence System' }}">
+    <title>{% block title %}AI Crop Advisor{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block head_extra %}{% endblock %}
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/" class="nav-brand">
+            <i class="fas fa-seedling"></i>
+            <span>AI Crop Advisor</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/" class="nav-link {% if request.path == '/' %}active{% endif %}">
+                <i class="fas fa-home"></i> Home</a></li>
+            <li><a href="/crop-advisor" class="nav-link {% if '/crop' in request.path %}active{% endif %}">
+                <i class="fas fa-wheat-awn"></i> Crop Advisor</a></li>
+            <li><a href="/disease-detection" class="nav-link {% if '/disease' in request.path %}active{% endif %}">
+                <i class="fas fa-microscope"></i> Disease Detection</a></li>
+            <li><a href="/weather-risk" class="nav-link {% if request.path == '/weather-risk' %}active{% endif %}">
+                <i class="fas fa-cloud-rain"></i> Weather Risk</a></li>
+            <li><a href="/live-weather" class="nav-link {% if request.path == '/live-weather' %}active{% endif %}">
+                <i class="fas fa-cloud-sun"></i> Live Weather</a></li>
+            <li><a href="/dashboard" class="nav-link {% if '/dashboard' in request.path %}active{% endif %}">
+                <i class="fas fa-gauge-high"></i> Dashboard</a></li>
+            <li><a href="/history" class="nav-link {% if '/history' in request.path %}active{% endif %}">
+                <i class="fas fa-clock-rotate-left"></i> History</a></li>
+            <li><a href="/model-performance" class="nav-link {% if '/model-performance' in request.path %}active{% endif %}">
+                <i class="fas fa-chart-bar"></i> Performance</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Flash Messages -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="flash-container">
+      {% for category, message in messages %}
+        <div class="flash flash-{{ category }}">{{ message }}
+          <button class="flash-close" onclick="this.parentElement.remove()">&times;</button>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+<!-- Main Content -->
+<main class="main-content">
+    {% block content %}{% endblock %}
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <p>
+            <i class="fas fa-seedling"></i>
+            AI Crop Advisor &mdash; University ML Final Project<br>
+            <small>Predictions are estimates from locally trained models. Not a substitute for professional agricultural advice.</small>
+        </p>
+    </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+ENV*/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing, Linting & Build caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# User uploads & runtime temporary files
+AI_Crop_Advisor/uploads/*
+!AI_Crop_Advisor/uploads/.gitkeep
+
+# SQLite database files (runtime state)
+AI_Crop_Advisor/database/*.db
+
+# Large raw image datasets (downloadable via kagglehub / download_datasets.py)
+AI_Crop_Advisor/data/plant_disease/PlantVillage/
+AI_Crop_Advisor/data/plant_disease/**/
+AI_Crop_Advisor/data/plant_disease/*
+!AI_Crop_Advisor/data/plant_disease/.gitkeep
+
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Secrets / API keys
+*.env
+kaggle.json

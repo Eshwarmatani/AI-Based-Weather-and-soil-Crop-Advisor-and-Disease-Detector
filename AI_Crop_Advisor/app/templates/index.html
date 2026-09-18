@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %}AI Crop Advisor — Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <h1>AI-Based Smart<br>Crop Advisor</h1>
+    <p>
+        Three real ML models working together to guide your agricultural decisions —
+        crop recommendation, plant disease detection, and weather-based disease risk.
+    </p>
+    <div class="hero-actions">
+        <a href="/crop-advisor" class="btn btn-primary">
+            <i class="fas fa-wheat-awn"></i> Get Crop Recommendation
+        </a>
+        <a href="/disease-detection" class="btn btn-outline">
+            <i class="fas fa-microscope"></i> Detect Plant Disease
+        </a>
+        <a href="/weather-risk" class="btn btn-outline">
+            <i class="fas fa-cloud-rain"></i> Check Weather Risk
+        </a>
+    </div>
+</section>
+
+<!-- Feature Cards -->
+<section class="card-grid" style="margin-bottom:3rem">
+    <div class="card">
+        <div class="card-icon" style="color:var(--green-400)">
+            <i class="fas fa-wheat-awn"></i>
+        </div>
+        <h2 class="card-title">Crop Recommendation</h2>
+        <p style="color:var(--text-muted);font-size:.9rem">
+            Enter N, P, K, temperature, humidity, soil pH, and rainfall.
+            Receive Top-3 crop recommendations with confidence scores
+            from a trained Random Forest classifier (F1 = 99.5%).
+        </p>
+        <a href="/crop-advisor" class="btn btn-primary" style="margin-top:1.25rem;width:100%;justify-content:center">
+            Try It <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="card">
+        <div class="card-icon" style="color:#4dc95a">
+            <i class="fas fa-microscope"></i>
+        </div>
+        <h2 class="card-title">Plant Disease Detection</h2>
+        <p style="color:var(--text-muted);font-size:.9rem">
+            Upload a leaf image. MobileNetV2 transfer learning model
+            classifies diseases across 15 PlantVillage categories
+            covering Pepper, Potato, and Tomato diseases.
+        </p>
+        <a href="/disease-detection" class="btn btn-primary" style="margin-top:1.25rem;width:100%;justify-content:center">
+            Upload Image <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="card">
+        <div class="card-icon" style="color:var(--amber-400)">
+            <i class="fas fa-cloud-sun-rain"></i>
+        </div>
+        <h2 class="card-title">Weather Disease Risk</h2>
+        <p style="color:var(--text-muted);font-size:.9rem">
+            Enter temperature, humidity, rainfall, and wind speed.
+            An SVM model estimates rice disease risk based on
+            literature-documented weather patterns per disease class.
+        </p>
+        <a href="/weather-risk" class="btn btn-primary" style="margin-top:1.25rem;width:100%;justify-content:center">
+            Check Risk <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+
+<!-- Stats Row -->
+<section class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-bottom:3rem">
+    <div class="card" style="text-align:center;padding:1.5rem">
+        <div style="font-size:2rem;font-weight:800;color:var(--green-300)">22</div>
+        <div style="font-size:.85rem;color:var(--text-muted)">Crop Classes</div>
+    </div>
+    <div class="card" style="text-align:center;padding:1.5rem">
+        <div style="font-size:2rem;font-weight:800;color:var(--green-300)">15</div>
+        <div style="font-size:.85rem;color:var(--text-muted)">Disease Classes</div>
+    </div>
+    <div class="card" style="text-align:center;padding:1.5rem">
+        <div style="font-size:2rem;font-weight:800;color:var(--green-300)">6</div>
+        <div style="font-size:.85rem;color:var(--text-muted)">Rice Risk Classes</div>
+    </div>
+    <div class="card" style="text-align:center;padding:1.5rem">
+        <div style="font-size:2rem;font-weight:800;color:var(--green-300)">3</div>
+        <div style="font-size:.85rem;color:var(--text-muted)">ML Models</div>
+    </div>
+    <div class="card" style="text-align:center;padding:1.5rem">
+        <div style="font-size:2rem;font-weight:800;color:var(--green-300)">99.5%</div>
+        <div style="font-size:.85rem;color:var(--text-muted)">Crop Model F1</div>
+    </div>
+</section>
+
+<!-- Disclaimer -->
+<div class="alert alert-info">
+    <i class="fas fa-circle-info"></i>
+    <strong>Important:</strong> Predictions are estimates from locally trained models.
+    This system does not prescribe pesticide dosages or guarantee outcomes.
+    Always consult a qualified agricultural expert.
+</div>
+{% endblock %}

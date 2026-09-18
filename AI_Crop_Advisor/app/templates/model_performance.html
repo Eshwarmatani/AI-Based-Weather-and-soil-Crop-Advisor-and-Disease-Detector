@@ -1,0 +1,1028 @@
+{% extends "base.html" %}
+{% block title %}Model Performance &amp; Per-Class Evaluation — AI Crop Advisor{% endblock %}
+
+{% block head_extra %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+/* ── Model Selector Tabs ────────────────────────────────────────── */
+.model-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    background: var(--bg-card);
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+}
+.model-tab-btn {
+    flex: 1 1 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+}
+.model-tab-btn:hover {
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.04);
+}
+.model-tab-btn.active {
+    background: rgba(34, 136, 42, 0.2);
+    color: var(--green-300);
+    border-color: rgba(77, 201, 90, 0.3);
+    box-shadow: 0 0 12px rgba(34, 136, 42, 0.25);
+}
+.tab-badge {
+    font-size: 0.72rem;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-light);
+}
+.model-tab-btn.active .tab-badge {
+    background: var(--green-500);
+    color: #fff;
+}
+
+/* ── Performance Summary Banner & Cards ────────────────────────── */
+.test-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(34, 136, 42, 0.15);
+    border: 1px solid rgba(77, 201, 90, 0.3);
+    color: var(--green-300);
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.summary-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.summary-card {
+    background: var(--bg-card2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+.summary-card:hover {
+    border-color: rgba(77, 201, 90, 0.4);
+    transform: translateY(-2px);
+}
+.summary-card-title {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.summary-card-value {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+.summary-card-value.highlight-green {
+    color: var(--green-300);
+}
+.summary-card-sub {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 0.35rem;
+}
+
+/* ── Secondary Metric Pills ────────────────────────────────────── */
+.metric-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+}
+.metric-pill {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.45rem 0.85rem;
+    font-size: 0.82rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.metric-pill strong {
+    color: var(--green-300);
+}
+
+/* ── Chart Section ─────────────────────────────────────────────── */
+.chart-container-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+}
+.chart-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.chart-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.chart-buttons {
+    display: flex;
+    gap: 0.35rem;
+}
+.chart-btn {
+    background: var(--bg-card2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.35rem 0.75rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.chart-btn:hover, .chart-btn.active {
+    color: var(--green-300);
+    border-color: var(--green-500);
+    background: rgba(34, 136, 42, 0.15);
+}
+.chart-wrapper {
+    position: relative;
+    height: 340px;
+    width: 100%;
+}
+
+/* ── Per-Class Table ───────────────────────────────────────────── */
+.table-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+}
+.table-header-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.table-search-input {
+    background: var(--bg-card2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.45rem 0.85rem;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    min-width: 240px;
+    outline: none;
+    transition: var(--transition);
+}
+.table-search-input:focus {
+    border-color: var(--green-400);
+    box-shadow: 0 0 8px rgba(77, 201, 90, 0.2);
+}
+.scroll-table-container {
+    max-height: 480px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+}
+.scroll-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    white-space: nowrap;
+}
+.scroll-table-container th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #12171f;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid var(--border);
+    text-align: left;
+}
+.scroll-table-container th.text-right,
+.scroll-table-container td.text-right {
+    text-align: right;
+}
+.scroll-table-container td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid rgba(48, 54, 61, 0.6);
+    color: var(--text-light);
+}
+.scroll-table-container tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+.scroll-table-container tfoot tr {
+    position: sticky;
+    bottom: 0;
+    background: #141a22;
+    font-weight: 700;
+    border-top: 2px solid var(--border);
+}
+.scroll-table-container tfoot td {
+    color: var(--text-main);
+}
+.metric-bar-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-width: 140px;
+}
+.metric-bar-bg {
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    overflow: hidden;
+}
+.metric-bar-fill {
+    height: 100%;
+    background: var(--green-400);
+    border-radius: 999px;
+}
+
+/* ── Confusion Matrix Section ──────────────────────────────────── */
+.cm-container-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+}
+.matrix-scroll-wrap {
+    max-height: 580px;
+    overflow: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: #0b0f14;
+    padding: 0.5rem;
+}
+.matrix-table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    font-size: 0.75rem;
+    text-align: center;
+    margin: 0 auto;
+}
+.matrix-table th {
+    padding: 0.45rem 0.6rem;
+    font-weight: 600;
+    white-space: nowrap;
+    background: var(--bg-card);
+    color: var(--text-muted);
+}
+.matrix-table th.axis-col {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform: rotate(-35deg);
+    transform-origin: left bottom;
+    height: 70px;
+    text-align: left;
+    vertical-align: bottom;
+}
+.matrix-table th.axis-row {
+    text-align: right;
+    padding-right: 0.75rem;
+    font-size: 0.76rem;
+    color: var(--text-light);
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.matrix-cell {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: transform 0.15s ease;
+    cursor: default;
+    color: #ffffff;
+}
+.matrix-cell:hover {
+    transform: scale(1.15);
+    z-index: 5;
+    outline: 2px solid #fff;
+}
+.matrix-legend {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.legend-box {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+}
+
+/* ── Responsive Details ────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .model-tabs {
+        flex-direction: column;
+    }
+    .summary-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .chart-wrapper {
+        height: 280px;
+    }
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="section-header">
+    <h1><i class="fas fa-chart-line" style="color:var(--green-300)"></i> Model Performance &amp; Per-Class Evaluation</h1>
+    <p>Rigorous, untouched hold-out test set evaluations with granular per-class precision, recall, F1-scores, and confusion matrices.</p>
+</div>
+
+<!-- Model Selector Tabs -->
+<div class="model-tabs" role="tablist">
+    <button class="model-tab-btn active" id="tabBtnCrop" onclick="switchModel('crop')">
+        <i class="fas fa-wheat-awn"></i>
+        <span>Model 1 — Crop Recommendation</span>
+        <span class="tab-badge">22 Classes</span>
+    </button>
+    <button class="model-tab-btn" id="tabBtnDisease" onclick="switchModel('disease')">
+        <i class="fas fa-microscope"></i>
+        <span>Model 2 — Plant Disease</span>
+        <span class="tab-badge">15 Classes</span>
+    </button>
+    <button class="model-tab-btn" id="tabBtnWeather" onclick="switchModel('weather')">
+        <i class="fas fa-cloud-rain"></i>
+        <span>Model 3 — Weather Risk</span>
+        <span class="tab-badge">6 Classes</span>
+    </button>
+    <button class="model-tab-btn" id="tabBtnRice" onclick="switchModel('rice-disease')">
+        <i class="fas fa-leaf"></i>
+        <span>Model 4 — Rice Disease</span>
+        <span class="tab-badge">6 Classes</span>
+    </button>
+</div>
+
+<!-- Dynamic Model View Container -->
+<div id="modelViewContainer">
+    <div class="spinner" style="margin:4rem auto"></div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Global cache for performance responses
+const modelCache = {};
+let currentModelKey = 'crop';
+let activeChartInstance = null;
+let currentChartMode = 'f1'; // 'f1', 'pr', 'support'
+
+const modelEndpoints = {
+    'crop': '/api/performance/crop',
+    'disease': '/api/performance/disease',
+    'weather': '/api/performance/weather',
+    'rice-disease': '/api/performance/rice-disease'
+};
+
+const modelMeta = {
+    'crop': {
+        title: 'Model 1 — Crop Recommendation',
+        icon: 'fa-wheat-awn',
+        desc: 'Multi-class classifier predicting the optimal crop based on soil NPK, temperature, humidity, pH, and rainfall.',
+        figureCm: '/static/figures/crop_confusion_matrix.png',
+        figureCmp: '/static/figures/crop_model_comparison.png'
+    },
+    'disease': {
+        title: 'Model 2 — Plant Disease Detection (Garden Crops)',
+        icon: 'fa-microscope',
+        desc: 'Fine-tuned MobileNetV2 deep convolutional network detecting 15 tomato, potato, and bell pepper disease/healthy conditions.',
+        figureCm: '/static/figures/disease_confusion_matrix.png',
+        figureCmp: '/static/figures/disease_training_accuracy.png'
+    },
+    'weather': {
+        title: 'Model 3 — Weather-Based Disease Risk Prediction',
+        icon: 'fa-cloud-rain',
+        desc: 'Support Vector Machine analyzing microclimate variables (temp, humidity, rain, wind) to assess rice pathogen vulnerability.',
+        figureCm: '/static/figures/weather_disease_confusion_matrix.png',
+        figureCmp: '/static/figures/weather_disease_model_comparison.png'
+    },
+    'rice-disease': {
+        title: 'Model 4 — Rice Leaf Disease Detection (Paddy Crops)',
+        icon: 'fa-leaf',
+        desc: 'Deeply fine-tuned MobileNetV2 architecture specialized for paddy diseases (Bacterial Leaf Blight, Blast, Sheath Blight, etc.).',
+        figureCm: '/static/figures/rice_disease_confusion_matrix.png',
+        figureCmp: '/static/figures/rice_disease_training_accuracy.png'
+    }
+};
+
+// Format helper
+function fmtPct(val) {
+    if (val === null || val === undefined || isNaN(val)) return 'N/A';
+    return (Number(val) * 100).toFixed(2) + '%';
+}
+function fmtDec(val) {
+    if (val === null || val === undefined || isNaN(val)) return 'N/A';
+    return Number(val).toFixed(4);
+}
+
+// Switch Active Model Tab
+async function switchModel(key) {
+    currentModelKey = key;
+    document.querySelectorAll('.model-tab-btn').forEach(btn => btn.classList.remove('active'));
+    if (key === 'crop') document.getElementById('tabBtnCrop').classList.add('active');
+    else if (key === 'disease') document.getElementById('tabBtnDisease').classList.add('active');
+    else if (key === 'weather') document.getElementById('tabBtnWeather').classList.add('active');
+    else if (key === 'rice-disease') document.getElementById('tabBtnRice').classList.add('active');
+
+    const container = document.getElementById('modelViewContainer');
+
+    if (modelCache[key]) {
+        renderModelView(modelCache[key]);
+        return;
+    }
+
+    container.innerHTML = '<div class="spinner" style="margin:4rem auto"></div>';
+
+    try {
+        const resp = await fetch(modelEndpoints[key]);
+        if (!resp.ok) {
+            container.innerHTML = `<div class="alert alert-warning">
+                <i class="fas fa-triangle-exclamation"></i> Evaluation data unavailable for ${modelMeta[key].title}.
+            </div>`;
+            return;
+        }
+        const data = await resp.json();
+        modelCache[key] = data;
+        renderModelView(data);
+    } catch (err) {
+        container.innerHTML = `<div class="alert alert-error">
+            <i class="fas fa-circle-exclamation"></i> Error loading evaluation data: ${err.message}
+        </div>`;
+    }
+}
+
+// Render Complete View for Active Model
+function renderModelView(data) {
+    const container = document.getElementById('modelViewContainer');
+    const meta = modelMeta[currentModelKey];
+
+    const modelName = data.best_model || 'Standard Evaluator';
+    const testSamples = (data.total_test_samples !== undefined && data.total_test_samples !== null)
+        ? Number(data.total_test_samples).toLocaleString()
+        : 'N/A';
+    const testAcc = fmtPct(data.test_accuracy);
+    const macroF1 = fmtPct(data.test_f1_macro);
+    const weightedF1 = fmtPct(data.test_f1_weighted);
+    const macroP = fmtPct(data.test_precision_macro);
+    const macroR = fmtPct(data.test_recall_macro);
+    const weightedP = fmtPct(data.test_precision_weighted);
+    const weightedR = fmtPct(data.test_recall_weighted);
+    const balAcc = data.balanced_accuracy ? fmtPct(data.balanced_accuracy) : null;
+
+    const perClass = Array.isArray(data.per_class) ? data.per_class : [];
+    const nClasses = data.n_classes || perClass.length || 0;
+
+    let html = `
+    <!-- Top Summary Banner -->
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem">
+        <div>
+            <div class="test-banner"><i class="fas fa-circle-check"></i> Test Performance &bull; Untouched Test Set</div>
+            <h2 style="font-size:1.5rem;font-weight:700;color:var(--text-main);margin-bottom:.3rem">
+                <i class="fas ${meta.icon}" style="color:var(--green-300);margin-right:.5rem"></i>${meta.title}
+            </h2>
+            <p style="color:var(--text-muted);font-size:.9rem;max-width:720px">${meta.desc}</p>
+        </div>
+    </div>
+
+    <!-- 5 Key Summary Cards -->
+    <div class="summary-cards-grid">
+        <div class="summary-card">
+            <div class="summary-card-title"><i class="fas fa-microchip"></i> Architecture / Model</div>
+            <div class="summary-card-value" style="font-size:1.35rem">${modelName}</div>
+            <div class="summary-card-sub">${nClasses} Target Classes</div>
+        </div>
+        <div class="summary-card">
+            <div class="summary-card-title"><i class="fas fa-database"></i> Total Test Samples</div>
+            <div class="summary-card-value highlight-green">${testSamples}</div>
+            <div class="summary-card-sub">Hold-out evaluation set</div>
+        </div>
+        <div class="summary-card">
+            <div class="summary-card-title"><i class="fas fa-bullseye"></i> Test Accuracy</div>
+            <div class="summary-card-value highlight-green">${testAcc}</div>
+            <div class="summary-card-sub">Overall correct test labels</div>
+        </div>
+        <div class="summary-card">
+            <div class="summary-card-title"><i class="fas fa-scale-balanced"></i> Macro F1-Score</div>
+            <div class="summary-card-value">${macroF1}</div>
+            <div class="summary-card-sub">Unweighted class average</div>
+        </div>
+        <div class="summary-card">
+            <div class="summary-card-title"><i class="fas fa-weight-scale"></i> Weighted F1-Score</div>
+            <div class="summary-card-value">${weightedF1}</div>
+            <div class="summary-card-sub">Support-weighted average</div>
+        </div>
+    </div>
+
+    <!-- Secondary Overall Metrics Pills -->
+    <div class="metric-pills">
+        <div class="metric-pill"><i class="fas fa-arrow-trend-up"></i> Macro Precision: <strong>${macroP}</strong></div>
+        <div class="metric-pill"><i class="fas fa-arrow-down-short-wide"></i> Macro Recall: <strong>${macroR}</strong></div>
+        <div class="metric-pill"><i class="fas fa-sliders"></i> Weighted Precision: <strong>${weightedP}</strong></div>
+        <div class="metric-pill"><i class="fas fa-sliders"></i> Weighted Recall: <strong>${weightedR}</strong></div>
+        ${balAcc ? `<div class="metric-pill"><i class="fas fa-scale-unbalanced"></i> Balanced Accuracy: <strong>${balAcc}</strong></div>` : ''}
+    </div>
+
+    <!-- Class Performance Visualization Chart Box -->
+    <div class="chart-container-box">
+        <div class="chart-controls">
+            <div class="chart-title">
+                <i class="fas fa-chart-simple" style="color:var(--green-300)"></i>
+                <span id="chartHeading">Per-Class F1-Score</span>
+            </div>
+            <div class="chart-buttons">
+                <button class="chart-btn ${currentChartMode === 'f1' ? 'active' : ''}" onclick="setChartMode('f1')">F1-Score</button>
+                <button class="chart-btn ${currentChartMode === 'pr' ? 'active' : ''}" onclick="setChartMode('pr')">Precision &amp; Recall</button>
+                <button class="chart-btn ${currentChartMode === 'support' ? 'active' : ''}" onclick="setChartMode('support')">Test Samples (Support)</button>
+            </div>
+        </div>
+        <div class="chart-wrapper">
+            <canvas id="performanceChartCanvas"></canvas>
+        </div>
+    </div>
+
+    <!-- Individual Class Performance Table -->
+    <div class="table-card">
+        <div class="table-header-row">
+            <div>
+                <h3 style="font-size:1.1rem;font-weight:700;color:var(--text-main);margin-bottom:.2rem">
+                    <i class="fas fa-table-list" style="color:var(--green-300);margin-right:.4rem"></i>
+                    Per-Class Evaluation Metrics (${perClass.length} Classes)
+                </h3>
+                <p style="color:var(--text-muted);font-size:.82rem">Individual class breakdown dynamically loaded from actual classification test evaluation.</p>
+            </div>
+            <input type="text" id="classSearchBox" class="table-search-input" placeholder="🔍 Search class name..." oninput="filterClassTable()">
+        </div>
+
+        <div class="scroll-table-container">
+            <table id="perClassTable">
+                <thead>
+                    <tr>
+                        <th>Class / Category Name</th>
+                        <th class="text-right">Precision</th>
+                        <th class="text-right">Recall</th>
+                        <th class="text-right">F1-Score</th>
+                        <th>F1 Bar</th>
+                        <th class="text-right">Support (Samples)</th>
+                    </tr>
+                </thead>
+                <tbody id="perClassTableBody">
+                    ${renderClassTableRows(perClass)}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Macro Average</td>
+                        <td class="text-right">${macroP}</td>
+                        <td class="text-right">${macroR}</td>
+                        <td class="text-right">${macroF1}</td>
+                        <td>—</td>
+                        <td class="text-right">${testSamples}</td>
+                    </tr>
+                    <tr>
+                        <td>Weighted Average</td>
+                        <td class="text-right">${weightedP}</td>
+                        <td class="text-right">${weightedR}</td>
+                        <td class="text-right">${weightedF1}</td>
+                        <td>—</td>
+                        <td class="text-right">${testSamples}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <!-- Confusion Matrix Card -->
+    <div class="cm-container-box">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1rem">
+            <div>
+                <h3 style="font-size:1.1rem;font-weight:700;color:var(--text-main);margin-bottom:.2rem">
+                    <i class="fas fa-border-all" style="color:var(--green-300);margin-right:.4rem"></i>
+                    Confusion Matrix — Actual vs. Predicted
+                </h3>
+                <p style="color:var(--text-muted);font-size:.82rem">Real test labels (Rows / True) plotted against model predictions (Columns / Predicted).</p>
+            </div>
+            <div style="display:flex;gap:.5rem">
+                <button class="chart-btn active" id="btnShowMatrixTable" onclick="toggleCmView('table')">Interactive Table</button>
+                <button class="chart-btn" id="btnShowMatrixImage" onclick="toggleCmView('image')">Heatmap Plot</button>
+            </div>
+        </div>
+
+        <div id="cmTableView">
+            ${renderConfusionMatrixTable(data)}
+        </div>
+
+        <div id="cmImageView" style="display:none;text-align:center;padding:1rem 0">
+            <img src="${meta.figureCm}" alt="Confusion matrix figure"
+                 style="max-width:100%;max-height:600px;border-radius:var(--radius-sm);border:1px solid var(--border)"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <div style="display:none;color:var(--text-muted);padding:2rem">
+                <i class="fas fa-image" style="font-size:2rem;margin-bottom:.5rem"></i><br>
+                Plot image not found in static figures.
+            </div>
+        </div>
+    </div>
+    `;
+
+    // Append candidate comparison table if data.results exists
+    if (Array.isArray(data.results) && data.results.length > 0) {
+        html += renderCandidateComparison(data.results, data.best_model);
+    }
+
+    container.innerHTML = html;
+    buildPerformanceChart(perClass);
+}
+
+// Generate rows for Per-Class Table
+function renderClassTableRows(perClass) {
+    if (!perClass || perClass.length === 0) {
+        return `<tr><td colspan="6" style="text-align:center;color:var(--text-muted);padding:2rem">No per-class metrics available.</td></tr>`;
+    }
+    return perClass.map(item => {
+        const cleanName = item.class.replace(/___/g, ' - ').replace(/__/g, ' ').replace(/_/g, ' ');
+        const p = fmtPct(item.precision);
+        const r = fmtPct(item.recall);
+        const f1 = fmtPct(item.f1_score);
+        const f1Num = Number(item.f1_score || 0);
+        const f1Width = Math.min(100, Math.max(0, f1Num * 100));
+        const sup = item.support !== undefined ? item.support : 'N/A';
+
+        // Color coding for score indicator
+        let barColor = 'var(--green-400)';
+        if (f1Num < 0.7) barColor = 'var(--amber-500)';
+        if (f1Num < 0.5) barColor = 'var(--red-500)';
+
+        return `
+        <tr data-class-name="${item.class.toLowerCase()}">
+            <td style="font-weight:600">
+                <span title="${item.class}">${cleanName}</span>
+            </td>
+            <td class="text-right">${p}</td>
+            <td class="text-right">${r}</td>
+            <td class="text-right" style="font-weight:700">${f1}</td>
+            <td>
+                <div class="metric-bar-cell">
+                    <div class="metric-bar-bg">
+                        <div class="metric-bar-fill" style="width:${f1Width}%;background:${barColor}"></div>
+                    </div>
+                    <span style="font-size:0.75rem;color:var(--text-muted);min-width:32px">${(f1Num*100).toFixed(0)}%</span>
+                </div>
+            </td>
+            <td class="text-right" style="color:var(--text-muted)">${sup}</td>
+        </tr>`;
+    }).join('');
+}
+
+// Client-side search in Per-Class Table
+function filterClassTable() {
+    const q = (document.getElementById('classSearchBox').value || '').trim().toLowerCase();
+    const rows = document.querySelectorAll('#perClassTableBody tr');
+    rows.forEach(r => {
+        const name = r.getAttribute('data-class-name') || '';
+        r.style.display = name.includes(q) ? '' : 'none';
+    });
+}
+
+// Toggle between interactive Confusion Matrix Table & Heatmap Image
+function toggleCmView(view) {
+    const tbl = document.getElementById('cmTableView');
+    const img = document.getElementById('cmImageView');
+    const btnTbl = document.getElementById('btnShowMatrixTable');
+    const btnImg = document.getElementById('btnShowMatrixImage');
+
+    if (view === 'table') {
+        tbl.style.display = 'block';
+        img.style.display = 'none';
+        btnTbl.classList.add('active');
+        btnImg.classList.remove('active');
+    } else {
+        tbl.style.display = 'none';
+        img.style.display = 'block';
+        btnTbl.classList.remove('active');
+        btnImg.classList.add('active');
+    }
+}
+
+// Render Interactive Heatmap Table
+function renderConfusionMatrixTable(data) {
+    const cm = data.confusion_matrix;
+    const labels = data.matrix_labels || data.classes || [];
+
+    if (!Array.isArray(cm) || cm.length === 0) {
+        return `<div class="alert alert-info" style="margin:1rem 0">Confusion matrix not available for this model.</div>`;
+    }
+
+    // Find max value for color scale
+    let maxVal = 1;
+    for (let i = 0; i < cm.length; i++) {
+        for (let j = 0; j < cm[i].length; j++) {
+            if (cm[i][j] > maxVal) maxVal = cm[i][j];
+        }
+    }
+
+    const shortLabels = labels.map(l => {
+        const short = l.replace(/___/g, ' ').replace(/__/g, ' ').replace(/_/g, ' ');
+        return short.length > 18 ? short.substring(0, 16) + '…' : short;
+    });
+
+    let tableHtml = `
+    <div class="matrix-scroll-wrap">
+        <table class="matrix-table">
+            <thead>
+                <tr>
+                    <th style="background:transparent"></th>
+                    <th colspan="${labels.length}" style="text-align:center;font-weight:700;color:var(--green-300);padding-bottom:.5rem">
+                        PREDICTED CLASS &rarr;
+                    </th>
+                </tr>
+                <tr>
+                    <th style="vertical-align:bottom;text-align:right;padding-right:.5rem;color:var(--green-300)">ACTUAL &darr;</th>
+                    ${shortLabels.map((lbl, idx) => `<th class="axis-col" title="${labels[idx]}">${lbl}</th>`).join('')}
+                </tr>
+            </thead>
+            <tbody>`;
+
+    for (let i = 0; i < cm.length; i++) {
+        const actualLabel = labels[i] || `Class ${i}`;
+        const actualShort = shortLabels[i] || actualLabel;
+        tableHtml += `<tr><th class="axis-row" title="${actualLabel}">${actualShort}</th>`;
+
+        for (let j = 0; j < cm[i].length; j++) {
+            const val = cm[i][j];
+            const isDiag = (i === j);
+            const intensity = val > 0 ? Math.max(0.12, (val / maxVal)) : 0;
+
+            let bgColor = 'rgba(255, 255, 255, 0.02)';
+            let textColor = 'var(--text-muted)';
+
+            if (isDiag && val > 0) {
+                bgColor = `rgba(46, 168, 58, ${0.25 + intensity * 0.75})`;
+                textColor = '#ffffff';
+            } else if (!isDiag && val > 0) {
+                bgColor = `rgba(239, 68, 68, ${0.35 + intensity * 0.65})`;
+                textColor = '#ffffff';
+            }
+
+            const predLabel = labels[j] || `Class ${j}`;
+            const tip = `Actual: ${actualLabel}&#10;Predicted: ${predLabel}&#10;Count: ${val}`;
+
+            tableHtml += `
+            <td class="matrix-cell" style="background:${bgColor};color:${textColor}" title="${tip}">
+                ${val}
+            </td>`;
+        }
+        tableHtml += `</tr>`;
+    }
+
+    tableHtml += `</tbody></table></div>
+    <div class="matrix-legend">
+        <div class="legend-item"><div class="legend-box" style="background:rgba(46, 168, 58, 0.8)"></div> Correct Predictions (Diagonal)</div>
+        <div class="legend-item"><div class="legend-box" style="background:rgba(239, 68, 68, 0.6)"></div> Misclassifications (Off-diagonal)</div>
+        <div class="legend-item"><div class="legend-box" style="background:rgba(255, 255, 255, 0.04)"></div> Zero occurrences</div>
+    </div>`;
+
+    return tableHtml;
+}
+
+// Render Candidate Model Comparison
+function renderCandidateComparison(results, bestModelName) {
+    return `
+    <div class="table-card">
+        <h3 style="font-size:1.1rem;font-weight:700;color:var(--text-main);margin-bottom:.5rem">
+            <i class="fas fa-trophy" style="color:var(--amber-400);margin-right:.4rem"></i> Candidate Model Cross-Validation Comparison
+        </h3>
+        <p style="color:var(--text-muted);font-size:.82rem;margin-bottom:1rem">
+            Comparative performance of candidate architectures tuned on the training split prior to final hold-out evaluation.
+        </p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Algorithm</th>
+                        <th class="text-right">Accuracy</th>
+                        <th class="text-right">Precision</th>
+                        <th class="text-right">Recall</th>
+                        <th class="text-right">F1-Score</th>
+                        <th class="text-right">Fit Time (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${results.map(r => {
+                        const isBest = (r.model === bestModelName);
+                        return `
+                        <tr style="${isBest ? 'background:rgba(34,136,42,0.12);font-weight:600' : ''}">
+                            <td>${r.model} ${isBest ? '<span class="tab-badge" style="background:var(--green-500);color:#fff;margin-left:.4rem">Best</span>' : ''}</td>
+                            <td class="text-right">${fmtPct(r.accuracy)}</td>
+                            <td class="text-right">${fmtPct(r.precision)}</td>
+                            <td class="text-right">${fmtPct(r.recall)}</td>
+                            <td class="text-right" style="color:var(--green-300)">${fmtPct(r.f1)}</td>
+                            <td class="text-right" style="color:var(--text-muted)">${r.train_time_sec || '—'}</td>
+                        </tr>`;
+                    }).join('')}
+                </tbody>
+            </table>
+        </div>
+    </div>`;
+}
+
+// Switch between chart modes: F1, Precision/Recall, Support
+function setChartMode(mode) {
+    currentChartMode = mode;
+    document.querySelectorAll('.chart-btn').forEach(b => b.classList.remove('active'));
+    const data = modelCache[currentModelKey];
+    if (data && data.per_class) {
+        buildPerformanceChart(data.per_class);
+    }
+}
+
+// Build Chart.js Visualizations dynamically from real data
+function buildPerformanceChart(perClass) {
+    const canvas = document.getElementById('performanceChartCanvas');
+    if (!canvas) return;
+
+    if (activeChartInstance) {
+        activeChartInstance.destroy();
+        activeChartInstance = null;
+    }
+
+    if (!perClass || perClass.length === 0) return;
+
+    const labels = perClass.map(item => item.class.replace(/___/g, ' - ').replace(/__/g, ' ').replace(/_/g, ' '));
+    const ctx = canvas.getContext('2d');
+
+    let datasets = [];
+    let yAxisConfig = {};
+    const headingEl = document.getElementById('chartHeading');
+
+    if (currentChartMode === 'f1') {
+        if (headingEl) headingEl.innerText = 'Per-Class F1-Score';
+        datasets = [{
+            label: 'F1-Score (%)',
+            data: perClass.map(item => (Number(item.f1_score || 0) * 100).toFixed(2)),
+            backgroundColor: 'rgba(77, 201, 90, 0.7)',
+            borderColor: '#4dc95a',
+            borderWidth: 1.5,
+            borderRadius: 4
+        }];
+        yAxisConfig = {
+            min: 0,
+            max: 105,
+            ticks: {
+                callback: val => val + '%',
+                color: '#8b949e'
+            },
+            grid: { color: 'rgba(48, 54, 61, 0.5)' }
+        };
+    } else if (currentChartMode === 'pr') {
+        if (headingEl) headingEl.innerText = 'Per-Class Precision vs. Recall';
+        datasets = [
+            {
+                label: 'Precision (%)',
+                data: perClass.map(item => (Number(item.precision || 0) * 100).toFixed(2)),
+                backgroundColor: 'rgba(59, 130, 246, 0.7)',
+                borderColor: '#3b82f6',
+                borderWidth: 1.5,
+                borderRadius: 4
+            },
+            {
+                label: 'Recall (%)',
+                data: perClass.map(item => (Number(item.recall || 0) * 100).toFixed(2)),
+                backgroundColor: 'rgba(245, 158, 11, 0.7)',
+                borderColor: '#f59e0b',
+                borderWidth: 1.5,
+                borderRadius: 4
+            }
+        ];
+        yAxisConfig = {
+            min: 0,
+            max: 105,
+            ticks: {
+                callback: val => val + '%',
+                color: '#8b949e'
+            },
+            grid: { color: 'rgba(48, 54, 61, 0.5)' }
+        };
+    } else if (currentChartMode === 'support') {
+        if (headingEl) headingEl.innerText = 'Class Distribution (Test Samples / Support)';
+        datasets = [{
+            label: 'Test Samples',
+            data: perClass.map(item => Number(item.support || 0)),
+            backgroundColor: 'rgba(168, 85, 247, 0.7)',
+            borderColor: '#a855f7',
+            borderWidth: 1.5,
+            borderRadius: 4
+        }];
+        yAxisConfig = {
+            beginAtZero: true,
+            ticks: { color: '#8b949e' },
+            grid: { color: 'rgba(48, 54, 61, 0.5)' }
+        };
+    }
+
+    activeChartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: datasets
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: { duration: 400 },
+            plugins: {
+                legend: {
+                    display: currentChartMode === 'pr',
+                    labels: { color: '#e6edf3', font: { family: 'Inter', size: 12 } }
+                },
+                tooltip: {
+                    backgroundColor: '#161b22',
+                    titleColor: '#e6edf3',
+                    bodyColor: '#cdd9e5',
+                    borderColor: '#30363d',
+                    borderWidth: 1,
+                    padding: 10
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        color: '#8b949e',
+                        font: { size: perClass.length > 15 ? 10 : 11 },
+                        maxRotation: 45,
+                        minRotation: 30
+                    },
+                    grid: { display: false }
+                },
+                y: yAxisConfig
+            }
+        }
+    });
+}
+
+// Initial load
+document.addEventListener('DOMContentLoaded', () => {
+    switchModel('crop');
+});
+</script>
+{% endblock %}

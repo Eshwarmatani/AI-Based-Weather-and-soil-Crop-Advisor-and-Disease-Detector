@@ -1,0 +1,6 @@
+model,accuracy,precision,recall,f1,train_time_sec
+Logistic Regression,0.8016,0.8022,0.8016,0.7998,0.03
+Decision Tree,0.7128,0.7129,0.7128,0.7118,0.02
+Random Forest,0.7768,0.7788,0.7768,0.7744,0.69
+Support Vector Machine,0.8029,0.8072,0.8029,0.8006,0.52
+Gradient Boosting,0.7859,0.7866,0.7859,0.784,5.99

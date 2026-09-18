@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — AI Crop Advisor{% endblock %}
+{% block content %}
+
+<div class="section-header">
+    <h1><i class="fas fa-gauge-high" style="font-size:1.8rem;margin-right:.5rem"></i> Dashboard</h1>
+    <p>Live model status and quick access to all prediction tools</p>
+</div>
+
+<!-- Status Cards -->
+<div class="card-grid" style="margin-bottom:2rem" id="statusGrid">
+    <div class="card" style="text-align:center">
+        <div style="font-size:2rem;color:var(--green-400)" id="cropStatus"><i class="fas fa-circle-notch fa-spin"></i></div>
+        <div style="margin-top:.5rem;font-weight:600">Crop Model</div>
+        <div id="cropStatusText" style="font-size:.8rem;color:var(--text-muted)">Checking…</div>
+    </div>
+    <div class="card" style="text-align:center">
+        <div style="font-size:2rem;color:var(--green-400)" id="diseaseStatus"><i class="fas fa-circle-notch fa-spin"></i></div>
+        <div style="margin-top:.5rem;font-weight:600">Disease Model</div>
+        <div id="diseaseStatusText" style="font-size:.8rem;color:var(--text-muted)">Checking…</div>
+    </div>
+    <div class="card" style="text-align:center">
+        <div style="font-size:2rem;color:var(--amber-400)" id="weatherStatus"><i class="fas fa-circle-notch fa-spin"></i></div>
+        <div style="margin-top:.5rem;font-weight:600">Weather Risk Model</div>
+        <div id="weatherStatusText" style="font-size:.8rem;color:var(--text-muted)">Checking…</div>
+    </div>
+</div>
+
+<!-- Quick launch -->
+<div class="card-grid">
+    <a href="/crop-advisor" class="card" style="text-decoration:none;display:block">
+        <div class="card-icon" style="color:var(--green-400)"><i class="fas fa-wheat-awn"></i></div>
+        <h2 class="card-title">Crop Advisor</h2>
+        <p style="color:var(--text-muted);font-size:.88rem">Get soil &amp; weather-based crop recommendations</p>
+    </a>
+    <a href="/disease-detection" class="card" style="text-decoration:none;display:block">
+        <div class="card-icon" style="color:#4dc95a"><i class="fas fa-microscope"></i></div>
+        <h2 class="card-title">Disease Detection</h2>
+        <p style="color:var(--text-muted);font-size:.88rem">Upload a leaf image for instant disease identification</p>
+    </a>
+    <a href="/weather-risk" class="card" style="text-decoration:none;display:block">
+        <div class="card-icon" style="color:var(--amber-400)"><i class="fas fa-cloud-sun-rain"></i></div>
+        <h2 class="card-title">Weather Disease Risk</h2>
+        <p style="color:var(--text-muted);font-size:.88rem">Predict rice disease risk from weather conditions</p>
+    </a>
+    <a href="/model-performance" class="card" style="text-decoration:none;display:block">
+        <div class="card-icon" style="color:var(--blue-500)"><i class="fas fa-chart-bar"></i></div>
+        <h2 class="card-title">Model Performance</h2>
+        <p style="color:var(--text-muted);font-size:.88rem">View real accuracy metrics from test set evaluation</p>
+    </a>
+    <a href="/history" class="card" style="text-decoration:none;display:block">
+        <div class="card-icon" style="color:var(--text-muted)"><i class="fas fa-clock-rotate-left"></i></div>
+        <h2 class="card-title">Prediction History</h2>
+        <p style="color:var(--text-muted);font-size:.88rem">Browse all predictions made through this session</p>
+    </a>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function checkModel(endpoint, iconId, textId, label) {
+    try {
+        const resp = await fetch(endpoint);
+        const data = await resp.json();
+        if (resp.status === 404) {
+            document.getElementById(iconId).innerHTML = '<i class="fas fa-circle-xmark" style="color:#f87171"></i>';
+            document.getElementById(textId).textContent = 'Not trained yet';
+        } else {
+            const best = data.best_model || (data.test_accuracy ? 'MobileNetV2' : '');
+            document.getElementById(iconId).innerHTML = '<i class="fas fa-circle-check" style="color:var(--green-400)"></i>';
+            document.getElementById(textId).textContent = 'Ready — ' + best;
+        }
+    } catch(e) {
+        document.getElementById(iconId).innerHTML = '<i class="fas fa-circle-question" style="color:var(--amber-400)"></i>';
+        document.getElementById(textId).textContent = 'Status unknown';
+    }
+}
+
+checkModel('/api/performance/crop',    'cropStatus',    'cropStatusText');
+checkModel('/api/performance/disease', 'diseaseStatus', 'diseaseStatusText');
+checkModel('/api/performance/weather', 'weatherStatus', 'weatherStatusText');
+</script>
+{% endblock %}

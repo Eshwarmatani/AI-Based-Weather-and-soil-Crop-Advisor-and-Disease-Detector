@@ -1,0 +1,2 @@
+search-path = ["AI_Crop_Advisor", "."]
+disable-search-path-heuristics = true

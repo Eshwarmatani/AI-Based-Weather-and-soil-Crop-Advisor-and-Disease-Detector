@@ -1,0 +1,224 @@
+{% extends "base.html" %}
+{% block title %}My Weather — Live Meteorological Intelligence{% endblock %}
+{% block content %}
+
+<div class="section-header">
+    <h1><i class="fas fa-cloud-sun" style="font-size:1.8rem;margin-right:.5rem;color:var(--amber-400)"></i> My Weather</h1>
+    <p>Automatically detect your GPS location and retrieve live real-time meteorological observations</p>
+</div>
+
+<div style="max-width:760px;margin:0 auto">
+    <div class="card" style="text-align:center;padding:2.5rem 2rem">
+        <div style="font-size:3rem;margin-bottom:1rem;color:var(--amber-400)">
+            <i class="fas fa-satellite-dish"></i>
+        </div>
+        <h2 class="card-title" style="font-size:1.4rem;justify-content:center;margin-bottom:.5rem">Live Location Detection</h2>
+        <p style="color:var(--text-muted);font-size:.9rem;margin-bottom:1.75rem">
+            Click the button below to retrieve live temperature, relative humidity, precipitation, and wind speed from the Open-Meteo satellite network.
+        </p>
+
+        <button type="button" class="btn btn-primary" onclick="getLocation()" id="detectBtn" style="padding:.75rem 2rem;font-size:1rem;margin:0 auto">
+            <i class="fas fa-location-crosshairs"></i> Detect My Location
+        </button>
+
+        <div id="status" style="margin-top:1.5rem;font-size:.92rem;font-weight:500;min-height:1.5rem"></div>
+
+        <!-- Live Weather Results Display -->
+        <div id="weather" style="display:none;margin-top:2rem;text-align:left">
+            <div class="result-header" style="background:rgba(34,136,42,0.1);padding:1rem 1.25rem;border-radius:var(--radius-sm);border:1px solid var(--border);margin-bottom:1.5rem">
+                <div class="result-icon" style="background:rgba(245,158,11,0.18);color:var(--amber-400)">
+                    <i class="fas fa-sun-cloud" id="weatherIcon"></i>
+                </div>
+                <div>
+                    <div style="font-size:.82rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600">Observation Report</div>
+                    <div style="font-size:1.3rem;font-weight:700" id="conditionText">Current Weather</div>
+                </div>
+            </div>
+
+            <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:1.5rem">
+                <div class="card" style="padding:1rem;background:rgba(255,255,255,0.02)">
+                    <div style="font-size:.8rem;color:var(--text-muted);margin-bottom:.25rem">
+                        <i class="fas fa-location-dot" style="color:#60a5fa"></i> Coordinates
+                    </div>
+                    <div style="font-weight:700;font-size:1rem">
+                        <span id="latitude">—</span>, <span id="longitude">—</span>
+                    </div>
+                </div>
+
+                <div class="card" style="padding:1rem;background:rgba(255,255,255,0.02)">
+                    <div style="font-size:.8rem;color:var(--text-muted);margin-bottom:.25rem">
+                        <i class="fas fa-temperature-three-quarters" style="color:#f87171"></i> Temperature
+                    </div>
+                    <div style="font-weight:800;font-size:1.5rem;color:var(--green-300)">
+                        <strong id="temperature">—</strong> <span style="font-size:1rem">°C</span>
+                    </div>
+                </div>
+
+                <div class="card" style="padding:1rem;background:rgba(255,255,255,0.02)">
+                    <div style="font-size:.8rem;color:var(--text-muted);margin-bottom:.25rem">
+                        <i class="fas fa-droplet" style="color:#38bdf8"></i> Relative Humidity
+                    </div>
+                    <div style="font-weight:800;font-size:1.5rem;color:var(--green-300)">
+                        <strong id="humidity">—</strong> <span style="font-size:1rem">%</span>
+                    </div>
+                </div>
+
+                <div class="card" style="padding:1rem;background:rgba(255,255,255,0.02)">
+                    <div style="font-size:.8rem;color:var(--text-muted);margin-bottom:.25rem">
+                        <i class="fas fa-cloud-rain" style="color:#818cf8"></i> Precipitation
+                    </div>
+                    <div style="font-weight:800;font-size:1.5rem;color:var(--green-300)">
+                        <strong id="precipitation">—</strong> <span style="font-size:1rem">mm</span>
+                    </div>
+                </div>
+
+                <div class="card" style="padding:1rem;background:rgba(255,255,255,0.02);grid-column:1/-1">
+                    <div style="font-size:.8rem;color:var(--text-muted);margin-bottom:.25rem">
+                        <i class="fas fa-wind" style="color:#fbbf24"></i> Wind Speed (10m)
+                    </div>
+                    <div style="font-weight:800;font-size:1.5rem;color:var(--green-300)">
+                        <strong id="wind">—</strong> <span style="font-size:1rem">km/h</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agricultural Model Quick Bridge -->
+            <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.25rem;text-align:center">
+                <div style="font-weight:600;font-size:.95rem;margin-bottom:.5rem">
+                    <i class="fas fa-seedling" style="color:var(--green-400)"></i> Apply Live Weather to Machine Learning Models
+                </div>
+                <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">
+                    Transfer these exact live parameters into the Crop Advisor or Weather Disease Risk prediction tools:
+                </p>
+                <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap">
+                    <button type="button" class="btn btn-primary" onclick="transferToWeatherRisk()">
+                        <i class="fas fa-cloud-rain"></i> Check Disease Risk With This Weather
+                    </button>
+                    <button type="button" class="btn btn-outline" onclick="transferToCropAdvisor()">
+                        <i class="fas fa-wheat-awn"></i> Find Best Crops For This Weather
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+let lastWeatherData = null;
+
+const WMO_CODES = {
+    0: "Clear Sky",
+    1: "Mainly Clear", 2: "Partly Cloudy", 3: "Overcast",
+    45: "Fog", 48: "Depositing Rime Fog",
+    51: "Light Drizzle", 53: "Moderate Drizzle", 55: "Dense Drizzle",
+    61: "Slight Rain", 63: "Moderate Rain", 65: "Heavy Rain",
+    71: "Slight Snow Fall", 73: "Moderate Snow Fall", 75: "Heavy Snow Fall",
+    80: "Slight Rain Showers", 81: "Moderate Rain Showers", 82: "Violent Rain Showers",
+    95: "Thunderstorm", 96: "Thunderstorm with Slight Hail", 99: "Thunderstorm with Heavy Hail"
+};
+
+function getLocation() {
+    const status = document.getElementById("status");
+    const btn = document.getElementById("detectBtn");
+
+    if (!navigator.geolocation) {
+        status.innerHTML = "<span style='color:#f87171'><i class='fas fa-circle-xmark'></i> Geolocation is not supported by your browser.</span>";
+        return;
+    }
+
+    btn.disabled = true;
+    status.innerHTML = "<span style='color:var(--amber-400)'><i class='fas fa-spinner fa-spin'></i> Detecting your location...</span>";
+
+    navigator.geolocation.getCurrentPosition(
+        sendLocation,
+        locationError,
+        { timeout: 10000, enableHighAccuracy: true }
+    );
+}
+
+function sendLocation(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const status = document.getElementById("status");
+    const btn = document.getElementById("detectBtn");
+
+    status.innerHTML = "<span style='color:var(--amber-400)'><i class='fas fa-cloud-sun fa-spin'></i> Fetching live weather from Open-Meteo...</span>";
+
+    fetch("/weather", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            latitude: latitude,
+            longitude: longitude
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        btn.disabled = false;
+        if (data.error) {
+            throw new Error(data.error);
+        }
+
+        const current = data.current;
+        lastWeatherData = {
+            latitude: latitude,
+            longitude: longitude,
+            temperature: current.temperature_2m,
+            humidity: current.relative_humidity_2m,
+            precipitation: current.precipitation,
+            wind_speed: current.wind_speed_10m
+        };
+
+        document.getElementById("latitude").textContent = latitude.toFixed(4);
+        document.getElementById("longitude").textContent = longitude.toFixed(4);
+        document.getElementById("temperature").textContent = current.temperature_2m;
+        document.getElementById("humidity").textContent = current.relative_humidity_2m;
+        document.getElementById("precipitation").textContent = current.precipitation;
+        document.getElementById("wind").textContent = current.wind_speed_10m;
+
+        const code = current.weather_code;
+        const condition = WMO_CODES[code] || "Weather Observed";
+        document.getElementById("conditionText").textContent = condition;
+
+        document.getElementById("weather").style.display = "block";
+        status.innerHTML = "<span style='color:var(--green-400)'><i class='fas fa-circle-check'></i> Weather detected successfully!</span>";
+    })
+    .catch(error => {
+        btn.disabled = false;
+        status.innerHTML = "<span style='color:#f87171'><i class='fas fa-circle-exmark'></i> Error: " + error.message + "</span>";
+    });
+}
+
+function locationError(error) {
+    const status = document.getElementById("status");
+    document.getElementById("detectBtn").disabled = false;
+
+    if (error.code === 1) {
+        status.innerHTML = "<span style='color:#f87171'><i class='fas fa-ban'></i> Location permission was denied.</span>";
+    } else if (error.code === 2) {
+        status.innerHTML = "<span style='color:#f87171'><i class='fas fa-triangle-exclamation'></i> Your location could not be determined.</span>";
+    } else if (error.code === 3) {
+        status.innerHTML = "<span style='color:#f87171'><i class='fas fa-hourglass-end'></i> Location request timed out.</span>";
+    } else {
+        status.innerHTML = "<span style='color:#f87171'><i class='fas fa-circle-xmark'></i> Unable to detect your location.</span>";
+    }
+}
+
+function transferToWeatherRisk() {
+    if (!lastWeatherData) return;
+    const url = `/weather-risk?temperature=${lastWeatherData.temperature}&humidity=${lastWeatherData.humidity}&rainfall=${lastWeatherData.precipitation}&wind_speed=${lastWeatherData.wind_speed}&autofill=true`;
+    window.location.href = url;
+}
+
+function transferToCropAdvisor() {
+    if (!lastWeatherData) return;
+    const url = `/crop-advisor?temperature=${lastWeatherData.temperature}&humidity=${lastWeatherData.humidity}&rainfall=${lastWeatherData.precipitation}&autofill=true`;
+    window.location.href = url;
+}
+</script>
+{% endblock %}

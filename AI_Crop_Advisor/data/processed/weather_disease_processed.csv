@@ -1,0 +1,3830 @@
+temperature,humidity,rainfall,wind_speed,disease_label
+28.62,89.98,11.43,10.91,Sheath Blight
+23.11,83.33,12.22,8.79,Leaf scald
+22.12,99.69,2.32,5.2,Brown Spot
+30.1,82.03,9.59,13.01,Leaf scald
+29.91,90.42,2.65,18.0,Bacterial Leaf Blight
+22.83,93.15,14.89,11.05,Leaf Blast
+27.98,59.47,2.29,15.66,Healthy Rice Leaf
+25.93,92.98,8.7,20.96,Leaf Blast
+27.92,96.2,9.42,25.92,Leaf Blast
+24.17,95.67,14.22,21.51,Leaf Blast
+25.62,55.0,4.39,13.71,Healthy Rice Leaf
+25.33,88.82,8.14,12.28,Leaf Blast
+22.7,90.08,7.21,4.65,Brown Spot
+28.11,80.29,9.92,20.76,Leaf scald
+30.58,83.78,8.5,18.61,Bacterial Leaf Blight
+25.54,81.48,1.29,19.75,Leaf scald
+27.64,67.36,3.54,7.01,Healthy Rice Leaf
+25.78,91.82,9.26,26.91,Leaf Blast
+29.03,86.6,9.35,23.15,Bacterial Leaf Blight
+24.94,92.96,16.79,17.34,Leaf Blast
+25.63,93.15,7.26,7.06,Brown Spot
+25.24,91.92,5.26,11.98,Sheath Blight
+29.71,91.28,7.39,9.1,Brown Spot
+26.92,57.31,2.31,9.89,Healthy Rice Leaf
+25.59,91.33,8.58,18.7,Leaf Blast
+29.41,82.59,17.72,16.83,Bacterial Leaf Blight
+22.59,99.75,5.7,22.61,Leaf Blast
+24.49,87.54,16.09,28.93,Bacterial Leaf Blight
+27.31,90.91,17.75,27.73,Bacterial Leaf Blight
+19.86,96.62,13.29,21.05,Leaf Blast
+25.55,60.32,3.8,8.88,Healthy Rice Leaf
+26.94,62.41,0.86,15.09,Healthy Rice Leaf
+32.57,88.91,10.78,29.76,Bacterial Leaf Blight
+28.16,90.13,10.18,17.85,Leaf scald
+27.71,94.23,24.52,18.37,Bacterial Leaf Blight
+25.34,57.97,0.1,6.35,Healthy Rice Leaf
+25.89,87.41,8.15,12.3,Leaf Blast
+31.23,88.5,10.44,8.08,Sheath Blight
+23.35,56.53,3.97,7.45,Healthy Rice Leaf
+25.72,87.4,8.99,24.13,Leaf scald
+31.75,91.07,17.4,24.31,Bacterial Leaf Blight
+26.79,62.16,3.37,13.37,Healthy Rice Leaf
+28.47,89.97,22.11,25.79,Bacterial Leaf Blight
+29.08,90.67,7.07,28.47,Leaf scald
+28.27,90.33,3.98,10.15,Brown Spot
+24.95,92.43,7.86,18.94,Leaf Blast
+30.23,87.9,16.07,14.7,Bacterial Leaf Blight
+28.17,57.28,1.51,12.46,Healthy Rice Leaf
+28.34,54.79,2.56,10.04,Healthy Rice Leaf
+22.81,98.94,13.22,20.27,Leaf Blast
+27.29,64.84,3.99,11.8,Healthy Rice Leaf
+19.3,89.14,10.23,4.44,Brown Spot
+29.03,86.96,21.04,27.37,Bacterial Leaf Blight
+25.25,91.46,15.02,15.22,Leaf Blast
+25.43,54.44,0.56,16.03,Healthy Rice Leaf
+24.93,93.5,7.23,17.63,Leaf Blast
+27.87,65.1,2.66,8.77,Healthy Rice Leaf
+29.44,82.53,9.63,8.76,Leaf scald
+31.02,97.03,2.49,10.19,Sheath Blight
+31.1,85.58,13.66,27.24,Bacterial Leaf Blight
+32.85,96.88,2.15,6.91,Sheath Blight
+25.35,90.0,4.8,10.21,Brown Spot
+31.92,91.74,7.14,12.62,Sheath Blight
+28.36,96.59,17.86,15.61,Leaf Blast
+23.86,86.79,4.83,5.52,Brown Spot
+27.87,76.21,5.03,20.33,Leaf scald
+27.46,52.92,0.75,11.38,Healthy Rice Leaf
+30.39,90.6,6.33,11.47,Brown Spot
+26.43,84.6,7.03,13.64,Leaf scald
+24.63,87.41,13.46,19.54,Bacterial Leaf Blight
+28.14,58.13,5.58,10.17,Healthy Rice Leaf
+30.35,94.21,2.36,8.51,Sheath Blight
+22.81,95.74,14.31,14.74,Leaf Blast
+20.0,95.18,9.08,19.51,Leaf scald
+24.25,60.19,0.0,7.56,Healthy Rice Leaf
+22.75,96.17,6.44,21.01,Leaf Blast
+29.1,83.63,9.78,25.24,Bacterial Leaf Blight
+32.4,83.75,15.37,11.38,Bacterial Leaf Blight
+32.3,94.01,0.0,10.7,Sheath Blight
+35.22,85.37,4.82,4.92,Sheath Blight
+23.45,52.52,2.83,8.57,Healthy Rice Leaf
+29.29,94.16,5.8,19.55,Sheath Blight
+19.23,90.03,4.28,10.74,Brown Spot
+29.82,89.16,3.93,26.42,Leaf scald
+25.08,61.76,2.11,10.3,Healthy Rice Leaf
+31.23,95.49,0.0,21.01,Brown Spot
+27.88,85.33,9.28,16.28,Leaf scald
+26.31,61.72,1.83,7.61,Healthy Rice Leaf
+21.53,94.9,15.27,16.76,Leaf Blast
+23.34,87.93,11.4,11.52,Leaf Blast
+24.69,60.04,3.01,9.45,Healthy Rice Leaf
+28.62,85.26,20.73,26.63,Bacterial Leaf Blight
+24.19,91.7,11.89,11.51,Leaf Blast
+22.27,89.73,5.4,13.78,Brown Spot
+28.43,81.91,7.68,15.25,Brown Spot
+26.01,58.68,3.03,10.83,Healthy Rice Leaf
+25.84,68.99,0.0,13.48,Healthy Rice Leaf
+26.57,54.36,0.79,10.96,Healthy Rice Leaf
+27.52,91.45,7.2,21.46,Leaf scald
+27.04,96.6,13.72,21.02,Leaf Blast
+25.06,96.81,3.92,8.71,Brown Spot
+32.09,90.81,6.73,12.63,Sheath Blight
+27.04,85.86,17.66,14.73,Leaf scald
+19.49,94.78,5.89,3.44,Brown Spot
+29.61,81.88,9.46,29.65,Bacterial Leaf Blight
+30.1,81.4,19.18,17.65,Bacterial Leaf Blight
+26.86,67.14,1.08,11.18,Healthy Rice Leaf
+29.66,93.63,6.99,15.61,Sheath Blight
+27.43,92.86,7.83,12.73,Leaf scald
+35.64,91.06,10.35,9.08,Sheath Blight
+26.85,91.12,9.61,11.19,Leaf scald
+26.59,97.99,2.59,14.28,Brown Spot
+30.59,93.41,8.46,9.69,Sheath Blight
+26.19,84.06,11.83,14.21,Leaf scald
+28.85,86.61,16.51,25.36,Bacterial Leaf Blight
+24.98,57.6,6.07,11.64,Healthy Rice Leaf
+24.59,87.74,1.44,12.32,Brown Spot
+30.91,86.86,13.38,20.51,Leaf scald
+29.94,93.97,6.83,19.2,Sheath Blight
+25.9,92.38,9.15,9.31,Brown Spot
+25.41,64.62,2.07,10.38,Healthy Rice Leaf
+26.87,54.62,0.78,10.04,Healthy Rice Leaf
+28.37,88.72,3.84,20.69,Sheath Blight
+24.45,96.84,3.07,10.61,Brown Spot
+28.53,84.12,19.98,18.03,Bacterial Leaf Blight
+31.67,83.26,10.35,14.79,Leaf scald
+27.95,92.15,11.37,21.25,Bacterial Leaf Blight
+30.76,84.12,2.5,5.24,Sheath Blight
+32.44,98.37,6.13,10.59,Sheath Blight
+26.26,79.81,6.24,20.11,Leaf scald
+31.82,81.96,17.96,19.15,Bacterial Leaf Blight
+24.15,95.62,10.57,2.94,Leaf Blast
+26.34,91.81,8.34,10.55,Sheath Blight
+23.75,93.62,6.17,5.99,Brown Spot
+27.1,92.34,5.23,7.41,Brown Spot
+27.11,56.75,3.57,8.2,Healthy Rice Leaf
+23.95,66.75,3.24,7.25,Healthy Rice Leaf
+25.43,62.28,3.57,14.78,Healthy Rice Leaf
+26.86,96.81,3.82,13.7,Brown Spot
+26.53,91.21,0.31,10.97,Brown Spot
+23.85,77.85,4.95,12.08,Leaf scald
+31.83,87.38,8.22,12.77,Sheath Blight
+30.69,85.94,8.57,13.04,Sheath Blight
+30.73,84.35,10.24,21.17,Bacterial Leaf Blight
+25.41,81.45,4.31,19.06,Leaf scald
+24.08,63.92,0.0,4.32,Healthy Rice Leaf
+25.15,94.96,11.32,17.56,Leaf Blast
+30.35,89.37,25.57,26.23,Bacterial Leaf Blight
+20.49,100.0,1.58,16.51,Brown Spot
+21.67,86.06,10.67,28.87,Bacterial Leaf Blight
+23.62,89.57,8.17,11.56,Leaf Blast
+25.03,93.4,5.54,4.97,Brown Spot
+32.57,92.93,2.96,9.32,Brown Spot
+28.95,79.09,19.5,23.72,Bacterial Leaf Blight
+21.44,95.87,11.48,17.94,Leaf Blast
+32.18,88.61,6.29,4.65,Sheath Blight
+27.8,48.75,3.31,4.6,Healthy Rice Leaf
+28.22,86.54,4.61,4.65,Brown Spot
+30.48,91.22,16.48,16.55,Leaf Blast
+27.79,63.49,2.0,6.22,Healthy Rice Leaf
+28.87,83.53,22.92,20.02,Bacterial Leaf Blight
+20.84,89.26,16.1,18.44,Leaf Blast
+29.73,88.15,9.86,23.93,Leaf scald
+27.69,60.01,0.0,12.48,Healthy Rice Leaf
+24.51,88.72,13.6,15.49,Bacterial Leaf Blight
+22.55,63.7,0.72,11.59,Healthy Rice Leaf
+27.79,87.62,16.05,21.22,Bacterial Leaf Blight
+29.54,91.59,22.18,27.14,Bacterial Leaf Blight
+28.54,97.52,1.42,11.72,Brown Spot
+28.78,97.19,4.75,8.17,Sheath Blight
+27.88,90.96,13.02,21.49,Bacterial Leaf Blight
+27.26,65.25,1.24,6.21,Healthy Rice Leaf
+24.6,79.46,8.73,12.39,Leaf scald
+27.93,83.52,15.21,31.86,Bacterial Leaf Blight
+26.99,61.41,4.21,11.98,Healthy Rice Leaf
+24.96,99.4,13.59,9.02,Leaf Blast
+22.49,62.26,1.53,10.74,Healthy Rice Leaf
+28.28,87.1,24.59,22.13,Bacterial Leaf Blight
+24.67,86.17,20.3,15.69,Bacterial Leaf Blight
+26.31,61.45,2.36,6.89,Healthy Rice Leaf
+30.75,95.55,1.52,21.6,Leaf scald
+31.01,91.19,6.78,8.41,Brown Spot
+33.57,88.45,12.83,14.37,Sheath Blight
+25.83,86.95,14.73,14.53,Bacterial Leaf Blight
+30.95,94.22,0.91,6.18,Brown Spot
+26.27,93.3,15.1,13.67,Leaf Blast
+26.38,84.83,3.51,15.11,Leaf scald
+31.31,82.83,8.82,18.5,Sheath Blight
+21.2,95.04,13.93,18.13,Leaf Blast
+33.06,86.18,14.26,14.77,Bacterial Leaf Blight
+29.84,94.13,12.12,11.12,Sheath Blight
+23.09,55.12,1.38,15.33,Healthy Rice Leaf
+24.31,67.44,0.41,7.77,Healthy Rice Leaf
+27.06,59.17,3.31,9.13,Healthy Rice Leaf
+32.18,89.78,19.71,21.09,Bacterial Leaf Blight
+24.44,60.02,2.41,17.81,Healthy Rice Leaf
+26.47,89.58,20.63,19.74,Bacterial Leaf Blight
+26.99,81.19,11.97,19.12,Bacterial Leaf Blight
+31.09,84.2,15.78,21.19,Bacterial Leaf Blight
+28.09,87.08,31.44,16.57,Bacterial Leaf Blight
+26.17,91.19,5.43,5.75,Brown Spot
+21.43,94.03,10.23,15.07,Leaf Blast
+24.51,63.1,2.2,11.55,Healthy Rice Leaf
+24.56,57.14,2.04,10.83,Healthy Rice Leaf
+22.34,85.21,11.29,24.31,Leaf scald
+25.41,55.07,3.4,8.62,Healthy Rice Leaf
+33.31,94.34,9.98,7.63,Sheath Blight
+28.58,84.8,8.66,13.83,Sheath Blight
+24.06,89.12,18.8,23.49,Leaf Blast
+26.59,95.13,11.34,16.99,Leaf Blast
+25.09,100.0,10.11,9.94,Leaf Blast
+30.68,92.22,21.15,21.65,Bacterial Leaf Blight
+26.35,86.87,15.08,22.79,Bacterial Leaf Blight
+24.41,85.31,9.55,19.43,Leaf scald
+23.55,86.02,5.63,22.82,Leaf scald
+26.85,87.71,17.65,10.29,Bacterial Leaf Blight
+26.36,91.48,7.97,8.71,Sheath Blight
+30.11,64.23,0.69,14.23,Healthy Rice Leaf
+25.16,74.49,7.29,7.02,Leaf scald
+33.81,95.59,8.28,13.71,Sheath Blight
+30.23,98.75,2.55,12.54,Brown Spot
+23.04,65.66,1.12,12.37,Healthy Rice Leaf
+24.28,90.6,6.01,12.17,Leaf Blast
+28.47,95.82,6.85,12.76,Brown Spot
+17.74,88.09,4.5,12.53,Brown Spot
+31.92,87.19,9.06,3.48,Sheath Blight
+33.33,87.41,13.68,21.78,Bacterial Leaf Blight
+26.92,95.58,3.14,18.34,Leaf Blast
+24.43,76.87,8.19,11.0,Leaf scald
+32.0,91.04,2.45,8.87,Brown Spot
+24.22,88.44,8.53,22.1,Leaf Blast
+27.94,88.64,18.12,19.76,Bacterial Leaf Blight
+31.29,92.01,10.26,18.42,Sheath Blight
+32.29,84.85,18.25,18.05,Bacterial Leaf Blight
+27.97,58.99,2.69,10.19,Healthy Rice Leaf
+29.14,90.85,1.94,15.54,Sheath Blight
+17.65,96.55,20.48,11.91,Leaf Blast
+25.9,50.32,2.82,11.81,Healthy Rice Leaf
+22.87,61.83,1.12,7.71,Healthy Rice Leaf
+24.37,63.95,1.68,10.69,Healthy Rice Leaf
+28.29,86.29,2.95,8.93,Brown Spot
+21.85,65.67,6.21,14.65,Healthy Rice Leaf
+21.25,91.1,15.94,12.26,Leaf Blast
+30.71,86.98,12.63,22.36,Sheath Blight
+29.63,93.59,3.06,6.23,Sheath Blight
+31.99,85.27,8.27,10.15,Sheath Blight
+31.62,94.79,29.11,17.14,Bacterial Leaf Blight
+27.59,82.18,17.01,28.28,Bacterial Leaf Blight
+29.75,97.34,6.71,0.22,Sheath Blight
+30.14,99.93,8.8,4.82,Sheath Blight
+25.97,85.99,6.68,20.82,Leaf scald
+26.28,84.45,10.83,14.01,Leaf scald
+32.53,98.12,0.0,14.94,Sheath Blight
+29.89,96.6,11.5,10.68,Sheath Blight
+27.08,68.7,2.76,13.4,Healthy Rice Leaf
+32.05,83.15,17.99,25.34,Bacterial Leaf Blight
+26.92,89.45,9.23,19.79,Leaf Blast
+28.9,88.52,9.31,15.64,Leaf scald
+25.74,57.96,0.77,12.12,Healthy Rice Leaf
+27.99,84.46,5.17,16.28,Leaf scald
+28.69,81.47,16.91,25.36,Bacterial Leaf Blight
+29.07,94.85,10.52,15.28,Leaf Blast
+23.06,58.99,1.0,12.46,Healthy Rice Leaf
+25.87,90.18,17.12,3.88,Leaf Blast
+28.83,91.06,26.75,23.27,Bacterial Leaf Blight
+24.89,67.18,0.0,10.26,Healthy Rice Leaf
+25.26,92.72,16.65,12.65,Leaf Blast
+24.2,63.64,0.0,10.73,Healthy Rice Leaf
+24.08,90.07,17.88,16.48,Leaf Blast
+24.55,95.06,9.96,16.67,Leaf Blast
+34.79,89.29,15.28,26.34,Bacterial Leaf Blight
+29.98,83.79,3.59,16.49,Leaf scald
+30.19,92.07,11.3,12.53,Sheath Blight
+28.93,84.64,11.75,9.68,Sheath Blight
+30.51,85.71,11.8,24.11,Bacterial Leaf Blight
+24.95,89.91,13.16,25.17,Bacterial Leaf Blight
+27.13,86.85,2.43,16.52,Brown Spot
+28.35,92.75,3.97,0.91,Brown Spot
+24.69,49.42,5.14,13.21,Healthy Rice Leaf
+21.59,90.83,2.29,14.33,Brown Spot
+24.35,90.36,14.99,12.07,Leaf Blast
+30.45,93.83,16.58,17.15,Bacterial Leaf Blight
+31.24,83.35,22.72,17.31,Bacterial Leaf Blight
+23.26,60.18,1.47,12.81,Healthy Rice Leaf
+26.13,51.47,0.0,9.08,Healthy Rice Leaf
+24.48,97.45,8.98,15.56,Leaf Blast
+32.34,87.57,14.36,28.87,Bacterial Leaf Blight
+32.1,88.48,8.7,10.65,Sheath Blight
+29.36,82.51,5.32,17.12,Leaf scald
+27.04,87.21,10.97,20.29,Bacterial Leaf Blight
+25.11,83.81,5.5,14.32,Leaf scald
+25.22,92.01,4.27,5.42,Brown Spot
+23.88,57.21,4.05,10.04,Healthy Rice Leaf
+23.44,59.41,2.67,10.97,Healthy Rice Leaf
+26.47,96.92,16.51,21.33,Leaf Blast
+23.56,81.57,3.89,18.81,Leaf scald
+28.25,97.58,7.69,10.02,Brown Spot
+26.22,90.13,11.26,17.91,Leaf Blast
+29.78,98.03,6.59,11.65,Brown Spot
+29.81,85.01,7.44,5.97,Sheath Blight
+32.66,86.54,10.98,11.44,Sheath Blight
+24.42,93.61,4.42,9.5,Brown Spot
+27.21,85.88,11.27,9.8,Sheath Blight
+31.62,90.95,29.53,28.76,Bacterial Leaf Blight
+30.7,86.59,20.77,16.94,Bacterial Leaf Blight
+22.0,73.09,8.54,12.56,Leaf scald
+26.4,67.23,0.0,8.94,Healthy Rice Leaf
+24.35,91.43,3.14,9.71,Brown Spot
+27.07,92.19,6.23,13.84,Brown Spot
+27.44,91.25,3.47,13.05,Leaf scald
+22.44,93.47,10.87,13.12,Leaf Blast
+27.66,81.88,14.09,30.05,Bacterial Leaf Blight
+28.3,84.49,5.25,15.31,Brown Spot
+25.39,90.7,16.38,13.66,Leaf Blast
+33.63,99.02,8.09,13.76,Sheath Blight
+20.35,90.55,19.04,14.45,Leaf Blast
+22.89,95.23,15.29,13.75,Leaf Blast
+28.25,85.98,3.95,14.12,Brown Spot
+26.44,55.42,2.84,5.79,Healthy Rice Leaf
+22.55,82.22,2.11,29.4,Leaf scald
+28.21,58.37,2.27,18.11,Healthy Rice Leaf
+31.71,100.0,4.84,16.3,Brown Spot
+22.45,56.02,0.26,14.31,Healthy Rice Leaf
+28.07,87.24,7.24,20.47,Sheath Blight
+25.73,89.58,10.05,19.58,Bacterial Leaf Blight
+31.83,62.56,2.44,4.58,Healthy Rice Leaf
+28.09,95.55,17.92,19.19,Leaf Blast
+29.02,93.09,6.03,7.01,Brown Spot
+29.46,54.99,2.8,4.46,Healthy Rice Leaf
+26.31,50.6,2.51,10.7,Healthy Rice Leaf
+25.24,89.32,2.45,11.51,Brown Spot
+33.04,84.14,10.96,17.4,Sheath Blight
+24.93,98.37,6.27,8.74,Brown Spot
+29.82,96.5,9.16,17.3,Sheath Blight
+27.07,94.21,11.69,10.24,Leaf Blast
+21.55,94.69,11.79,15.74,Leaf Blast
+24.37,65.3,1.51,12.32,Healthy Rice Leaf
+25.25,86.69,3.81,17.35,Leaf scald
+29.45,91.94,12.72,24.83,Leaf scald
+24.65,86.56,15.76,14.53,Leaf scald
+27.72,89.92,13.29,25.91,Leaf Blast
+29.66,96.51,0.0,11.04,Brown Spot
+24.32,97.85,5.25,5.03,Brown Spot
+24.89,87.81,28.13,23.26,Bacterial Leaf Blight
+34.47,97.95,7.71,13.77,Brown Spot
+20.05,90.5,6.25,22.02,Leaf scald
+29.04,91.44,13.88,24.83,Bacterial Leaf Blight
+29.73,99.5,5.27,14.64,Sheath Blight
+29.95,91.61,6.42,13.83,Sheath Blight
+26.68,56.89,3.16,12.37,Healthy Rice Leaf
+33.77,88.4,7.73,10.27,Sheath Blight
+32.41,91.03,5.45,10.06,Sheath Blight
+21.08,93.1,13.62,13.33,Leaf Blast
+26.53,92.44,2.65,11.75,Brown Spot
+23.71,86.22,3.67,12.45,Leaf scald
+26.53,65.83,0.0,7.29,Healthy Rice Leaf
+26.31,88.81,7.37,11.76,Brown Spot
+23.74,83.26,5.25,6.5,Brown Spot
+24.27,67.21,3.79,11.21,Healthy Rice Leaf
+34.59,89.75,7.25,12.06,Sheath Blight
+26.66,62.39,4.04,13.25,Healthy Rice Leaf
+27.41,94.85,8.73,16.32,Leaf Blast
+22.39,91.66,10.12,9.93,Leaf Blast
+21.21,65.04,0.03,3.42,Healthy Rice Leaf
+24.31,95.28,12.4,27.33,Leaf Blast
+32.93,84.99,16.85,15.49,Bacterial Leaf Blight
+34.04,89.43,22.21,19.05,Bacterial Leaf Blight
+32.83,90.35,5.33,17.52,Brown Spot
+27.52,91.77,9.44,20.27,Leaf Blast
+28.2,93.17,8.71,11.84,Brown Spot
+23.84,84.22,7.62,19.76,Leaf scald
+30.27,81.31,11.74,27.76,Bacterial Leaf Blight
+30.48,86.34,9.27,8.67,Sheath Blight
+27.25,81.24,3.98,9.13,Leaf scald
+26.19,90.83,5.38,18.79,Leaf Blast
+29.65,93.82,7.48,20.53,Sheath Blight
+24.44,91.2,9.85,20.75,Leaf scald
+31.08,82.85,10.73,26.85,Bacterial Leaf Blight
+22.7,85.53,10.84,14.32,Leaf scald
+25.49,55.37,1.04,11.45,Healthy Rice Leaf
+24.27,86.03,5.77,16.61,Leaf scald
+24.27,63.51,1.43,8.02,Healthy Rice Leaf
+25.15,54.4,1.52,12.21,Healthy Rice Leaf
+26.52,84.5,6.47,16.15,Brown Spot
+30.96,86.0,30.11,18.25,Bacterial Leaf Blight
+34.01,81.07,7.44,19.92,Bacterial Leaf Blight
+20.75,92.78,6.49,11.13,Brown Spot
+20.99,86.85,6.67,22.69,Leaf scald
+32.37,84.44,8.55,16.67,Leaf scald
+29.03,87.1,17.93,20.65,Bacterial Leaf Blight
+19.21,85.75,4.83,10.19,Brown Spot
+30.85,93.79,0.15,10.59,Sheath Blight
+25.77,95.94,11.8,20.8,Leaf Blast
+23.42,94.65,0.56,12.51,Brown Spot
+25.35,86.03,4.21,22.03,Leaf scald
+22.86,96.1,15.87,12.54,Leaf Blast
+29.89,93.73,6.24,19.94,Sheath Blight
+28.66,85.95,1.91,12.05,Leaf scald
+22.18,94.29,5.36,11.27,Brown Spot
+20.29,92.09,0.3,7.82,Brown Spot
+27.67,61.98,1.59,10.48,Healthy Rice Leaf
+27.66,56.29,2.87,12.73,Healthy Rice Leaf
+23.27,90.89,3.12,8.52,Brown Spot
+23.89,59.99,1.62,11.43,Healthy Rice Leaf
+28.17,82.49,21.6,21.55,Bacterial Leaf Blight
+20.57,93.46,3.85,14.77,Leaf Blast
+24.65,84.0,12.37,20.92,Leaf scald
+31.32,83.15,25.44,17.44,Bacterial Leaf Blight
+27.52,91.54,11.08,18.5,Leaf Blast
+36.99,88.37,14.01,13.58,Bacterial Leaf Blight
+26.23,55.18,1.62,10.76,Healthy Rice Leaf
+24.33,60.51,3.26,4.42,Healthy Rice Leaf
+30.94,90.65,18.45,10.72,Sheath Blight
+29.92,95.52,7.58,8.29,Sheath Blight
+17.73,94.37,0.16,16.89,Brown Spot
+28.62,90.35,1.66,23.1,Leaf scald
+27.55,91.55,11.38,18.28,Leaf scald
+23.06,93.83,8.27,6.89,Brown Spot
+22.54,97.01,16.07,23.03,Leaf Blast
+27.05,55.23,1.2,9.47,Healthy Rice Leaf
+30.28,57.39,2.7,5.92,Healthy Rice Leaf
+28.64,67.9,3.34,10.84,Healthy Rice Leaf
+27.29,61.68,2.2,13.9,Healthy Rice Leaf
+30.9,91.89,16.17,22.21,Bacterial Leaf Blight
+23.92,89.95,5.04,23.81,Leaf scald
+29.86,84.39,8.98,17.76,Leaf scald
+25.17,84.7,8.4,21.74,Leaf scald
+32.48,89.44,17.54,16.36,Bacterial Leaf Blight
+27.17,52.18,3.44,10.39,Healthy Rice Leaf
+25.47,97.24,4.85,13.77,Brown Spot
+26.4,61.58,1.66,14.41,Healthy Rice Leaf
+24.44,84.31,5.79,22.83,Leaf scald
+25.09,85.79,16.97,23.62,Bacterial Leaf Blight
+30.62,89.15,18.32,15.03,Bacterial Leaf Blight
+23.86,98.21,13.66,17.04,Leaf Blast
+24.01,97.57,10.93,19.21,Leaf Blast
+20.81,93.73,5.66,14.2,Brown Spot
+23.51,93.79,14.99,21.52,Leaf Blast
+26.26,61.09,0.72,9.22,Healthy Rice Leaf
+24.39,98.84,19.16,18.45,Leaf Blast
+28.3,96.78,26.88,20.72,Bacterial Leaf Blight
+21.98,88.03,4.08,10.69,Brown Spot
+25.23,61.83,3.07,12.19,Healthy Rice Leaf
+26.46,93.13,7.33,15.29,Sheath Blight
+31.27,86.61,5.78,8.53,Sheath Blight
+23.44,50.96,1.17,3.74,Healthy Rice Leaf
+27.02,85.81,10.23,23.1,Bacterial Leaf Blight
+26.89,94.53,3.16,13.59,Brown Spot
+29.56,87.38,6.56,6.63,Sheath Blight
+29.83,83.17,13.08,18.97,Bacterial Leaf Blight
+26.86,63.97,0.84,8.07,Healthy Rice Leaf
+25.79,62.45,2.68,9.84,Healthy Rice Leaf
+27.86,54.3,1.98,10.58,Healthy Rice Leaf
+27.83,91.0,7.17,10.83,Brown Spot
+27.47,95.46,12.88,17.95,Leaf Blast
+26.99,90.85,8.21,16.61,Leaf Blast
+32.33,89.74,15.64,12.58,Bacterial Leaf Blight
+28.79,88.1,14.13,19.51,Leaf scald
+33.26,88.08,7.08,18.87,Sheath Blight
+24.37,91.64,5.86,12.35,Brown Spot
+27.82,90.77,12.09,12.39,Leaf scald
+26.89,93.22,10.18,18.65,Leaf Blast
+29.83,96.63,5.13,19.48,Sheath Blight
+34.68,85.57,5.6,3.43,Sheath Blight
+27.68,84.1,9.4,8.98,Leaf scald
+31.13,86.77,14.03,14.35,Bacterial Leaf Blight
+27.04,85.81,4.65,2.35,Brown Spot
+23.91,83.07,5.52,24.21,Leaf scald
+31.29,84.92,16.26,20.17,Bacterial Leaf Blight
+23.79,64.26,1.15,6.77,Healthy Rice Leaf
+25.74,62.6,4.56,8.39,Healthy Rice Leaf
+27.25,84.1,19.47,22.57,Leaf scald
+24.53,97.29,15.5,25.35,Bacterial Leaf Blight
+31.35,93.87,8.65,24.22,Bacterial Leaf Blight
+27.5,96.67,4.47,14.9,Brown Spot
+26.86,66.26,4.79,7.58,Healthy Rice Leaf
+26.17,93.8,7.94,23.26,Leaf Blast
+30.51,80.68,15.58,18.21,Leaf scald
+30.78,86.5,15.07,9.49,Sheath Blight
+29.25,88.81,1.58,25.12,Leaf scald
+25.28,89.24,6.68,12.03,Brown Spot
+25.55,82.76,18.75,11.42,Leaf scald
+28.16,90.32,16.39,9.2,Bacterial Leaf Blight
+29.58,81.62,28.64,21.92,Bacterial Leaf Blight
+32.46,91.14,5.45,14.74,Sheath Blight
+29.57,83.67,0.0,16.93,Leaf scald
+26.92,83.45,20.49,17.62,Bacterial Leaf Blight
+27.12,94.68,12.68,17.85,Leaf Blast
+25.95,87.59,14.24,16.06,Leaf Blast
+23.07,93.19,2.96,10.05,Brown Spot
+29.74,96.27,13.48,14.19,Sheath Blight
+22.01,67.27,0.48,8.84,Healthy Rice Leaf
+25.03,96.09,3.34,5.27,Brown Spot
+24.69,59.78,0.21,9.79,Healthy Rice Leaf
+25.69,87.23,16.45,17.47,Bacterial Leaf Blight
+31.46,90.03,20.87,29.54,Bacterial Leaf Blight
+21.92,91.17,12.25,22.65,Leaf Blast
+26.33,85.65,1.09,17.97,Leaf scald
+28.96,95.05,9.29,17.7,Sheath Blight
+22.83,83.03,14.14,20.33,Leaf scald
+29.42,91.1,2.52,8.98,Brown Spot
+17.87,87.43,5.24,14.32,Brown Spot
+23.84,91.29,7.63,10.66,Brown Spot
+33.81,90.32,9.15,16.36,Leaf scald
+32.36,95.9,7.94,10.85,Sheath Blight
+29.51,75.06,21.32,32.81,Bacterial Leaf Blight
+27.26,96.61,4.79,11.19,Brown Spot
+26.91,59.06,3.87,10.88,Healthy Rice Leaf
+25.25,56.24,0.28,10.03,Healthy Rice Leaf
+26.35,61.91,3.7,13.1,Healthy Rice Leaf
+28.34,92.37,18.29,10.99,Sheath Blight
+27.97,80.52,19.26,21.16,Bacterial Leaf Blight
+28.05,96.35,10.97,19.02,Leaf Blast
+25.33,93.32,5.48,15.0,Leaf Blast
+27.58,97.26,11.78,17.74,Leaf Blast
+26.26,53.4,2.62,10.32,Healthy Rice Leaf
+25.04,89.58,9.4,19.75,Leaf scald
+32.91,94.99,7.28,15.63,Sheath Blight
+32.39,93.38,8.15,14.81,Sheath Blight
+32.71,83.31,9.24,18.04,Leaf scald
+29.78,99.08,1.05,20.5,Sheath Blight
+33.26,90.62,15.48,15.34,Bacterial Leaf Blight
+23.4,98.46,2.39,12.11,Brown Spot
+25.54,82.49,9.82,12.08,Leaf scald
+21.73,89.71,2.89,9.98,Brown Spot
+25.13,92.51,3.43,9.81,Brown Spot
+28.65,84.45,2.15,19.15,Leaf scald
+22.82,87.06,6.44,11.61,Brown Spot
+21.33,56.78,1.21,6.7,Healthy Rice Leaf
+33.11,83.44,11.7,9.19,Brown Spot
+24.53,84.96,9.16,20.39,Leaf scald
+25.75,78.68,7.25,13.94,Leaf scald
+27.34,88.52,13.64,12.44,Leaf scald
+27.98,82.69,3.86,18.66,Leaf scald
+30.05,94.03,4.71,16.09,Sheath Blight
+22.65,65.5,4.68,11.49,Healthy Rice Leaf
+29.16,92.23,0.0,16.45,Sheath Blight
+28.42,79.67,4.35,17.18,Sheath Blight
+29.39,86.92,10.55,17.93,Bacterial Leaf Blight
+25.29,65.68,1.99,15.17,Healthy Rice Leaf
+30.82,88.08,6.63,13.41,Sheath Blight
+24.94,57.96,1.65,9.35,Healthy Rice Leaf
+26.56,91.86,20.8,4.2,Leaf Blast
+29.93,90.81,24.93,20.86,Bacterial Leaf Blight
+21.69,96.25,18.19,13.14,Leaf Blast
+29.66,88.16,6.01,13.23,Sheath Blight
+28.77,89.77,7.24,13.28,Brown Spot
+29.99,85.71,0.0,13.55,Sheath Blight
+25.5,85.3,1.74,8.79,Brown Spot
+28.74,93.12,15.31,17.14,Sheath Blight
+22.19,85.35,6.17,18.88,Brown Spot
+24.6,63.16,2.01,13.42,Healthy Rice Leaf
+32.82,88.51,3.97,9.09,Sheath Blight
+29.39,84.97,9.37,14.89,Leaf scald
+25.36,91.6,0.87,9.14,Brown Spot
+24.78,92.5,13.45,16.58,Leaf Blast
+27.38,86.43,6.13,22.23,Leaf scald
+30.43,87.56,2.95,14.78,Leaf scald
+32.37,84.91,9.24,30.98,Bacterial Leaf Blight
+32.99,89.96,7.62,15.38,Sheath Blight
+24.03,92.14,5.46,10.9,Brown Spot
+30.35,93.87,10.88,8.91,Sheath Blight
+32.0,89.88,9.12,9.23,Sheath Blight
+32.24,87.7,11.5,14.23,Sheath Blight
+28.14,87.14,20.82,21.78,Bacterial Leaf Blight
+27.01,88.81,14.05,19.36,Bacterial Leaf Blight
+28.21,86.62,7.17,19.65,Bacterial Leaf Blight
+25.83,55.6,2.98,12.41,Healthy Rice Leaf
+22.84,98.16,19.82,13.61,Leaf Blast
+30.97,89.47,7.71,13.34,Sheath Blight
+23.44,92.68,13.41,1.63,Leaf Blast
+25.05,91.35,5.05,19.8,Leaf Blast
+31.52,90.09,6.04,12.34,Brown Spot
+32.04,92.07,16.89,10.74,Sheath Blight
+20.46,95.8,12.79,13.53,Leaf Blast
+34.36,100.0,0.0,12.1,Sheath Blight
+31.89,88.64,7.64,9.64,Sheath Blight
+22.54,95.9,13.36,22.39,Leaf Blast
+22.24,96.09,9.0,21.14,Leaf Blast
+32.47,84.46,21.09,12.93,Bacterial Leaf Blight
+23.48,86.94,4.43,17.37,Leaf scald
+28.13,76.23,4.21,15.06,Leaf scald
+26.42,97.16,11.93,14.77,Leaf Blast
+23.77,90.81,18.11,14.95,Leaf Blast
+24.79,95.64,13.14,12.75,Leaf Blast
+29.04,90.7,4.65,11.95,Brown Spot
+30.98,92.47,17.76,23.69,Bacterial Leaf Blight
+22.11,82.84,9.37,13.79,Leaf scald
+32.03,84.16,6.31,11.98,Brown Spot
+31.77,85.82,18.39,16.64,Bacterial Leaf Blight
+24.82,64.12,2.8,8.52,Healthy Rice Leaf
+27.05,91.1,14.75,16.71,Leaf Blast
+30.69,88.05,3.56,7.12,Brown Spot
+22.6,90.53,4.68,15.18,Brown Spot
+30.3,96.53,9.56,11.81,Sheath Blight
+33.57,87.67,5.07,8.38,Sheath Blight
+27.56,83.79,10.41,15.77,Leaf scald
+23.66,95.52,4.89,10.96,Brown Spot
+29.96,91.82,0.82,4.46,Sheath Blight
+30.1,84.46,8.99,17.45,Leaf scald
+31.37,79.9,1.3,8.27,Sheath Blight
+25.76,67.81,3.17,12.54,Healthy Rice Leaf
+32.11,93.85,2.12,17.99,Sheath Blight
+30.45,83.09,6.19,14.12,Brown Spot
+15.0,92.58,1.58,14.58,Brown Spot
+20.94,93.01,9.7,10.3,Leaf Blast
+30.05,80.4,13.07,18.86,Leaf scald
+29.92,95.33,15.29,19.88,Bacterial Leaf Blight
+26.22,87.76,8.73,16.64,Leaf scald
+23.77,94.1,6.33,11.67,Brown Spot
+31.89,89.69,9.02,11.59,Brown Spot
+23.55,60.15,4.56,8.87,Healthy Rice Leaf
+25.81,90.52,9.2,4.49,Brown Spot
+22.09,94.65,6.05,14.97,Leaf scald
+27.28,61.87,3.46,11.34,Healthy Rice Leaf
+22.5,83.13,6.54,14.42,Leaf scald
+23.92,60.31,0.0,9.87,Healthy Rice Leaf
+31.19,80.09,10.81,14.12,Leaf scald
+20.71,82.73,4.7,21.81,Leaf scald
+28.2,100.0,14.35,18.33,Leaf Blast
+27.88,85.23,25.45,29.9,Bacterial Leaf Blight
+31.2,56.57,3.82,12.99,Healthy Rice Leaf
+33.68,90.38,17.67,14.25,Bacterial Leaf Blight
+25.74,91.78,7.06,4.9,Brown Spot
+33.62,91.52,6.06,10.28,Sheath Blight
+23.51,93.06,13.44,8.37,Leaf Blast
+25.63,94.41,4.12,21.01,Leaf Blast
+30.48,91.93,16.8,19.61,Bacterial Leaf Blight
+27.14,88.42,17.43,26.62,Bacterial Leaf Blight
+29.64,57.94,0.17,10.83,Healthy Rice Leaf
+28.21,60.02,3.68,8.27,Healthy Rice Leaf
+26.67,46.74,3.02,9.35,Healthy Rice Leaf
+24.03,84.72,6.84,8.87,Brown Spot
+34.24,84.87,22.24,31.88,Bacterial Leaf Blight
+28.61,91.85,7.26,15.02,Leaf scald
+28.48,84.43,7.43,24.75,Bacterial Leaf Blight
+21.66,95.68,5.46,15.81,Brown Spot
+25.33,58.95,3.99,10.04,Healthy Rice Leaf
+29.8,91.87,0.0,12.01,Brown Spot
+34.03,86.51,16.68,20.02,Bacterial Leaf Blight
+25.51,53.61,1.41,15.33,Healthy Rice Leaf
+32.64,88.05,1.73,7.91,Sheath Blight
+27.26,88.39,7.44,19.53,Leaf scald
+26.61,91.29,4.71,16.28,Brown Spot
+32.44,88.56,12.53,19.81,Bacterial Leaf Blight
+22.95,96.67,9.56,8.26,Leaf Blast
+30.9,93.27,7.19,11.02,Brown Spot
+20.34,90.05,14.2,16.22,Leaf Blast
+31.25,87.29,8.5,14.22,Leaf scald
+26.48,50.54,1.74,16.36,Healthy Rice Leaf
+34.97,92.71,6.95,10.91,Sheath Blight
+23.03,92.84,2.64,4.85,Brown Spot
+26.96,65.94,0.0,11.49,Healthy Rice Leaf
+31.74,94.41,10.76,11.07,Leaf scald
+33.06,99.1,8.15,16.79,Sheath Blight
+21.49,86.99,5.02,4.32,Leaf scald
+28.64,74.25,12.46,13.53,Leaf scald
+26.88,85.77,12.6,22.62,Leaf scald
+24.93,58.62,2.76,6.52,Healthy Rice Leaf
+25.35,84.88,9.13,19.58,Leaf scald
+29.32,81.44,4.06,16.19,Leaf scald
+26.34,86.24,7.06,13.72,Leaf scald
+27.43,78.19,16.41,19.01,Bacterial Leaf Blight
+25.21,86.18,3.09,11.14,Leaf scald
+20.73,89.01,11.17,21.17,Leaf scald
+33.2,86.06,24.6,23.11,Bacterial Leaf Blight
+29.17,84.02,5.53,11.12,Sheath Blight
+24.72,96.56,13.53,19.55,Leaf Blast
+26.24,94.08,21.85,19.13,Bacterial Leaf Blight
+26.91,54.25,1.32,5.82,Healthy Rice Leaf
+29.15,62.07,3.78,14.75,Healthy Rice Leaf
+29.22,92.05,8.86,16.8,Leaf Blast
+26.06,56.88,0.47,7.03,Healthy Rice Leaf
+31.84,87.83,18.88,27.16,Bacterial Leaf Blight
+24.34,95.76,17.24,20.79,Leaf Blast
+29.6,92.21,9.64,17.46,Sheath Blight
+22.21,95.47,13.75,28.21,Leaf Blast
+27.42,93.82,13.91,15.99,Leaf Blast
+23.04,66.6,2.06,5.4,Healthy Rice Leaf
+32.44,92.81,7.65,15.07,Sheath Blight
+27.64,92.79,24.49,17.44,Bacterial Leaf Blight
+30.84,52.91,2.41,7.68,Healthy Rice Leaf
+28.85,99.88,3.19,10.57,Brown Spot
+23.25,84.13,12.25,11.92,Leaf scald
+28.57,100.0,10.52,12.83,Leaf Blast
+28.73,57.19,2.72,4.25,Healthy Rice Leaf
+27.86,81.21,14.34,20.31,Bacterial Leaf Blight
+25.84,96.05,7.48,9.74,Brown Spot
+27.33,62.1,0.96,12.72,Healthy Rice Leaf
+23.94,64.43,3.54,10.03,Healthy Rice Leaf
+25.6,80.92,7.51,17.33,Leaf scald
+28.55,56.86,1.3,10.14,Healthy Rice Leaf
+26.72,66.13,1.26,12.94,Healthy Rice Leaf
+32.43,93.86,16.3,4.29,Sheath Blight
+25.69,54.96,1.36,11.52,Healthy Rice Leaf
+32.42,92.39,3.86,17.91,Sheath Blight
+28.4,92.31,4.59,13.89,Brown Spot
+31.28,96.34,6.02,12.64,Sheath Blight
+31.09,91.07,4.32,12.1,Sheath Blight
+29.25,86.03,5.68,11.49,Leaf scald
+28.07,94.27,13.71,15.36,Leaf Blast
+22.15,82.8,2.05,23.99,Leaf scald
+30.11,92.2,4.55,12.08,Brown Spot
+29.88,89.62,10.37,8.83,Sheath Blight
+28.77,92.52,14.52,10.55,Sheath Blight
+25.07,96.31,11.2,9.81,Leaf Blast
+21.33,92.87,9.33,20.33,Leaf Blast
+32.24,94.42,5.19,14.55,Brown Spot
+28.98,82.87,11.36,18.85,Sheath Blight
+24.6,94.26,15.03,17.05,Leaf Blast
+26.98,94.62,7.23,13.42,Brown Spot
+26.0,87.41,1.95,12.73,Brown Spot
+29.28,91.54,12.74,23.5,Bacterial Leaf Blight
+23.27,95.83,12.15,26.45,Leaf Blast
+25.49,54.39,0.0,5.13,Healthy Rice Leaf
+25.91,92.6,4.94,12.05,Brown Spot
+28.11,96.02,6.66,20.0,Brown Spot
+26.61,54.48,0.51,8.24,Healthy Rice Leaf
+27.82,94.27,9.06,10.44,Leaf scald
+32.74,74.43,6.64,11.65,Leaf scald
+26.73,85.27,10.23,20.39,Leaf scald
+31.09,93.88,6.23,20.99,Leaf Blast
+28.94,96.86,6.64,14.08,Brown Spot
+34.98,92.83,6.18,14.53,Brown Spot
+29.67,61.95,1.45,8.63,Healthy Rice Leaf
+26.75,97.08,3.43,7.2,Brown Spot
+25.66,92.78,5.47,16.52,Brown Spot
+32.09,89.59,8.97,11.75,Brown Spot
+33.04,88.54,9.68,13.01,Sheath Blight
+33.07,90.36,4.45,10.15,Sheath Blight
+29.7,63.77,3.36,6.01,Healthy Rice Leaf
+30.29,86.05,16.84,21.93,Bacterial Leaf Blight
+34.65,94.57,27.73,21.32,Bacterial Leaf Blight
+27.57,86.58,7.25,11.2,Sheath Blight
+26.35,66.07,2.84,7.6,Healthy Rice Leaf
+28.38,62.24,1.82,9.73,Healthy Rice Leaf
+20.63,98.01,7.67,23.2,Leaf Blast
+21.46,94.13,9.08,4.38,Brown Spot
+33.57,89.14,1.96,29.48,Bacterial Leaf Blight
+27.62,93.49,16.63,17.13,Leaf Blast
+30.42,84.03,2.62,15.18,Brown Spot
+30.11,95.06,6.32,17.0,Leaf scald
+21.86,91.78,12.89,13.56,Leaf Blast
+18.18,84.55,3.98,4.09,Brown Spot
+28.18,59.61,1.01,2.68,Healthy Rice Leaf
+35.32,95.53,7.75,9.28,Sheath Blight
+28.67,61.39,1.72,11.44,Healthy Rice Leaf
+30.81,95.39,5.86,21.89,Bacterial Leaf Blight
+25.29,96.63,1.8,8.3,Brown Spot
+27.63,94.76,0.08,4.65,Brown Spot
+28.04,92.49,12.12,17.61,Sheath Blight
+23.49,94.37,20.96,11.78,Leaf Blast
+20.14,94.07,4.4,4.95,Brown Spot
+20.11,89.18,12.1,8.47,Leaf Blast
+28.51,95.45,0.73,2.61,Brown Spot
+26.57,83.75,26.74,21.31,Bacterial Leaf Blight
+28.91,85.88,5.37,22.93,Bacterial Leaf Blight
+26.77,62.99,2.94,2.88,Healthy Rice Leaf
+27.28,90.16,8.33,14.58,Leaf Blast
+25.59,65.23,1.19,10.25,Healthy Rice Leaf
+26.97,91.72,13.65,16.9,Leaf scald
+25.18,94.94,9.36,12.44,Leaf Blast
+33.03,87.35,11.44,5.44,Brown Spot
+22.34,53.01,2.17,5.02,Healthy Rice Leaf
+19.95,95.2,9.1,26.26,Leaf Blast
+28.66,49.46,2.55,7.29,Healthy Rice Leaf
+31.41,95.64,8.8,10.67,Sheath Blight
+25.03,85.94,10.29,7.99,Leaf scald
+23.06,97.19,15.46,22.54,Leaf Blast
+25.62,95.66,6.31,13.33,Leaf Blast
+20.42,82.9,11.27,16.22,Leaf scald
+25.33,56.69,2.08,10.61,Healthy Rice Leaf
+28.3,83.92,11.98,24.81,Bacterial Leaf Blight
+29.37,81.2,11.12,21.48,Bacterial Leaf Blight
+28.8,88.52,10.99,31.24,Bacterial Leaf Blight
+29.17,81.12,15.85,25.08,Bacterial Leaf Blight
+20.62,86.79,5.67,28.4,Leaf scald
+26.71,89.03,12.87,20.79,Leaf scald
+32.39,93.13,5.88,26.78,Leaf scald
+23.81,52.32,1.13,9.12,Healthy Rice Leaf
+28.52,87.93,5.91,16.59,Leaf scald
+23.59,94.19,17.36,21.34,Leaf Blast
+24.91,47.75,0.0,7.89,Healthy Rice Leaf
+33.09,87.96,19.8,14.59,Bacterial Leaf Blight
+35.57,87.69,21.55,25.69,Bacterial Leaf Blight
+27.23,88.8,9.11,18.28,Leaf Blast
+26.81,76.44,6.01,12.05,Leaf scald
+32.82,88.71,18.23,22.57,Bacterial Leaf Blight
+21.12,90.23,13.13,10.42,Leaf Blast
+27.68,63.18,4.05,9.9,Healthy Rice Leaf
+29.29,91.85,2.03,6.92,Bacterial Leaf Blight
+23.14,88.43,14.35,23.52,Leaf Blast
+27.62,88.07,11.27,20.62,Leaf scald
+29.57,90.24,12.01,11.83,Sheath Blight
+23.32,92.44,5.42,14.07,Leaf scald
+25.64,53.86,2.99,13.03,Healthy Rice Leaf
+27.3,87.58,17.91,27.45,Bacterial Leaf Blight
+25.21,98.66,4.28,10.57,Brown Spot
+20.75,91.8,12.03,15.9,Leaf Blast
+23.25,62.78,1.05,8.05,Healthy Rice Leaf
+23.17,91.29,7.1,29.6,Leaf Blast
+28.64,86.76,9.32,14.9,Leaf scald
+29.42,93.03,0.5,11.07,Sheath Blight
+23.15,59.42,1.52,11.92,Healthy Rice Leaf
+26.94,91.5,13.33,23.19,Leaf Blast
+31.64,84.47,8.43,21.14,Leaf scald
+27.16,96.95,6.41,26.57,Leaf Blast
+25.66,59.56,1.99,12.46,Healthy Rice Leaf
+31.6,93.25,12.63,18.78,Sheath Blight
+30.57,89.87,4.65,16.21,Leaf scald
+24.61,92.58,19.09,19.12,Leaf Blast
+25.73,61.99,0.59,9.71,Healthy Rice Leaf
+26.88,63.39,0.0,7.09,Healthy Rice Leaf
+28.56,98.57,2.37,14.14,Sheath Blight
+28.72,75.89,20.94,14.6,Bacterial Leaf Blight
+29.63,86.51,10.71,15.44,Leaf scald
+25.65,78.76,15.8,23.07,Bacterial Leaf Blight
+29.98,89.09,8.11,10.91,Sheath Blight
+24.69,88.06,7.04,14.94,Leaf scald
+25.33,59.71,2.32,7.78,Healthy Rice Leaf
+29.76,84.72,11.48,14.27,Leaf scald
+25.35,81.88,8.26,19.2,Leaf scald
+20.83,95.21,2.08,13.75,Brown Spot
+28.74,88.01,14.26,22.0,Leaf scald
+24.47,84.44,5.56,17.19,Leaf scald
+24.96,52.2,2.9,8.86,Healthy Rice Leaf
+25.77,79.8,5.94,21.82,Leaf scald
+27.69,87.88,24.66,19.69,Bacterial Leaf Blight
+26.59,41.76,3.9,6.45,Healthy Rice Leaf
+26.97,98.1,15.19,8.35,Leaf Blast
+26.87,54.06,1.99,8.68,Healthy Rice Leaf
+25.37,51.54,2.61,10.72,Healthy Rice Leaf
+30.0,91.03,11.39,14.86,Sheath Blight
+29.52,85.54,3.78,13.33,Sheath Blight
+31.49,89.94,18.21,20.48,Bacterial Leaf Blight
+26.62,92.06,7.33,16.13,Brown Spot
+20.42,91.95,2.43,15.39,Brown Spot
+31.23,89.37,1.49,7.65,Sheath Blight
+28.14,86.16,14.2,29.74,Bacterial Leaf Blight
+29.5,94.69,10.37,8.38,Sheath Blight
+25.91,80.68,8.61,14.1,Leaf scald
+29.78,88.48,0.0,12.4,Sheath Blight
+26.37,91.99,15.87,21.96,Leaf Blast
+31.01,76.57,19.49,10.32,Bacterial Leaf Blight
+21.5,93.54,13.64,17.34,Leaf Blast
+23.61,93.22,2.78,15.38,Brown Spot
+23.4,96.16,8.27,20.04,Leaf Blast
+24.34,96.14,6.51,17.41,Leaf Blast
+23.35,55.53,1.69,11.75,Healthy Rice Leaf
+26.46,48.4,1.84,11.3,Healthy Rice Leaf
+24.48,95.41,9.76,22.63,Leaf Blast
+27.86,84.71,7.57,20.08,Leaf scald
+21.35,86.93,5.25,7.48,Brown Spot
+27.09,77.5,16.72,26.2,Leaf scald
+25.3,61.94,0.39,7.64,Healthy Rice Leaf
+27.4,94.64,9.09,17.64,Leaf scald
+30.7,96.14,15.01,13.22,Leaf scald
+26.16,93.47,5.62,22.29,Leaf Blast
+27.93,87.71,14.64,17.45,Bacterial Leaf Blight
+22.37,93.98,8.65,21.4,Leaf Blast
+32.12,90.69,4.4,13.2,Sheath Blight
+25.23,91.65,13.57,16.75,Leaf scald
+33.3,91.53,20.8,21.02,Bacterial Leaf Blight
+25.02,75.46,4.88,16.94,Leaf scald
+21.27,88.87,5.94,20.9,Leaf Blast
+28.27,90.72,10.0,10.16,Leaf Blast
+32.63,89.76,4.98,8.42,Sheath Blight
+32.01,93.28,13.65,19.21,Bacterial Leaf Blight
+29.05,93.25,14.74,17.09,Sheath Blight
+25.08,59.52,0.0,11.7,Healthy Rice Leaf
+34.32,97.04,10.17,9.48,Sheath Blight
+27.78,92.66,4.75,17.52,Brown Spot
+29.93,85.74,23.98,14.4,Bacterial Leaf Blight
+21.85,91.4,5.88,16.98,Leaf scald
+25.8,84.7,11.42,14.02,Brown Spot
+25.19,57.82,2.99,11.17,Healthy Rice Leaf
+30.83,88.82,26.47,21.6,Bacterial Leaf Blight
+22.92,98.29,10.36,18.41,Leaf Blast
+29.83,91.02,5.31,10.3,Sheath Blight
+25.03,94.98,8.84,16.14,Leaf Blast
+23.93,57.76,1.08,11.41,Healthy Rice Leaf
+33.04,80.77,9.26,15.22,Leaf scald
+23.1,63.91,3.09,8.37,Healthy Rice Leaf
+30.23,90.49,7.76,18.02,Leaf scald
+26.83,63.83,0.96,1.71,Healthy Rice Leaf
+31.84,84.35,16.27,26.68,Bacterial Leaf Blight
+28.96,85.06,18.01,26.8,Bacterial Leaf Blight
+23.97,93.02,21.79,20.45,Leaf Blast
+31.74,89.82,18.58,22.21,Bacterial Leaf Blight
+28.78,91.53,7.41,9.07,Sheath Blight
+27.49,97.29,2.33,15.65,Leaf Blast
+35.88,84.28,5.73,5.72,Leaf scald
+32.34,90.95,8.13,9.74,Brown Spot
+25.53,92.3,22.55,24.11,Bacterial Leaf Blight
+29.99,94.39,11.73,19.59,Bacterial Leaf Blight
+25.45,63.24,0.0,10.48,Healthy Rice Leaf
+31.14,88.31,5.42,12.48,Sheath Blight
+29.56,84.24,16.2,18.66,Leaf scald
+25.61,86.6,6.6,10.63,Brown Spot
+30.76,77.08,17.16,30.37,Bacterial Leaf Blight
+26.95,98.68,11.1,14.76,Leaf Blast
+31.2,80.36,20.13,21.17,Bacterial Leaf Blight
+28.67,62.83,1.31,13.14,Healthy Rice Leaf
+20.71,90.96,4.33,10.28,Brown Spot
+29.75,89.0,23.7,28.68,Bacterial Leaf Blight
+28.76,85.95,13.33,15.27,Bacterial Leaf Blight
+28.18,94.74,4.33,10.53,Brown Spot
+26.52,64.27,2.87,12.54,Healthy Rice Leaf
+29.16,46.64,2.17,8.95,Healthy Rice Leaf
+32.38,85.73,9.35,16.59,Sheath Blight
+24.81,61.13,2.11,12.37,Healthy Rice Leaf
+23.04,92.87,7.81,18.36,Leaf Blast
+25.59,86.04,9.6,7.69,Brown Spot
+30.87,86.5,8.46,9.2,Sheath Blight
+27.65,90.44,5.61,10.81,Sheath Blight
+22.38,85.19,14.39,15.66,Leaf scald
+26.52,62.62,4.14,11.63,Healthy Rice Leaf
+34.31,87.81,18.47,24.83,Bacterial Leaf Blight
+28.08,95.82,3.89,11.79,Brown Spot
+25.42,64.43,2.57,7.77,Healthy Rice Leaf
+26.43,95.79,16.49,13.9,Leaf Blast
+29.03,82.71,6.71,29.76,Leaf scald
+28.12,95.73,0.19,9.34,Sheath Blight
+20.81,93.93,6.4,13.29,Brown Spot
+31.98,87.72,13.75,22.36,Bacterial Leaf Blight
+28.05,85.18,16.58,20.0,Bacterial Leaf Blight
+26.32,61.98,2.49,10.75,Healthy Rice Leaf
+22.48,82.26,10.12,12.91,Leaf scald
+22.26,89.99,7.02,13.44,Brown Spot
+27.73,78.19,19.5,22.29,Bacterial Leaf Blight
+25.78,93.27,7.79,9.51,Leaf Blast
+32.78,94.32,4.52,6.17,Sheath Blight
+30.25,89.47,7.25,18.31,Sheath Blight
+30.31,97.83,5.99,17.06,Brown Spot
+26.02,63.08,3.48,13.0,Healthy Rice Leaf
+24.25,93.49,18.71,25.66,Leaf Blast
+29.42,91.28,8.71,10.3,Sheath Blight
+25.55,98.7,13.82,16.52,Leaf Blast
+27.72,94.5,8.96,21.24,Leaf Blast
+26.48,67.58,2.93,12.52,Healthy Rice Leaf
+28.46,91.41,5.63,9.84,Brown Spot
+21.25,92.38,4.92,14.09,Brown Spot
+26.99,90.13,4.42,11.73,Brown Spot
+32.91,97.23,6.44,13.71,Sheath Blight
+26.22,77.52,9.8,8.25,Leaf scald
+28.68,89.27,29.73,25.34,Bacterial Leaf Blight
+22.54,95.94,12.89,19.61,Leaf Blast
+24.02,51.07,4.27,10.77,Healthy Rice Leaf
+23.6,87.16,6.68,16.9,Leaf scald
+30.32,96.15,2.45,13.42,Sheath Blight
+26.73,60.07,1.78,8.39,Healthy Rice Leaf
+23.12,91.37,2.64,15.82,Leaf Blast
+20.22,88.7,6.79,11.11,Brown Spot
+27.77,78.34,8.8,9.7,Leaf scald
+25.99,57.55,1.68,7.57,Healthy Rice Leaf
+29.62,82.41,3.92,11.14,Leaf scald
+23.52,89.95,17.63,21.77,Leaf Blast
+25.19,59.08,2.32,5.43,Healthy Rice Leaf
+23.84,88.04,2.13,15.3,Brown Spot
+24.97,87.68,9.24,15.42,Leaf scald
+27.1,96.48,7.5,11.47,Leaf Blast
+30.82,94.63,23.3,30.33,Bacterial Leaf Blight
+19.57,89.33,13.57,14.44,Leaf Blast
+33.86,93.03,8.74,11.29,Sheath Blight
+25.62,48.6,2.55,10.62,Healthy Rice Leaf
+22.5,91.71,4.85,16.05,Brown Spot
+25.91,65.56,9.14,22.54,Leaf scald
+30.71,76.63,15.57,20.25,Bacterial Leaf Blight
+24.21,56.46,1.06,10.67,Healthy Rice Leaf
+25.1,53.12,4.22,7.89,Healthy Rice Leaf
+28.7,86.73,9.11,14.66,Leaf scald
+22.01,88.31,12.68,16.98,Leaf Blast
+30.02,85.51,4.38,23.26,Leaf scald
+24.93,92.93,13.8,22.15,Leaf scald
+20.5,98.19,17.63,15.34,Leaf Blast
+31.15,92.76,26.67,26.26,Bacterial Leaf Blight
+27.62,87.48,5.96,16.68,Brown Spot
+29.75,61.13,0.25,9.63,Healthy Rice Leaf
+25.94,90.26,11.3,17.76,Leaf Blast
+22.89,94.32,11.7,14.55,Leaf Blast
+25.39,71.41,0.37,10.37,Healthy Rice Leaf
+23.69,61.64,2.3,11.44,Healthy Rice Leaf
+27.46,86.85,4.26,15.73,Sheath Blight
+28.69,93.19,4.82,15.7,Brown Spot
+20.41,97.19,8.99,11.53,Brown Spot
+23.54,93.16,4.09,11.53,Brown Spot
+33.86,87.42,6.28,7.43,Sheath Blight
+28.82,99.95,7.14,12.97,Leaf Blast
+21.78,93.31,13.4,12.05,Leaf Blast
+31.1,60.3,0.26,7.5,Healthy Rice Leaf
+27.31,86.62,4.2,6.11,Brown Spot
+23.84,80.69,4.54,16.83,Leaf scald
+33.25,92.97,7.55,9.89,Sheath Blight
+30.26,61.56,0.0,10.13,Healthy Rice Leaf
+23.21,90.11,4.29,20.29,Leaf scald
+24.61,63.62,3.62,11.81,Healthy Rice Leaf
+20.58,94.2,3.99,8.15,Brown Spot
+23.18,96.78,9.26,20.57,Leaf Blast
+32.93,91.87,8.4,15.63,Sheath Blight
+25.43,90.82,8.92,9.0,Brown Spot
+22.69,97.7,21.88,27.15,Leaf Blast
+24.5,94.04,13.5,10.4,Leaf Blast
+21.9,91.85,6.18,11.96,Brown Spot
+23.98,53.39,3.01,14.57,Healthy Rice Leaf
+31.9,94.96,28.92,28.94,Bacterial Leaf Blight
+21.1,95.21,13.8,22.28,Leaf Blast
+31.41,92.69,5.9,17.64,Sheath Blight
+26.85,86.14,21.96,19.83,Bacterial Leaf Blight
+27.1,66.45,0.4,8.89,Healthy Rice Leaf
+30.72,94.99,25.63,22.11,Bacterial Leaf Blight
+31.03,76.33,21.67,27.87,Bacterial Leaf Blight
+32.34,90.28,6.6,11.63,Sheath Blight
+22.94,95.34,10.14,9.64,Leaf Blast
+24.35,94.88,6.61,13.33,Brown Spot
+24.35,91.97,7.83,14.24,Brown Spot
+26.34,76.71,7.03,14.16,Leaf scald
+26.47,59.75,3.54,16.82,Healthy Rice Leaf
+33.38,96.1,7.57,12.19,Sheath Blight
+29.5,95.71,3.16,10.47,Brown Spot
+29.06,80.48,2.35,20.9,Leaf scald
+28.0,82.94,28.57,24.52,Bacterial Leaf Blight
+19.33,95.3,4.6,12.31,Brown Spot
+30.3,94.66,16.92,21.34,Bacterial Leaf Blight
+21.72,93.16,7.86,19.79,Leaf Blast
+23.77,60.85,0.0,13.71,Healthy Rice Leaf
+27.27,90.86,3.78,13.13,Brown Spot
+33.11,93.06,11.69,11.54,Sheath Blight
+28.74,94.1,5.33,12.36,Sheath Blight
+28.81,88.93,31.38,34.54,Bacterial Leaf Blight
+27.36,58.77,4.87,6.67,Healthy Rice Leaf
+32.04,89.5,1.93,4.5,Sheath Blight
+25.26,95.07,11.54,12.75,Leaf Blast
+28.42,85.92,9.56,11.76,Leaf scald
+24.67,91.25,6.53,11.99,Leaf Blast
+28.47,91.49,15.58,14.82,Sheath Blight
+30.52,94.94,2.28,11.13,Sheath Blight
+31.35,92.78,28.34,14.95,Bacterial Leaf Blight
+29.58,89.37,7.4,16.37,Sheath Blight
+32.9,84.07,22.92,29.32,Bacterial Leaf Blight
+32.68,87.41,10.17,10.7,Leaf scald
+26.52,84.61,13.02,14.18,Leaf scald
+27.53,90.39,9.6,15.35,Leaf scald
+21.38,94.59,4.85,8.62,Brown Spot
+28.9,95.56,6.61,8.23,Brown Spot
+21.87,97.18,6.82,7.98,Brown Spot
+27.16,89.97,17.08,11.38,Leaf Blast
+31.55,88.63,8.7,4.66,Sheath Blight
+25.45,93.26,12.08,13.81,Leaf Blast
+26.95,86.06,7.64,6.15,Leaf scald
+31.44,87.3,17.82,24.07,Bacterial Leaf Blight
+30.1,89.21,4.96,5.47,Brown Spot
+23.71,91.0,14.49,15.87,Leaf scald
+32.73,88.02,5.76,12.23,Sheath Blight
+27.57,92.96,20.09,18.84,Bacterial Leaf Blight
+23.08,94.15,10.15,16.74,Leaf Blast
+27.98,83.32,4.09,29.03,Leaf scald
+29.38,100.0,5.02,14.24,Brown Spot
+31.61,100.0,2.29,8.38,Sheath Blight
+27.14,97.84,15.28,18.51,Bacterial Leaf Blight
+24.63,96.77,11.81,22.07,Leaf Blast
+30.1,86.13,16.17,22.84,Bacterial Leaf Blight
+31.69,93.28,10.02,12.69,Sheath Blight
+32.66,89.44,0.05,9.89,Sheath Blight
+27.84,77.88,1.47,11.02,Brown Spot
+29.11,94.31,14.21,18.62,Leaf Blast
+25.26,95.97,8.64,17.06,Leaf Blast
+25.83,93.85,9.24,14.35,Leaf Blast
+30.8,89.8,7.99,15.6,Sheath Blight
+28.23,91.89,22.56,13.07,Bacterial Leaf Blight
+27.95,89.87,15.4,21.05,Bacterial Leaf Blight
+27.83,60.42,0.93,8.15,Healthy Rice Leaf
+25.54,81.62,21.29,19.58,Bacterial Leaf Blight
+27.94,54.82,2.57,11.75,Healthy Rice Leaf
+29.9,81.51,24.73,20.19,Bacterial Leaf Blight
+29.24,86.28,18.76,20.98,Bacterial Leaf Blight
+29.8,89.02,7.25,15.8,Leaf scald
+27.81,80.87,12.62,12.81,Leaf scald
+23.04,90.94,10.78,14.3,Leaf Blast
+31.03,85.18,11.41,17.63,Sheath Blight
+22.36,93.17,10.06,19.81,Leaf Blast
+24.26,95.58,12.0,12.23,Leaf Blast
+30.48,92.26,6.16,22.74,Bacterial Leaf Blight
+27.32,90.58,0.0,16.17,Leaf scald
+24.85,95.48,8.52,17.88,Bacterial Leaf Blight
+27.81,93.05,6.16,12.16,Brown Spot
+25.41,56.04,0.0,11.22,Healthy Rice Leaf
+31.48,95.66,11.17,25.91,Leaf scald
+27.9,81.56,2.17,24.24,Leaf scald
+26.52,95.06,7.9,19.71,Leaf Blast
+24.32,88.2,20.37,14.39,Leaf Blast
+23.55,69.53,0.39,7.17,Healthy Rice Leaf
+31.53,94.05,22.47,24.46,Bacterial Leaf Blight
+26.03,91.26,4.21,19.54,Brown Spot
+30.67,83.38,8.01,10.88,Brown Spot
+32.34,87.88,8.95,10.85,Sheath Blight
+25.36,95.91,4.01,8.65,Brown Spot
+31.8,83.59,22.77,24.17,Bacterial Leaf Blight
+31.03,59.86,3.47,10.05,Healthy Rice Leaf
+30.0,84.74,18.38,19.49,Bacterial Leaf Blight
+27.27,63.06,2.02,13.27,Healthy Rice Leaf
+24.51,90.32,16.09,11.45,Leaf Blast
+35.37,90.15,9.86,11.09,Sheath Blight
+25.17,93.35,12.05,20.96,Leaf Blast
+31.67,90.69,16.5,19.9,Bacterial Leaf Blight
+27.04,85.85,23.3,24.86,Bacterial Leaf Blight
+30.84,78.11,7.54,11.24,Leaf scald
+20.98,85.99,28.08,18.53,Bacterial Leaf Blight
+21.47,96.18,9.32,18.54,Leaf Blast
+24.24,52.79,0.0,4.87,Healthy Rice Leaf
+24.56,86.91,17.74,19.31,Bacterial Leaf Blight
+27.48,54.02,1.16,15.68,Healthy Rice Leaf
+26.88,58.72,0.86,11.89,Healthy Rice Leaf
+24.84,56.37,2.22,11.08,Healthy Rice Leaf
+28.41,66.22,4.27,7.0,Healthy Rice Leaf
+28.08,83.65,4.87,17.48,Leaf scald
+25.02,81.71,10.28,8.92,Leaf scald
+30.24,89.94,9.21,7.99,Sheath Blight
+25.34,90.72,3.44,13.39,Brown Spot
+26.48,61.7,3.49,8.97,Healthy Rice Leaf
+22.91,81.58,2.99,21.85,Brown Spot
+26.72,94.41,14.45,22.65,Leaf Blast
+30.83,89.23,2.5,9.93,Sheath Blight
+29.88,90.23,16.34,21.05,Bacterial Leaf Blight
+26.22,93.4,12.73,14.87,Leaf Blast
+28.28,95.92,0.0,12.85,Sheath Blight
+25.43,58.65,0.32,13.08,Healthy Rice Leaf
+27.34,89.27,8.64,15.02,Leaf scald
+29.15,86.82,22.06,25.03,Bacterial Leaf Blight
+26.24,81.52,9.31,19.53,Leaf scald
+27.43,81.96,9.02,13.21,Leaf scald
+28.36,91.02,7.41,12.79,Brown Spot
+26.77,54.77,2.0,11.26,Healthy Rice Leaf
+23.97,54.59,2.54,10.28,Healthy Rice Leaf
+22.15,92.55,10.05,12.54,Brown Spot
+23.45,98.27,17.63,22.98,Leaf Blast
+29.92,93.67,4.77,21.93,Sheath Blight
+28.45,61.75,1.81,8.32,Healthy Rice Leaf
+31.08,91.31,5.84,18.71,Leaf scald
+20.46,91.89,5.39,8.97,Brown Spot
+31.28,79.71,15.32,20.14,Bacterial Leaf Blight
+24.45,92.78,7.59,18.8,Leaf Blast
+26.18,52.04,0.59,9.74,Healthy Rice Leaf
+23.31,90.2,0.0,13.99,Brown Spot
+26.63,58.8,0.17,3.02,Healthy Rice Leaf
+26.34,94.04,12.3,24.48,Leaf Blast
+26.02,65.01,2.69,11.98,Healthy Rice Leaf
+27.85,62.95,0.52,7.58,Healthy Rice Leaf
+22.03,97.45,17.6,17.5,Leaf Blast
+29.95,92.4,3.73,6.61,Sheath Blight
+31.15,91.51,23.79,25.13,Bacterial Leaf Blight
+26.0,87.42,8.98,19.05,Leaf scald
+22.23,90.35,17.43,13.35,Leaf Blast
+26.38,99.82,8.73,3.27,Leaf Blast
+26.9,58.42,0.65,12.3,Healthy Rice Leaf
+30.98,96.86,9.92,15.99,Sheath Blight
+30.68,90.77,2.67,7.09,Sheath Blight
+30.77,89.28,0.83,15.39,Sheath Blight
+32.5,94.9,12.22,11.35,Sheath Blight
+26.49,86.8,5.4,21.03,Leaf scald
+29.99,89.86,6.71,15.16,Sheath Blight
+26.19,87.55,18.09,23.88,Bacterial Leaf Blight
+31.43,85.49,16.53,18.06,Leaf scald
+26.93,84.26,4.1,19.97,Bacterial Leaf Blight
+33.67,90.51,3.06,12.74,Sheath Blight
+24.21,88.57,19.18,11.18,Bacterial Leaf Blight
+26.35,72.2,1.58,18.58,Leaf scald
+29.88,89.69,8.94,8.31,Sheath Blight
+20.98,89.99,14.01,21.87,Leaf Blast
+23.53,87.71,15.68,11.99,Leaf scald
+26.77,86.45,10.99,26.05,Bacterial Leaf Blight
+20.47,92.4,0.83,6.62,Brown Spot
+25.49,90.12,6.1,16.4,Brown Spot
+23.08,92.5,8.77,11.75,Leaf Blast
+33.39,91.75,14.43,8.7,Sheath Blight
+28.12,91.7,10.1,3.53,Leaf Blast
+27.5,54.64,0.0,9.66,Healthy Rice Leaf
+24.08,99.64,18.03,12.28,Leaf Blast
+32.34,95.38,0.4,8.85,Sheath Blight
+25.39,85.4,11.48,26.15,Bacterial Leaf Blight
+32.49,81.18,13.39,24.58,Bacterial Leaf Blight
+24.96,92.0,8.07,24.76,Leaf scald
+26.35,90.92,18.41,19.34,Leaf Blast
+27.11,100.0,3.63,11.48,Brown Spot
+25.81,69.41,0.0,6.77,Healthy Rice Leaf
+32.51,85.26,5.09,19.99,Bacterial Leaf Blight
+24.22,59.58,4.34,15.45,Healthy Rice Leaf
+28.67,52.0,0.69,7.36,Healthy Rice Leaf
+28.99,92.17,7.03,4.7,Sheath Blight
+26.74,63.17,2.58,10.78,Healthy Rice Leaf
+22.82,91.36,7.36,17.71,Leaf scald
+25.22,95.05,6.63,15.3,Brown Spot
+28.09,90.71,3.73,16.81,Sheath Blight
+30.46,87.55,17.24,19.14,Bacterial Leaf Blight
+25.65,58.74,0.2,5.0,Healthy Rice Leaf
+29.31,84.36,0.8,10.47,Leaf scald
+26.05,87.67,7.13,21.91,Leaf scald
+23.69,81.87,3.15,7.2,Leaf scald
+30.78,97.11,22.53,23.9,Bacterial Leaf Blight
+28.13,84.81,9.91,17.96,Bacterial Leaf Blight
+30.4,95.25,2.21,15.18,Brown Spot
+24.76,92.36,12.82,11.5,Leaf scald
+25.69,67.19,1.71,8.43,Healthy Rice Leaf
+24.8,86.26,8.14,20.52,Leaf scald
+25.06,93.24,20.49,14.07,Leaf Blast
+23.48,96.59,12.29,26.88,Leaf Blast
+22.82,60.39,0.62,9.16,Healthy Rice Leaf
+30.28,92.28,11.15,9.56,Sheath Blight
+23.66,52.35,2.42,16.83,Healthy Rice Leaf
+31.05,90.35,3.26,8.97,Sheath Blight
+31.2,81.33,0.0,25.66,Leaf scald
+24.36,61.7,2.68,3.34,Healthy Rice Leaf
+24.88,88.81,7.44,23.2,Leaf scald
+32.2,92.42,10.57,12.64,Sheath Blight
+21.84,86.12,6.06,7.02,Brown Spot
+25.61,81.91,1.45,22.33,Leaf scald
+21.25,90.15,6.99,11.11,Leaf Blast
+27.62,86.55,4.14,17.97,Leaf scald
+22.91,75.65,6.74,22.06,Leaf scald
+31.92,91.15,13.08,11.64,Sheath Blight
+22.02,64.81,2.14,8.19,Healthy Rice Leaf
+33.77,90.59,19.26,21.55,Bacterial Leaf Blight
+24.79,63.27,4.22,7.34,Healthy Rice Leaf
+28.96,58.32,0.0,2.85,Healthy Rice Leaf
+31.67,88.42,15.32,20.72,Bacterial Leaf Blight
+24.47,60.38,2.83,6.87,Healthy Rice Leaf
+24.24,99.01,3.23,16.83,Brown Spot
+28.21,86.6,13.86,15.86,Leaf scald
+31.82,86.37,7.67,16.36,Bacterial Leaf Blight
+27.66,59.23,1.83,13.36,Healthy Rice Leaf
+28.13,89.28,21.97,25.04,Bacterial Leaf Blight
+24.21,94.71,16.35,22.38,Leaf Blast
+28.17,96.36,8.8,16.01,Brown Spot
+22.05,94.3,11.37,19.88,Leaf Blast
+28.52,89.87,11.82,24.38,Bacterial Leaf Blight
+31.15,87.51,16.95,28.13,Bacterial Leaf Blight
+27.9,89.59,12.37,8.09,Sheath Blight
+28.4,89.11,18.03,18.9,Bacterial Leaf Blight
+29.36,86.33,8.85,11.8,Brown Spot
+25.54,83.36,8.52,10.15,Leaf scald
+26.93,98.29,1.6,3.58,Brown Spot
+32.88,91.55,18.71,22.09,Bacterial Leaf Blight
+24.52,92.39,12.31,21.34,Leaf Blast
+29.43,89.27,11.46,18.4,Bacterial Leaf Blight
+27.25,60.29,0.0,12.99,Healthy Rice Leaf
+23.16,93.0,14.43,10.36,Leaf Blast
+25.67,64.54,2.75,12.03,Healthy Rice Leaf
+25.29,92.48,1.18,23.38,Leaf scald
+29.3,84.0,18.49,17.17,Bacterial Leaf Blight
+22.76,95.75,11.32,19.83,Leaf Blast
+20.47,97.61,0.0,15.46,Brown Spot
+29.54,85.07,17.62,15.82,Bacterial Leaf Blight
+27.04,92.81,17.14,23.02,Bacterial Leaf Blight
+24.82,54.53,0.0,12.18,Healthy Rice Leaf
+32.89,92.5,26.92,18.56,Bacterial Leaf Blight
+32.06,92.33,4.61,17.71,Sheath Blight
+31.28,91.05,10.9,10.36,Sheath Blight
+31.44,90.54,11.13,5.35,Sheath Blight
+29.93,99.35,8.18,8.94,Sheath Blight
+29.44,85.28,2.93,8.98,Brown Spot
+33.13,87.96,18.97,23.89,Bacterial Leaf Blight
+26.8,87.69,5.31,14.21,Sheath Blight
+24.33,90.47,5.56,17.06,Leaf scald
+26.45,92.54,5.78,18.17,Leaf Blast
+27.6,79.79,2.95,9.65,Leaf scald
+25.64,60.66,0.27,9.81,Healthy Rice Leaf
+24.13,64.28,1.37,11.14,Healthy Rice Leaf
+28.41,95.28,7.04,9.74,Sheath Blight
+30.9,93.86,19.64,23.75,Bacterial Leaf Blight
+20.87,98.93,3.39,17.06,Leaf Blast
+32.4,99.36,4.62,2.28,Sheath Blight
+25.78,73.18,0.31,12.37,Leaf scald
+23.9,90.07,1.75,12.3,Brown Spot
+28.25,87.9,15.28,31.31,Bacterial Leaf Blight
+29.53,90.68,3.35,17.49,Brown Spot
+30.7,96.89,5.18,15.17,Sheath Blight
+26.66,85.09,2.35,9.14,Leaf scald
+24.59,93.85,9.63,10.23,Brown Spot
+29.53,84.29,27.22,15.68,Bacterial Leaf Blight
+25.74,91.91,4.56,9.82,Brown Spot
+32.26,97.41,1.24,13.05,Brown Spot
+23.42,87.12,8.48,8.8,Leaf scald
+31.19,81.89,7.74,16.97,Leaf scald
+31.38,82.99,14.6,18.3,Bacterial Leaf Blight
+22.32,86.28,4.24,15.77,Leaf scald
+18.21,94.61,14.17,23.06,Leaf Blast
+23.77,58.19,1.32,8.69,Healthy Rice Leaf
+26.99,90.68,5.5,15.15,Brown Spot
+28.41,86.85,14.64,22.83,Bacterial Leaf Blight
+28.15,79.96,9.54,12.68,Leaf scald
+29.59,98.56,4.42,8.85,Brown Spot
+27.15,90.62,9.53,28.56,Leaf Blast
+35.92,94.81,4.53,15.62,Brown Spot
+35.24,94.83,3.43,7.0,Sheath Blight
+26.06,64.16,1.53,6.77,Healthy Rice Leaf
+22.58,95.89,15.47,23.28,Leaf Blast
+26.32,92.76,6.55,16.8,Leaf scald
+22.28,94.72,10.78,31.29,Leaf Blast
+31.59,89.51,12.23,6.85,Sheath Blight
+18.91,86.45,18.61,19.04,Leaf scald
+26.64,94.17,9.53,16.73,Leaf Blast
+24.73,94.93,11.51,16.99,Leaf scald
+33.21,97.41,4.85,10.82,Sheath Blight
+26.54,82.64,6.97,20.25,Leaf scald
+25.35,93.85,13.51,21.45,Leaf Blast
+26.93,58.73,1.31,11.99,Healthy Rice Leaf
+27.63,64.84,1.8,3.7,Healthy Rice Leaf
+26.69,89.99,5.28,18.4,Leaf scald
+28.61,92.17,16.49,9.32,Leaf Blast
+32.95,84.71,8.85,16.36,Sheath Blight
+26.69,91.17,6.44,16.95,Leaf scald
+27.8,50.46,0.68,10.64,Healthy Rice Leaf
+33.31,96.32,5.96,9.22,Sheath Blight
+22.24,93.83,14.41,13.51,Leaf Blast
+25.71,96.49,5.14,13.07,Brown Spot
+28.25,82.58,4.32,10.03,Sheath Blight
+24.33,55.44,1.21,9.18,Healthy Rice Leaf
+28.72,54.53,3.12,6.54,Healthy Rice Leaf
+32.11,95.43,7.17,10.56,Sheath Blight
+29.3,85.92,19.99,21.79,Bacterial Leaf Blight
+33.78,90.35,5.06,6.34,Sheath Blight
+25.66,94.39,11.34,25.07,Leaf Blast
+25.24,70.24,2.38,6.72,Healthy Rice Leaf
+28.64,85.57,13.57,21.02,Leaf scald
+25.15,90.63,10.95,8.59,Leaf Blast
+28.43,87.71,10.08,16.47,Leaf scald
+31.58,96.61,15.62,15.25,Sheath Blight
+29.02,88.23,9.12,17.34,Leaf scald
+30.68,91.9,19.35,13.75,Leaf Blast
+29.64,91.96,6.49,5.57,Sheath Blight
+28.66,87.89,6.81,8.25,Leaf scald
+30.03,90.04,4.89,12.65,Sheath Blight
+33.19,93.97,11.98,18.37,Bacterial Leaf Blight
+28.67,86.05,24.95,17.99,Bacterial Leaf Blight
+29.97,89.62,9.36,20.05,Sheath Blight
+28.85,88.05,4.63,17.43,Leaf scald
+27.66,88.31,10.63,11.3,Leaf Blast
+28.15,64.2,1.05,14.07,Healthy Rice Leaf
+31.2,87.59,10.0,13.03,Sheath Blight
+31.6,93.86,0.23,13.98,Sheath Blight
+27.7,92.87,10.75,13.52,Sheath Blight
+28.62,57.36,2.37,14.44,Healthy Rice Leaf
+31.72,98.4,0.0,17.98,Leaf scald
+29.66,86.88,27.28,19.43,Bacterial Leaf Blight
+25.56,92.22,3.66,8.98,Brown Spot
+24.42,98.37,12.9,17.9,Leaf Blast
+27.6,92.83,4.41,14.21,Leaf scald
+23.06,86.84,8.56,18.94,Leaf scald
+22.79,95.03,9.1,17.37,Leaf Blast
+32.72,84.87,15.61,20.61,Bacterial Leaf Blight
+22.85,89.53,8.2,6.12,Brown Spot
+23.57,84.88,11.28,15.21,Leaf scald
+32.04,93.7,2.57,18.11,Brown Spot
+28.04,86.29,1.54,10.14,Sheath Blight
+29.08,92.16,8.35,8.74,Sheath Blight
+27.11,86.51,10.05,20.02,Leaf scald
+29.41,100.0,3.73,7.71,Brown Spot
+22.36,93.15,11.36,19.11,Leaf Blast
+26.5,69.8,1.42,10.75,Healthy Rice Leaf
+23.48,89.87,6.29,14.89,Brown Spot
+31.08,86.33,3.11,22.47,Brown Spot
+29.06,99.83,15.81,21.67,Bacterial Leaf Blight
+22.56,92.52,9.22,15.05,Leaf Blast
+25.0,91.63,4.92,14.56,Leaf Blast
+21.25,92.24,5.14,9.57,Brown Spot
+30.17,85.91,16.16,22.39,Bacterial Leaf Blight
+28.39,91.31,3.29,4.97,Brown Spot
+26.61,79.61,13.45,16.43,Bacterial Leaf Blight
+27.57,96.85,2.14,4.97,Brown Spot
+32.07,85.85,29.32,26.81,Bacterial Leaf Blight
+27.15,98.99,10.45,16.53,Leaf Blast
+26.06,85.75,9.29,7.45,Leaf scald
+28.72,85.79,10.9,18.35,Bacterial Leaf Blight
+24.82,91.13,11.65,14.27,Leaf Blast
+24.71,90.38,5.3,6.02,Leaf scald
+25.67,55.83,1.84,9.46,Healthy Rice Leaf
+30.24,93.69,7.3,15.37,Brown Spot
+27.74,85.94,27.28,22.07,Bacterial Leaf Blight
+26.84,94.69,13.41,19.14,Leaf Blast
+27.1,92.76,7.86,9.65,Brown Spot
+29.32,91.75,6.98,9.48,Sheath Blight
+24.36,57.99,0.0,7.57,Healthy Rice Leaf
+33.06,94.57,1.72,8.51,Sheath Blight
+28.86,93.54,6.05,18.08,Brown Spot
+29.46,70.3,3.21,12.94,Healthy Rice Leaf
+25.05,84.36,9.27,10.99,Bacterial Leaf Blight
+29.1,93.32,7.78,8.99,Sheath Blight
+32.32,89.25,16.58,22.67,Bacterial Leaf Blight
+23.67,89.24,17.35,1.45,Leaf Blast
+30.66,91.26,3.61,3.8,Sheath Blight
+18.42,85.83,17.3,11.77,Leaf scald
+34.32,89.89,10.72,28.17,Bacterial Leaf Blight
+31.52,94.99,15.28,18.27,Bacterial Leaf Blight
+28.43,83.14,20.03,19.3,Bacterial Leaf Blight
+34.16,88.92,0.09,10.47,Brown Spot
+26.8,83.03,5.02,12.94,Brown Spot
+28.06,92.66,9.83,12.85,Leaf Blast
+17.92,83.79,7.47,16.68,Leaf scald
+30.41,86.51,21.78,23.49,Bacterial Leaf Blight
+24.03,97.27,11.78,18.88,Leaf Blast
+22.7,57.94,0.39,8.7,Healthy Rice Leaf
+23.68,97.24,5.53,11.47,Leaf Blast
+27.09,55.87,0.9,8.64,Healthy Rice Leaf
+30.24,85.07,20.35,16.79,Bacterial Leaf Blight
+23.47,92.04,4.3,9.49,Brown Spot
+37.45,83.64,24.49,12.78,Bacterial Leaf Blight
+29.31,87.39,4.46,18.13,Leaf scald
+23.07,56.62,2.59,10.27,Healthy Rice Leaf
+23.19,95.33,7.41,19.1,Leaf Blast
+30.13,90.71,18.98,24.91,Bacterial Leaf Blight
+31.73,86.8,14.23,24.33,Bacterial Leaf Blight
+27.26,85.75,22.67,21.45,Bacterial Leaf Blight
+28.45,87.02,5.15,13.02,Sheath Blight
+25.47,64.94,2.24,10.28,Healthy Rice Leaf
+30.35,91.52,8.0,8.29,Sheath Blight
+25.31,90.7,4.7,18.18,Leaf scald
+23.57,91.17,7.78,19.4,Brown Spot
+23.21,95.58,16.25,18.81,Leaf Blast
+31.13,90.98,0.0,18.71,Sheath Blight
+29.05,83.69,1.83,11.99,Sheath Blight
+32.35,99.08,4.05,7.67,Sheath Blight
+29.92,83.06,27.66,28.63,Bacterial Leaf Blight
+21.42,66.57,1.82,9.08,Healthy Rice Leaf
+31.23,94.55,12.81,11.29,Sheath Blight
+17.35,96.29,13.18,14.84,Leaf Blast
+33.02,95.35,8.59,15.12,Brown Spot
+26.45,66.91,3.66,9.61,Healthy Rice Leaf
+29.59,86.5,16.89,24.03,Leaf scald
+30.49,82.66,6.85,22.42,Leaf scald
+27.94,94.99,4.53,11.4,Brown Spot
+22.42,95.88,13.45,16.79,Leaf Blast
+24.06,82.09,5.55,21.67,Leaf scald
+32.28,84.41,18.85,24.66,Bacterial Leaf Blight
+24.63,96.25,5.31,11.01,Brown Spot
+30.93,91.69,11.98,11.0,Sheath Blight
+23.61,92.74,8.57,6.53,Brown Spot
+26.14,96.53,6.15,16.25,Brown Spot
+26.18,83.42,13.31,25.1,Bacterial Leaf Blight
+28.65,97.24,10.09,14.89,Sheath Blight
+25.14,90.07,3.81,12.65,Brown Spot
+30.25,87.03,5.77,20.77,Sheath Blight
+24.79,76.14,12.01,18.56,Leaf scald
+23.38,88.85,12.96,17.07,Leaf Blast
+29.07,90.45,15.51,4.7,Leaf scald
+21.6,94.14,7.89,14.53,Leaf Blast
+25.18,58.91,0.71,12.98,Healthy Rice Leaf
+27.18,59.7,1.42,15.81,Healthy Rice Leaf
+22.41,93.05,1.07,6.04,Brown Spot
+21.51,87.24,7.68,12.43,Brown Spot
+28.49,87.36,3.59,5.17,Brown Spot
+23.5,95.09,12.04,17.94,Leaf Blast
+30.25,86.03,21.77,27.08,Bacterial Leaf Blight
+26.71,93.0,0.0,13.94,Leaf scald
+28.57,84.92,10.48,19.06,Leaf scald
+19.89,94.48,7.96,15.3,Leaf Blast
+26.84,77.75,15.75,16.44,Leaf scald
+25.19,61.25,0.98,16.48,Healthy Rice Leaf
+26.84,90.99,21.57,25.43,Bacterial Leaf Blight
+23.05,64.87,1.07,7.4,Healthy Rice Leaf
+26.48,67.68,3.69,7.55,Healthy Rice Leaf
+30.73,85.39,6.2,12.19,Leaf scald
+30.49,80.15,15.06,24.06,Leaf scald
+32.63,91.37,4.7,11.61,Sheath Blight
+24.05,80.08,4.95,18.08,Leaf scald
+30.22,93.1,8.91,14.47,Sheath Blight
+27.66,81.07,1.6,15.21,Leaf scald
+34.56,93.38,11.95,23.9,Bacterial Leaf Blight
+30.22,88.39,15.49,19.22,Bacterial Leaf Blight
+29.03,90.51,7.17,6.88,Brown Spot
+31.77,94.84,1.98,23.3,Brown Spot
+27.63,63.35,2.19,14.11,Healthy Rice Leaf
+22.45,93.23,12.85,16.99,Leaf Blast
+26.89,55.82,0.0,14.42,Healthy Rice Leaf
+27.59,87.21,4.14,19.4,Leaf scald
+30.31,87.32,25.14,28.43,Bacterial Leaf Blight
+30.62,93.17,4.62,16.09,Brown Spot
+24.88,86.96,8.58,18.99,Leaf scald
+28.64,87.37,4.34,9.63,Brown Spot
+22.35,80.19,7.62,21.53,Leaf scald
+28.99,59.93,3.29,9.92,Healthy Rice Leaf
+30.55,91.99,7.27,8.5,Sheath Blight
+27.56,87.99,11.37,9.5,Sheath Blight
+25.43,78.32,13.32,22.41,Leaf scald
+26.26,93.72,12.86,25.23,Leaf Blast
+23.85,82.5,7.72,10.87,Leaf scald
+20.55,99.04,6.01,12.65,Brown Spot
+18.54,97.88,7.62,7.91,Brown Spot
+21.54,92.32,2.31,3.8,Brown Spot
+30.07,93.2,7.76,25.96,Bacterial Leaf Blight
+29.79,82.99,19.64,18.27,Bacterial Leaf Blight
+29.04,91.69,1.41,19.47,Sheath Blight
+25.86,56.43,1.69,4.87,Healthy Rice Leaf
+23.5,95.65,13.59,20.21,Leaf Blast
+29.34,86.25,14.44,17.26,Bacterial Leaf Blight
+24.22,74.05,1.86,8.45,Healthy Rice Leaf
+22.24,90.36,9.14,22.62,Leaf Blast
+30.34,87.09,20.39,19.8,Bacterial Leaf Blight
+22.54,60.27,1.02,7.02,Healthy Rice Leaf
+24.16,67.31,2.44,8.52,Healthy Rice Leaf
+28.17,90.74,9.23,20.94,Leaf scald
+30.48,86.5,20.89,11.14,Bacterial Leaf Blight
+32.58,88.32,6.85,5.11,Sheath Blight
+24.57,88.68,8.16,12.5,Leaf Blast
+25.12,61.87,1.13,14.12,Healthy Rice Leaf
+29.69,80.44,13.28,28.25,Bacterial Leaf Blight
+26.93,92.82,5.42,21.0,Brown Spot
+30.07,56.44,0.0,10.65,Healthy Rice Leaf
+30.07,83.62,21.19,19.38,Bacterial Leaf Blight
+32.86,81.73,17.18,18.13,Bacterial Leaf Blight
+26.39,76.52,8.91,21.1,Leaf scald
+30.52,94.26,0.0,11.33,Brown Spot
+29.15,88.77,0.43,6.24,Sheath Blight
+24.78,98.04,13.68,15.88,Leaf Blast
+28.1,90.43,6.05,9.65,Brown Spot
+28.38,89.36,2.04,13.54,Sheath Blight
+28.36,88.69,7.18,16.66,Leaf scald
+25.78,87.1,16.26,25.32,Bacterial Leaf Blight
+20.59,85.15,12.03,13.91,Leaf scald
+29.09,86.3,2.44,22.06,Leaf scald
+29.47,87.68,8.21,18.05,Leaf scald
+20.82,83.73,7.09,6.51,Brown Spot
+32.08,98.51,2.6,10.4,Sheath Blight
+25.62,60.9,1.13,11.77,Healthy Rice Leaf
+24.88,58.18,2.26,13.97,Healthy Rice Leaf
+23.71,90.03,13.89,20.13,Leaf Blast
+29.22,68.42,1.13,4.8,Healthy Rice Leaf
+30.11,87.45,19.14,24.77,Bacterial Leaf Blight
+25.22,63.07,0.46,12.48,Healthy Rice Leaf
+25.03,87.71,6.25,16.04,Leaf scald
+23.56,82.93,9.33,25.65,Leaf scald
+23.98,98.93,2.41,13.86,Brown Spot
+32.64,86.81,6.47,5.09,Leaf scald
+26.54,94.56,23.41,23.23,Bacterial Leaf Blight
+31.4,79.77,14.12,18.06,Bacterial Leaf Blight
+23.11,88.7,6.21,14.95,Brown Spot
+28.64,96.9,10.35,18.59,Leaf Blast
+29.22,63.98,1.95,11.87,Healthy Rice Leaf
+24.61,81.19,7.44,15.87,Leaf scald
+27.05,94.89,13.03,16.06,Leaf Blast
+28.85,89.49,14.37,21.79,Leaf scald
+26.18,66.44,2.45,11.71,Healthy Rice Leaf
+25.39,87.31,26.3,27.58,Bacterial Leaf Blight
+26.85,87.64,9.8,14.76,Leaf scald
+30.96,86.52,14.44,20.87,Bacterial Leaf Blight
+27.4,91.97,14.85,27.31,Bacterial Leaf Blight
+30.48,92.44,7.54,11.61,Sheath Blight
+24.82,91.71,3.74,8.91,Brown Spot
+22.79,76.83,11.89,23.99,Leaf scald
+23.16,93.89,10.52,15.21,Leaf Blast
+26.23,98.68,6.62,12.12,Leaf Blast
+25.1,98.06,13.25,17.74,Leaf Blast
+21.09,87.31,5.28,13.55,Brown Spot
+25.28,63.16,2.33,9.99,Healthy Rice Leaf
+16.26,85.79,4.58,13.52,Brown Spot
+26.14,54.85,2.7,13.57,Healthy Rice Leaf
+26.08,83.5,11.62,24.97,Leaf scald
+26.45,96.11,11.92,17.77,Leaf Blast
+25.18,77.87,8.18,22.25,Leaf scald
+25.93,89.25,11.25,19.68,Leaf Blast
+20.07,93.48,17.23,15.23,Leaf Blast
+19.26,92.56,2.64,10.47,Brown Spot
+26.04,91.53,3.85,5.44,Brown Spot
+34.49,92.39,0.0,22.74,Sheath Blight
+29.4,88.43,7.04,5.82,Sheath Blight
+27.43,92.72,4.55,8.24,Brown Spot
+33.39,91.41,7.59,12.56,Sheath Blight
+28.31,93.83,2.48,19.54,Brown Spot
+28.21,74.87,7.19,13.84,Leaf scald
+27.39,90.04,25.38,24.33,Bacterial Leaf Blight
+26.75,91.02,6.89,11.09,Sheath Blight
+25.97,79.32,10.0,22.04,Leaf scald
+28.63,92.2,23.6,16.27,Sheath Blight
+34.6,92.86,3.7,15.24,Brown Spot
+28.19,96.15,2.67,14.15,Sheath Blight
+27.47,91.39,0.43,12.48,Brown Spot
+31.23,93.72,9.58,14.59,Sheath Blight
+37.6,86.8,20.49,31.01,Bacterial Leaf Blight
+30.81,89.3,24.92,15.16,Bacterial Leaf Blight
+22.98,99.34,6.31,15.64,Leaf Blast
+33.02,83.07,10.76,16.75,Leaf scald
+31.49,86.2,21.74,16.39,Bacterial Leaf Blight
+23.04,94.26,3.84,14.11,Brown Spot
+25.66,82.16,9.39,24.95,Leaf scald
+34.16,89.66,6.91,12.94,Brown Spot
+25.26,51.38,0.0,11.0,Healthy Rice Leaf
+25.39,84.82,6.25,18.05,Leaf scald
+19.89,94.03,8.39,24.41,Leaf Blast
+31.27,92.95,6.8,12.74,Sheath Blight
+29.08,90.45,13.54,10.11,Leaf Blast
+21.69,96.77,2.73,15.36,Brown Spot
+22.09,91.62,3.19,23.6,Brown Spot
+31.05,96.81,3.47,18.48,Brown Spot
+22.39,89.92,3.86,8.38,Brown Spot
+28.9,96.79,18.65,26.55,Bacterial Leaf Blight
+25.34,94.89,9.01,13.2,Leaf Blast
+34.29,83.72,7.71,19.38,Leaf scald
+28.95,57.93,0.0,13.87,Healthy Rice Leaf
+28.72,80.4,26.69,19.21,Bacterial Leaf Blight
+19.8,87.56,9.69,21.34,Brown Spot
+26.34,52.12,5.0,9.74,Healthy Rice Leaf
+30.08,100.0,9.13,17.52,Sheath Blight
+29.61,93.44,22.24,26.3,Bacterial Leaf Blight
+22.46,94.99,6.53,21.54,Leaf Blast
+27.85,80.19,5.19,16.23,Leaf scald
+30.49,92.25,10.5,10.05,Sheath Blight
+26.14,87.04,10.83,10.86,Sheath Blight
+27.63,93.84,4.55,15.07,Brown Spot
+25.84,95.26,9.87,17.03,Leaf Blast
+29.6,93.7,10.18,19.1,Leaf scald
+26.24,91.22,10.89,10.24,Brown Spot
+26.51,92.05,9.37,11.28,Leaf scald
+32.74,82.71,27.1,22.74,Bacterial Leaf Blight
+29.8,90.05,1.81,13.88,Sheath Blight
+27.86,86.48,7.22,16.74,Sheath Blight
+24.1,86.76,5.39,11.92,Brown Spot
+31.71,83.63,24.06,20.04,Bacterial Leaf Blight
+27.4,93.17,18.89,13.17,Leaf Blast
+34.19,85.47,2.88,23.64,Leaf scald
+26.83,61.96,5.49,14.63,Healthy Rice Leaf
+23.33,94.97,11.55,15.82,Leaf Blast
+27.5,65.52,3.62,13.31,Healthy Rice Leaf
+31.99,95.86,6.17,10.86,Sheath Blight
+25.71,96.11,10.78,18.81,Leaf Blast
+33.57,100.0,10.94,7.72,Sheath Blight
+26.51,89.75,3.82,7.84,Brown Spot
+25.88,92.49,5.62,18.05,Leaf scald
+25.0,81.11,6.7,15.7,Leaf scald
+22.86,81.25,1.61,18.04,Leaf scald
+26.13,76.52,14.34,18.72,Leaf scald
+24.77,67.25,1.92,7.11,Healthy Rice Leaf
+25.76,62.22,2.96,14.44,Healthy Rice Leaf
+25.75,82.32,18.57,19.25,Bacterial Leaf Blight
+26.86,91.53,6.99,14.09,Brown Spot
+33.72,86.32,16.79,18.26,Bacterial Leaf Blight
+25.09,78.75,0.0,17.03,Leaf scald
+27.67,84.87,3.32,7.96,Brown Spot
+25.33,60.92,1.39,12.99,Healthy Rice Leaf
+26.06,84.13,5.37,14.55,Brown Spot
+26.14,61.76,1.73,7.33,Healthy Rice Leaf
+27.6,99.03,4.56,10.0,Brown Spot
+30.35,90.7,3.4,7.19,Sheath Blight
+26.12,92.18,16.67,16.91,Leaf Blast
+26.81,85.47,18.77,26.16,Bacterial Leaf Blight
+25.93,88.65,7.6,10.5,Sheath Blight
+29.92,79.51,22.88,23.33,Bacterial Leaf Blight
+25.34,57.58,1.42,10.41,Healthy Rice Leaf
+29.16,91.47,12.59,18.63,Leaf scald
+31.44,90.23,4.51,3.16,Brown Spot
+25.03,98.93,6.35,11.06,Leaf Blast
+27.66,92.68,11.67,8.74,Leaf Blast
+27.26,93.59,9.0,12.92,Leaf Blast
+21.17,91.88,2.84,17.01,Brown Spot
+23.55,95.26,4.9,8.09,Brown Spot
+31.99,84.13,7.03,6.96,Sheath Blight
+25.72,82.55,6.9,17.08,Leaf scald
+31.25,88.55,7.46,22.78,Brown Spot
+23.61,64.04,0.99,7.71,Healthy Rice Leaf
+20.34,84.46,6.13,17.67,Leaf scald
+23.1,95.41,11.62,16.93,Leaf Blast
+22.7,96.78,9.09,24.35,Leaf Blast
+23.85,90.16,11.62,7.94,Leaf Blast
+32.08,94.22,5.58,6.71,Brown Spot
+30.17,87.16,9.94,15.68,Sheath Blight
+28.75,89.54,10.16,18.86,Sheath Blight
+31.67,95.16,9.96,14.37,Brown Spot
+27.7,94.0,3.28,11.82,Brown Spot
+30.78,86.07,7.84,9.73,Sheath Blight
+25.5,66.0,2.48,13.5,Healthy Rice Leaf
+29.57,92.06,18.82,27.43,Bacterial Leaf Blight
+22.34,99.74,0.0,11.21,Brown Spot
+28.74,81.21,25.2,26.7,Bacterial Leaf Blight
+30.98,76.3,4.41,15.96,Leaf scald
+25.53,81.5,14.52,12.9,Leaf scald
+24.73,59.81,0.83,15.05,Healthy Rice Leaf
+32.17,90.35,4.56,13.69,Sheath Blight
+18.89,90.89,10.48,10.47,Leaf Blast
+24.66,93.24,3.16,11.37,Brown Spot
+16.3,95.46,2.88,16.21,Brown Spot
+22.82,88.18,16.18,13.68,Leaf Blast
+25.81,95.68,11.79,21.22,Leaf Blast
+22.48,79.26,0.0,8.91,Leaf scald
+30.48,91.41,6.67,14.26,Sheath Blight
+31.49,91.01,10.75,23.91,Bacterial Leaf Blight
+31.6,90.14,0.42,11.75,Sheath Blight
+28.26,90.68,11.29,13.88,Leaf Blast
+27.33,85.85,3.05,8.4,Sheath Blight
+29.92,90.6,3.04,11.12,Brown Spot
+30.18,79.94,7.16,19.77,Leaf scald
+29.42,79.81,3.74,16.49,Leaf scald
+29.36,91.05,7.04,10.54,Sheath Blight
+29.94,88.64,19.23,26.81,Bacterial Leaf Blight
+29.38,95.34,19.8,19.98,Leaf Blast
+31.24,95.99,8.61,11.16,Sheath Blight
+30.48,89.94,0.79,2.66,Brown Spot
+28.12,90.46,22.49,16.92,Bacterial Leaf Blight
+30.29,92.22,3.0,15.44,Bacterial Leaf Blight
+27.76,61.36,2.34,10.65,Healthy Rice Leaf
+31.31,89.94,21.11,12.55,Bacterial Leaf Blight
+28.93,93.46,15.14,27.39,Bacterial Leaf Blight
+26.91,62.37,1.34,11.62,Healthy Rice Leaf
+23.32,95.37,12.36,18.95,Leaf Blast
+29.24,85.69,11.15,19.56,Bacterial Leaf Blight
+32.41,93.86,10.49,10.92,Sheath Blight
+30.48,94.53,5.2,6.9,Sheath Blight
+28.27,98.26,7.94,17.48,Brown Spot
+22.67,89.24,0.48,11.24,Brown Spot
+30.86,95.16,5.68,9.15,Brown Spot
+30.86,90.17,2.2,14.28,Brown Spot
+27.43,62.85,3.54,12.36,Healthy Rice Leaf
+24.39,88.53,6.35,5.63,Brown Spot
+28.6,99.23,3.05,17.68,Leaf Blast
+24.13,92.18,1.08,11.96,Brown Spot
+29.39,93.6,6.04,20.97,Sheath Blight
+27.39,82.38,10.17,22.81,Bacterial Leaf Blight
+31.81,87.7,26.84,12.64,Bacterial Leaf Blight
+30.8,95.66,4.63,12.6,Sheath Blight
+31.8,93.08,11.65,10.85,Sheath Blight
+29.58,89.83,12.82,11.06,Leaf Blast
+28.33,92.34,9.29,13.86,Sheath Blight
+27.96,95.07,4.51,13.05,Brown Spot
+25.69,51.72,2.34,9.19,Healthy Rice Leaf
+25.67,89.72,5.67,11.58,Leaf scald
+30.14,82.34,10.94,18.46,Leaf scald
+21.6,90.47,4.92,12.86,Brown Spot
+30.91,93.84,20.1,23.06,Bacterial Leaf Blight
+29.27,86.4,17.45,23.68,Bacterial Leaf Blight
+24.83,84.83,10.33,14.61,Brown Spot
+27.16,84.83,12.59,24.82,Leaf scald
+29.9,81.97,7.14,12.25,Leaf scald
+21.66,92.36,3.74,12.26,Brown Spot
+29.23,60.61,1.24,8.7,Healthy Rice Leaf
+25.07,89.99,11.47,20.15,Leaf Blast
+28.4,92.53,4.89,16.93,Brown Spot
+26.59,93.26,5.75,16.42,Leaf Blast
+29.22,92.22,6.92,15.42,Sheath Blight
+29.39,86.73,22.03,17.69,Bacterial Leaf Blight
+33.32,87.47,6.77,23.62,Leaf scald
+30.32,98.98,9.23,9.82,Sheath Blight
+23.11,60.42,2.04,4.07,Healthy Rice Leaf
+31.05,80.66,13.77,28.45,Bacterial Leaf Blight
+31.19,87.21,11.6,37.58,Bacterial Leaf Blight
+23.07,98.29,21.71,22.21,Leaf Blast
+23.19,92.66,14.94,19.14,Leaf Blast
+25.76,93.55,3.3,8.74,Brown Spot
+20.1,95.21,7.92,17.35,Leaf Blast
+23.84,98.65,14.91,17.17,Leaf Blast
+26.97,51.9,4.22,5.86,Healthy Rice Leaf
+31.98,83.08,15.15,29.7,Bacterial Leaf Blight
+32.27,90.18,7.59,17.36,Sheath Blight
+31.47,92.12,6.43,19.78,Bacterial Leaf Blight
+29.24,79.35,7.36,16.93,Leaf scald
+28.17,90.72,5.61,24.16,Leaf Blast
+23.04,98.4,8.61,14.78,Leaf Blast
+24.72,59.6,2.36,8.6,Healthy Rice Leaf
+30.47,91.82,23.21,19.88,Bacterial Leaf Blight
+29.07,94.62,1.83,10.58,Sheath Blight
+32.93,83.23,13.43,20.23,Bacterial Leaf Blight
+24.11,96.62,9.17,19.53,Leaf Blast
+23.31,91.52,3.56,10.11,Brown Spot
+31.81,90.12,11.43,18.15,Bacterial Leaf Blight
+28.6,68.08,2.12,11.83,Healthy Rice Leaf
+28.72,80.02,5.69,22.47,Leaf scald
+23.5,64.93,3.31,3.84,Healthy Rice Leaf
+25.68,61.9,5.45,10.63,Healthy Rice Leaf
+25.15,90.08,22.8,18.53,Bacterial Leaf Blight
+30.73,91.2,17.15,25.25,Bacterial Leaf Blight
+29.55,87.12,6.8,19.97,Bacterial Leaf Blight
+25.03,82.04,6.05,15.0,Leaf scald
+27.61,67.18,1.68,8.16,Healthy Rice Leaf
+25.38,58.08,1.94,7.52,Healthy Rice Leaf
+22.31,93.04,19.63,13.62,Leaf Blast
+31.5,90.17,5.38,13.23,Sheath Blight
+21.8,92.63,2.1,7.51,Brown Spot
+22.95,91.75,15.39,23.1,Leaf Blast
+28.51,92.25,6.21,8.54,Sheath Blight
+31.13,93.95,6.27,8.72,Sheath Blight
+29.72,90.61,6.45,10.42,Sheath Blight
+28.83,97.68,3.34,15.08,Brown Spot
+27.06,93.47,11.95,12.61,Leaf Blast
+30.74,91.98,3.61,16.89,Sheath Blight
+28.33,87.17,4.89,5.38,Brown Spot
+26.77,58.84,1.77,7.23,Healthy Rice Leaf
+27.33,49.99,1.51,12.31,Healthy Rice Leaf
+32.07,97.7,7.72,9.38,Sheath Blight
+23.61,93.81,9.51,18.52,Leaf Blast
+30.48,97.91,9.39,13.61,Leaf Blast
+32.68,91.84,9.34,4.35,Sheath Blight
+26.49,96.15,5.27,14.69,Brown Spot
+24.11,93.85,13.68,19.95,Bacterial Leaf Blight
+22.38,82.45,2.2,15.82,Brown Spot
+24.85,93.58,30.83,24.36,Bacterial Leaf Blight
+29.91,93.72,3.62,11.91,Sheath Blight
+27.34,88.14,7.42,15.8,Sheath Blight
+27.14,94.77,18.77,21.86,Leaf Blast
+29.2,66.8,2.27,10.16,Healthy Rice Leaf
+25.15,91.9,10.27,15.26,Leaf Blast
+33.18,82.92,9.42,10.21,Sheath Blight
+22.51,61.55,3.41,13.69,Healthy Rice Leaf
+21.09,94.74,5.1,16.17,Brown Spot
+32.98,90.53,26.78,21.56,Bacterial Leaf Blight
+30.06,81.43,0.0,12.3,Sheath Blight
+25.19,94.34,8.63,7.55,Leaf Blast
+30.64,87.29,8.61,17.1,Bacterial Leaf Blight
+28.66,89.5,8.37,15.34,Bacterial Leaf Blight
+28.97,98.01,8.21,18.74,Brown Spot
+26.86,87.26,6.08,19.35,Brown Spot
+28.9,58.13,0.21,13.8,Healthy Rice Leaf
+30.45,84.88,22.56,15.93,Bacterial Leaf Blight
+33.97,94.04,2.25,18.95,Sheath Blight
+29.54,58.4,0.91,11.47,Healthy Rice Leaf
+31.76,87.56,15.18,15.13,Leaf scald
+29.69,82.28,9.27,23.03,Bacterial Leaf Blight
+19.91,95.84,4.48,13.68,Brown Spot
+25.88,71.21,2.43,9.42,Healthy Rice Leaf
+26.9,87.05,10.88,7.27,Brown Spot
+30.5,81.17,1.02,25.26,Leaf scald
+27.21,86.73,14.09,20.35,Leaf scald
+26.09,85.49,9.91,18.88,Leaf scald
+32.01,94.73,5.71,18.86,Sheath Blight
+32.04,85.76,21.65,24.95,Bacterial Leaf Blight
+28.7,96.65,8.05,11.5,Brown Spot
+23.09,62.8,4.13,9.48,Healthy Rice Leaf
+28.98,79.89,6.33,17.08,Leaf scald
+31.9,81.43,9.27,14.84,Leaf scald
+26.36,82.43,9.95,14.34,Leaf scald
+26.47,86.23,17.38,25.18,Bacterial Leaf Blight
+27.01,93.74,3.53,8.76,Brown Spot
+29.37,96.09,16.78,21.57,Bacterial Leaf Blight
+27.27,61.24,0.13,11.89,Healthy Rice Leaf
+32.03,89.01,0.9,18.09,Sheath Blight
+32.28,91.54,0.0,9.95,Sheath Blight
+32.47,90.11,5.18,9.91,Brown Spot
+26.69,92.05,11.12,20.63,Leaf Blast
+28.84,90.92,26.65,9.0,Bacterial Leaf Blight
+27.69,81.19,15.67,26.54,Bacterial Leaf Blight
+34.32,96.68,6.79,11.8,Sheath Blight
+26.0,60.6,0.11,16.56,Healthy Rice Leaf
+21.17,49.93,4.41,10.93,Healthy Rice Leaf
+29.93,90.58,18.46,13.05,Bacterial Leaf Blight
+24.35,94.14,13.17,12.73,Leaf Blast
+31.48,88.07,10.14,20.27,Sheath Blight
+26.53,64.33,1.74,8.14,Healthy Rice Leaf
+29.5,86.18,23.42,28.2,Bacterial Leaf Blight
+33.09,96.3,7.9,5.11,Sheath Blight
+29.45,54.19,2.76,11.65,Healthy Rice Leaf
+30.33,89.51,4.47,10.95,Sheath Blight
+24.55,86.99,12.84,15.82,Leaf scald
+32.88,91.9,6.31,14.18,Bacterial Leaf Blight
+33.72,93.11,9.93,17.29,Bacterial Leaf Blight
+34.99,88.01,6.07,16.56,Sheath Blight
+31.92,97.64,2.87,16.79,Sheath Blight
+25.43,88.34,8.99,11.75,Leaf Blast
+27.59,58.25,3.24,6.0,Healthy Rice Leaf
+33.24,88.34,1.7,7.76,Sheath Blight
+26.94,97.93,15.9,18.25,Leaf Blast
+32.07,97.72,7.23,14.12,Sheath Blight
+30.17,95.9,10.07,20.75,Leaf scald
+18.53,84.41,9.24,24.27,Bacterial Leaf Blight
+21.05,93.68,1.48,9.1,Brown Spot
+27.39,94.12,0.0,11.63,Brown Spot
+23.07,54.14,3.12,11.65,Healthy Rice Leaf
+22.99,60.01,3.44,9.54,Healthy Rice Leaf
+17.81,93.79,6.91,11.33,Brown Spot
+30.64,96.81,9.31,9.61,Sheath Blight
+26.22,62.43,1.19,12.53,Healthy Rice Leaf
+27.87,88.57,2.79,9.65,Sheath Blight
+26.37,86.41,24.43,17.71,Bacterial Leaf Blight
+22.54,93.01,4.5,18.3,Leaf scald
+32.92,87.52,11.25,11.79,Leaf scald
+22.66,92.29,14.82,17.43,Leaf Blast
+26.19,96.38,9.49,16.53,Leaf Blast
+27.46,90.81,2.8,12.0,Brown Spot
+27.11,60.18,0.0,9.9,Healthy Rice Leaf
+20.96,87.88,3.88,4.47,Brown Spot
+29.6,90.17,7.81,19.39,Sheath Blight
+29.9,100.0,4.66,12.37,Sheath Blight
+22.34,97.92,7.45,17.13,Leaf Blast
+29.35,88.75,17.87,16.77,Bacterial Leaf Blight
+26.8,85.4,3.47,14.73,Brown Spot
+32.69,96.12,4.52,15.24,Sheath Blight
+24.37,89.6,14.98,14.89,Leaf Blast
+24.19,54.92,3.04,8.19,Healthy Rice Leaf
+30.09,95.53,17.18,22.09,Bacterial Leaf Blight
+23.25,91.65,5.32,10.47,Brown Spot
+24.21,96.32,7.26,11.71,Leaf Blast
+29.97,87.05,23.65,30.59,Bacterial Leaf Blight
+25.93,90.43,12.81,3.75,Leaf Blast
+23.68,91.79,5.51,10.91,Brown Spot
+28.03,90.18,22.81,24.78,Bacterial Leaf Blight
+29.13,56.0,2.13,14.13,Healthy Rice Leaf
+27.0,92.95,7.8,9.89,Leaf Blast
+26.42,87.87,4.08,11.15,Brown Spot
+28.91,97.67,4.43,7.28,Brown Spot
+25.62,64.12,0.16,7.53,Healthy Rice Leaf
+26.04,90.45,10.09,12.32,Leaf Blast
+29.07,69.19,1.97,7.84,Healthy Rice Leaf
+23.12,86.99,9.35,14.42,Brown Spot
+24.36,90.66,1.0,14.02,Brown Spot
+29.07,96.91,5.3,3.74,Brown Spot
+29.52,82.42,9.59,18.74,Bacterial Leaf Blight
+22.46,91.24,16.21,20.67,Leaf Blast
+31.97,87.98,15.25,20.5,Bacterial Leaf Blight
+31.35,83.24,5.33,18.16,Brown Spot
+32.87,93.58,3.63,14.87,Sheath Blight
+27.58,94.75,0.37,12.64,Brown Spot
+30.59,92.76,17.32,21.78,Bacterial Leaf Blight
+24.52,93.32,8.94,15.39,Leaf Blast
+28.82,76.82,13.74,13.45,Leaf scald
+21.81,95.25,6.05,14.3,Leaf Blast
+31.82,99.77,6.94,8.29,Sheath Blight
+20.72,84.66,4.99,12.72,Brown Spot
+26.9,65.0,0.0,10.6,Healthy Rice Leaf
+37.01,91.14,1.86,7.09,Brown Spot
+31.05,84.51,21.79,21.37,Bacterial Leaf Blight
+23.22,86.84,7.96,25.65,Leaf scald
+23.93,66.44,2.14,11.17,Healthy Rice Leaf
+28.28,88.86,0.0,22.95,Leaf scald
+32.58,88.2,5.4,18.49,Sheath Blight
+25.73,86.35,16.59,29.72,Bacterial Leaf Blight
+31.15,97.95,0.35,12.04,Sheath Blight
+21.3,96.73,9.48,18.2,Leaf Blast
+25.98,93.3,7.62,6.31,Brown Spot
+26.21,96.41,4.96,11.74,Brown Spot
+27.5,86.71,5.54,12.74,Leaf scald
+25.69,71.91,3.11,10.09,Healthy Rice Leaf
+29.25,87.88,6.52,13.02,Leaf scald
+25.0,57.11,3.48,10.32,Healthy Rice Leaf
+30.67,92.02,16.62,21.14,Bacterial Leaf Blight
+20.65,98.39,10.23,16.75,Leaf Blast
+32.36,81.55,16.27,21.91,Bacterial Leaf Blight
+36.63,93.0,8.53,5.85,Brown Spot
+26.08,93.87,8.09,25.03,Leaf Blast
+24.86,61.7,3.13,10.84,Healthy Rice Leaf
+21.09,93.37,10.93,19.4,Leaf Blast
+30.09,95.04,5.86,16.85,Sheath Blight
+25.31,62.47,0.84,7.91,Healthy Rice Leaf
+24.63,86.41,11.04,15.57,Leaf scald
+21.65,94.53,10.98,25.29,Leaf Blast
+30.22,86.37,17.37,12.81,Bacterial Leaf Blight
+26.38,95.34,10.42,17.34,Leaf Blast
+30.04,85.09,27.12,11.07,Bacterial Leaf Blight
+28.55,85.01,6.28,22.79,Leaf scald
+34.8,91.34,2.14,19.42,Sheath Blight
+26.88,59.82,0.0,11.25,Healthy Rice Leaf
+27.29,87.71,14.11,20.95,Bacterial Leaf Blight
+27.41,57.57,2.71,11.08,Healthy Rice Leaf
+22.18,87.2,17.75,20.52,Leaf scald
+29.75,91.91,18.73,21.33,Bacterial Leaf Blight
+26.14,95.12,3.29,9.78,Brown Spot
+29.48,93.89,4.67,8.69,Sheath Blight
+30.12,86.01,32.38,19.29,Bacterial Leaf Blight
+25.33,62.04,1.94,12.37,Healthy Rice Leaf
+26.1,61.06,0.91,5.25,Healthy Rice Leaf
+22.43,97.22,10.74,25.12,Leaf Blast
+27.17,60.66,0.98,9.36,Healthy Rice Leaf
+31.99,98.78,2.45,12.82,Sheath Blight
+29.24,84.71,23.96,29.45,Bacterial Leaf Blight
+23.57,87.1,2.51,14.12,Brown Spot
+28.09,86.08,6.75,13.09,Leaf scald
+23.48,87.86,2.6,7.42,Brown Spot
+25.26,99.06,13.25,17.49,Leaf Blast
+27.32,89.85,9.62,25.36,Bacterial Leaf Blight
+25.42,95.77,10.14,21.1,Leaf Blast
+24.58,95.4,4.32,16.92,Brown Spot
+23.02,95.18,8.12,23.87,Leaf Blast
+30.61,92.82,5.99,10.83,Brown Spot
+25.73,96.19,4.57,15.03,Brown Spot
+28.32,97.97,9.56,25.0,Leaf Blast
+25.64,94.4,9.94,8.41,Brown Spot
+25.06,48.76,1.19,7.02,Healthy Rice Leaf
+30.74,86.09,6.48,15.43,Sheath Blight
+25.16,90.51,12.28,7.79,Sheath Blight
+27.29,99.37,6.15,16.65,Sheath Blight
+23.72,93.49,5.44,7.26,Leaf Blast
+28.25,51.92,3.79,10.31,Healthy Rice Leaf
+26.93,98.09,14.26,15.06,Leaf Blast
+28.12,92.94,11.96,15.69,Bacterial Leaf Blight
+28.88,96.47,12.65,13.06,Leaf Blast
+28.39,82.42,11.09,13.11,Leaf scald
+27.58,69.01,0.0,11.75,Healthy Rice Leaf
+32.38,90.7,13.36,7.95,Sheath Blight
+23.41,57.72,2.19,7.35,Healthy Rice Leaf
+20.36,95.77,2.35,14.99,Brown Spot
+28.0,86.3,22.27,24.09,Bacterial Leaf Blight
+27.85,93.5,17.82,19.79,Bacterial Leaf Blight
+31.88,95.79,9.1,7.19,Sheath Blight
+23.56,55.09,0.0,18.44,Healthy Rice Leaf
+23.69,96.04,6.13,9.88,Brown Spot
+26.67,58.64,0.42,8.1,Healthy Rice Leaf
+26.26,58.38,0.99,11.46,Healthy Rice Leaf
+22.8,59.99,1.79,9.43,Healthy Rice Leaf
+26.79,92.22,1.0,11.23,Brown Spot
+31.09,89.11,6.64,13.59,Sheath Blight
+28.11,89.14,0.0,18.03,Brown Spot
+30.19,86.28,9.73,14.17,Leaf scald
+22.82,91.99,2.5,8.8,Brown Spot
+30.8,85.44,26.87,21.9,Bacterial Leaf Blight
+32.31,84.5,16.2,22.59,Bacterial Leaf Blight
+32.99,99.1,11.59,13.97,Sheath Blight
+23.89,91.56,3.6,10.46,Brown Spot
+31.69,89.1,14.37,20.25,Leaf scald
+31.46,90.31,23.52,19.92,Bacterial Leaf Blight
+26.59,56.63,2.59,15.12,Healthy Rice Leaf
+29.41,83.67,16.25,24.27,Leaf scald
+26.35,50.21,0.0,10.7,Healthy Rice Leaf
+31.56,91.63,9.27,25.06,Bacterial Leaf Blight
+21.65,98.05,12.47,6.37,Leaf Blast
+23.9,82.88,11.67,16.32,Leaf scald
+25.97,59.91,2.85,9.73,Healthy Rice Leaf
+29.27,96.52,3.36,12.68,Brown Spot
+25.38,59.88,0.09,12.14,Healthy Rice Leaf
+26.1,84.52,0.6,19.38,Leaf scald
+26.13,60.17,3.14,0.81,Healthy Rice Leaf
+28.87,100.0,5.32,15.63,Sheath Blight
+25.94,84.06,6.31,16.45,Leaf scald
+26.89,89.03,23.82,21.77,Bacterial Leaf Blight
+29.44,61.22,0.0,5.17,Healthy Rice Leaf
+20.46,92.78,7.52,24.26,Brown Spot
+25.59,63.2,5.34,9.07,Healthy Rice Leaf
+22.68,88.13,1.47,12.6,Brown Spot
+21.74,59.39,1.54,4.86,Healthy Rice Leaf
+26.36,60.06,3.38,11.22,Healthy Rice Leaf
+27.82,90.71,2.81,18.92,Brown Spot
+31.75,99.61,7.4,11.69,Sheath Blight
+28.59,67.78,12.18,23.53,Leaf scald
+28.94,91.16,16.94,19.1,Leaf Blast
+29.65,93.11,8.35,15.2,Sheath Blight
+29.1,85.72,12.93,5.2,Leaf scald
+15.85,87.86,2.6,11.25,Brown Spot
+31.3,87.92,32.07,18.78,Bacterial Leaf Blight
+24.94,53.6,1.69,10.17,Healthy Rice Leaf
+31.12,96.9,7.93,11.1,Sheath Blight
+26.68,89.9,6.64,16.96,Brown Spot
+25.58,92.95,8.89,10.14,Brown Spot
+21.63,88.2,1.85,13.0,Brown Spot
+29.63,81.31,14.49,13.95,Leaf scald
+26.68,90.86,14.54,15.21,Leaf Blast
+31.6,85.71,8.05,16.49,Sheath Blight
+30.03,100.0,2.35,14.8,Leaf scald
+31.29,94.11,6.1,10.52,Sheath Blight
+27.48,88.18,3.6,19.82,Leaf scald
+20.77,89.72,4.07,10.65,Brown Spot
+29.52,83.97,11.04,8.2,Sheath Blight
+33.54,90.53,4.55,12.45,Sheath Blight
+22.03,95.19,13.28,9.51,Leaf Blast
+30.68,91.07,5.86,11.03,Sheath Blight
+25.8,60.5,1.73,12.3,Healthy Rice Leaf
+29.69,91.78,12.61,16.11,Leaf Blast
+25.96,86.41,6.29,10.79,Leaf scald
+26.5,65.22,2.68,4.96,Healthy Rice Leaf
+30.3,83.47,11.33,21.29,Leaf scald
+29.31,88.16,27.0,12.71,Bacterial Leaf Blight
+23.32,95.56,5.0,11.69,Brown Spot
+25.03,53.29,0.0,9.1,Healthy Rice Leaf
+23.91,89.39,10.77,13.97,Leaf Blast
+28.11,84.54,11.15,16.06,Leaf scald
+30.57,85.15,5.3,9.4,Leaf scald
+22.1,87.54,2.93,10.96,Brown Spot
+28.72,95.42,8.62,8.28,Sheath Blight
+33.51,89.75,9.3,12.72,Sheath Blight
+31.58,98.05,6.05,14.59,Sheath Blight
+32.02,93.57,13.29,30.48,Bacterial Leaf Blight
+28.07,84.88,7.29,5.61,Sheath Blight
+25.17,89.25,4.8,16.73,Leaf scald
+26.92,75.23,7.76,12.77,Leaf scald
+27.66,85.19,7.22,11.86,Leaf scald
+25.37,84.67,17.71,27.83,Bacterial Leaf Blight
+25.26,98.89,3.56,17.38,Brown Spot
+30.19,59.15,2.52,6.14,Healthy Rice Leaf
+23.73,55.39,2.27,13.92,Healthy Rice Leaf
+25.71,92.1,11.89,16.87,Leaf Blast
+27.4,62.71,0.31,10.59,Healthy Rice Leaf
+23.86,60.13,2.81,9.04,Healthy Rice Leaf
+27.7,88.33,3.01,15.82,Leaf scald
+29.66,85.07,7.55,12.31,Leaf scald
+30.66,90.39,8.9,13.18,Sheath Blight
+25.62,84.89,11.25,21.44,Leaf scald
+33.79,94.17,7.04,9.27,Sheath Blight
+26.56,92.87,6.32,12.0,Brown Spot
+28.29,84.75,18.55,14.51,Bacterial Leaf Blight
+20.47,86.38,11.93,17.57,Leaf scald
+30.09,89.94,18.78,17.86,Leaf Blast
+28.91,62.09,0.32,9.66,Healthy Rice Leaf
+21.99,65.94,3.84,18.3,Healthy Rice Leaf
+31.86,84.85,10.61,16.81,Bacterial Leaf Blight
+24.69,91.31,1.42,21.22,Brown Spot
+22.19,92.11,7.88,7.48,Brown Spot
+27.2,90.57,10.11,16.54,Leaf scald
+22.84,56.35,1.65,10.04,Healthy Rice Leaf
+30.04,98.0,1.38,12.58,Sheath Blight
+31.66,92.64,22.46,10.13,Bacterial Leaf Blight
+26.35,92.06,11.04,19.5,Leaf Blast
+23.56,57.35,0.0,11.5,Healthy Rice Leaf
+29.26,59.42,3.01,12.29,Healthy Rice Leaf
+28.53,94.79,5.93,11.59,Sheath Blight
+33.08,89.84,5.74,14.0,Sheath Blight
+22.28,90.86,13.31,16.19,Leaf Blast
+28.46,92.32,3.57,16.3,Brown Spot
+32.13,93.19,8.98,13.42,Leaf scald
+28.11,79.95,14.63,28.72,Bacterial Leaf Blight
+27.51,78.5,9.69,11.71,Leaf scald
+23.52,95.28,12.02,14.76,Leaf Blast
+29.65,91.3,5.58,13.34,Sheath Blight
+21.32,90.46,8.08,3.83,Brown Spot
+20.98,97.59,9.06,11.54,Brown Spot
+29.0,100.0,5.07,12.68,Sheath Blight
+25.94,84.42,17.41,22.36,Bacterial Leaf Blight
+32.27,83.54,24.32,22.37,Bacterial Leaf Blight
+29.93,96.79,7.64,6.24,Sheath Blight
+31.51,90.56,1.19,4.18,Sheath Blight
+25.24,63.89,0.63,15.75,Healthy Rice Leaf
+31.32,90.63,0.0,9.17,Sheath Blight
+25.63,53.42,2.44,11.47,Healthy Rice Leaf
+26.47,92.85,3.89,10.61,Brown Spot
+29.4,91.4,11.48,34.47,Bacterial Leaf Blight
+27.45,96.15,8.76,8.93,Leaf Blast
+28.64,83.9,17.64,19.13,Bacterial Leaf Blight
+30.34,94.22,17.44,17.19,Sheath Blight
+23.31,93.74,10.23,12.48,Leaf Blast
+21.89,94.06,14.19,10.85,Leaf Blast
+21.22,87.26,5.99,13.67,Brown Spot
+31.05,88.83,3.12,15.42,Sheath Blight
+21.49,77.6,10.14,17.77,Leaf scald
+25.74,94.06,11.04,22.9,Leaf Blast
+29.43,77.91,23.07,24.88,Bacterial Leaf Blight
+26.62,85.89,0.88,13.8,Brown Spot
+23.75,89.77,10.15,16.72,Leaf scald
+23.06,88.52,3.44,11.23,Brown Spot
+21.36,95.78,11.71,22.3,Leaf Blast
+27.7,96.71,5.97,15.32,Brown Spot
+31.74,85.58,0.09,11.85,Sheath Blight
+27.36,94.53,7.72,14.16,Leaf Blast
+23.74,93.29,6.55,11.78,Brown Spot
+29.55,96.35,1.17,6.32,Sheath Blight
+23.9,90.97,8.65,12.51,Leaf Blast
+26.03,85.32,6.64,11.68,Brown Spot
+24.11,92.8,6.72,23.21,Leaf Blast
+27.01,88.89,5.32,12.43,Leaf scald
+33.67,79.82,2.19,15.94,Leaf scald
+27.72,81.63,4.92,14.05,Leaf scald
+22.84,97.41,9.43,20.77,Leaf Blast
+21.19,95.53,17.68,16.64,Leaf Blast
+31.28,86.01,6.16,14.76,Brown Spot
+21.15,91.53,4.03,15.2,Brown Spot
+25.14,92.78,9.06,19.4,Leaf Blast
+27.16,60.31,3.52,7.09,Healthy Rice Leaf
+26.07,81.53,7.46,12.46,Leaf scald
+26.26,90.09,6.65,13.86,Leaf scald
+23.78,60.03,0.95,9.88,Healthy Rice Leaf
+25.56,100.0,17.52,17.12,Leaf Blast
+19.23,95.22,6.49,14.94,Brown Spot
+25.57,93.04,19.14,21.45,Leaf Blast
+25.86,55.5,4.71,13.44,Healthy Rice Leaf
+27.65,86.02,15.77,19.38,Bacterial Leaf Blight
+23.76,90.93,18.49,15.83,Leaf Blast
+27.38,87.23,3.95,4.83,Brown Spot
+23.09,98.69,3.07,12.92,Brown Spot
+29.99,63.09,0.83,9.86,Healthy Rice Leaf
+30.45,90.85,15.95,20.2,Bacterial Leaf Blight
+28.02,96.9,16.92,27.77,Leaf Blast
+24.51,93.88,14.65,18.83,Leaf Blast
+25.34,65.65,1.15,10.87,Healthy Rice Leaf
+29.07,97.96,5.28,26.9,Leaf scald
+32.16,100.0,10.79,8.18,Sheath Blight
+28.21,92.12,6.02,16.73,Brown Spot
+28.61,88.26,1.45,10.27,Sheath Blight
+30.31,99.53,6.49,5.12,Brown Spot
+29.1,87.26,24.35,21.74,Bacterial Leaf Blight
+32.34,92.3,7.83,9.92,Sheath Blight
+25.7,89.85,9.29,15.7,Leaf Blast
+27.25,90.09,7.14,14.48,Brown Spot
+25.53,45.35,1.92,2.86,Healthy Rice Leaf
+26.79,90.11,21.48,15.92,Bacterial Leaf Blight
+25.24,92.5,7.65,12.21,Brown Spot
+26.47,54.99,1.6,16.06,Healthy Rice Leaf
+25.14,97.95,3.64,9.39,Brown Spot
+29.3,91.52,5.65,14.01,Sheath Blight
+25.28,57.07,1.95,12.05,Healthy Rice Leaf
+24.8,92.82,1.84,17.51,Leaf Blast
+32.61,94.22,11.47,20.45,Leaf scald
+24.49,61.49,4.12,8.24,Healthy Rice Leaf
+28.74,90.79,6.19,10.57,Sheath Blight
+21.29,91.36,2.43,13.68,Brown Spot
+28.86,85.98,15.18,20.65,Leaf scald
+31.54,91.02,9.71,13.89,Leaf scald
+31.35,93.36,7.07,17.22,Sheath Blight
+25.55,93.01,16.63,17.16,Leaf Blast
+28.31,87.83,25.63,23.69,Bacterial Leaf Blight
+33.52,86.13,9.28,10.27,Sheath Blight
+26.12,88.7,8.04,21.77,Leaf scald
+24.12,77.91,12.06,22.77,Leaf scald
+23.87,89.98,10.1,13.37,Brown Spot
+25.71,90.09,17.09,24.93,Leaf Blast
+25.23,91.24,2.94,15.11,Brown Spot
+19.55,94.8,7.84,13.66,Brown Spot
+25.96,87.29,12.55,21.29,Leaf scald
+26.69,88.99,5.2,11.7,Brown Spot
+30.47,92.94,14.4,22.17,Bacterial Leaf Blight
+33.89,94.25,20.76,19.18,Bacterial Leaf Blight
+24.27,89.68,4.72,17.15,Leaf scald
+19.45,92.13,2.7,7.19,Brown Spot
+31.11,90.09,2.43,12.71,Brown Spot
+31.14,93.06,10.73,15.7,Sheath Blight
+27.82,91.79,3.25,17.25,Leaf Blast
+25.39,95.77,9.56,13.8,Brown Spot
+25.85,80.95,2.53,20.04,Leaf scald
+31.42,88.58,6.69,9.0,Leaf scald
+25.59,91.1,16.03,26.81,Bacterial Leaf Blight
+27.26,93.94,4.98,13.33,Sheath Blight
+30.15,53.22,2.11,4.89,Healthy Rice Leaf
+21.82,93.46,11.42,15.81,Leaf Blast
+26.61,94.15,4.96,13.18,Leaf scald
+20.86,92.88,12.68,11.76,Leaf Blast
+26.67,98.99,16.34,15.38,Leaf Blast
+24.32,61.57,1.21,10.91,Healthy Rice Leaf
+27.14,90.43,4.04,13.33,Leaf Blast
+24.56,95.02,12.14,16.78,Leaf Blast
+18.58,93.44,8.2,6.4,Brown Spot
+34.44,88.26,11.49,25.55,Bacterial Leaf Blight
+26.5,82.79,21.74,27.73,Bacterial Leaf Blight
+27.3,64.76,5.46,8.41,Healthy Rice Leaf
+33.09,89.82,14.46,20.47,Bacterial Leaf Blight
+34.54,94.49,14.42,11.08,Sheath Blight
+25.92,54.19,1.76,11.27,Healthy Rice Leaf
+27.54,89.59,13.39,21.72,Bacterial Leaf Blight
+24.74,86.45,3.08,9.89,Brown Spot
+24.62,91.91,7.46,8.32,Leaf scald
+22.03,95.58,6.59,13.22,Brown Spot
+26.19,94.18,9.61,14.02,Leaf scald
+23.94,78.66,16.42,23.2,Bacterial Leaf Blight
+29.29,83.35,19.23,22.13,Bacterial Leaf Blight
+27.75,84.41,17.17,24.17,Bacterial Leaf Blight
+16.32,88.63,5.02,12.05,Brown Spot
+26.73,54.08,2.4,11.84,Healthy Rice Leaf
+22.52,95.07,5.46,10.02,Brown Spot
+28.08,97.24,9.07,9.85,Leaf Blast
+27.98,92.25,13.88,13.93,Leaf Blast
+23.63,61.26,2.06,10.65,Healthy Rice Leaf
+27.5,61.6,0.0,8.08,Healthy Rice Leaf
+31.28,89.99,7.33,7.44,Sheath Blight
+25.2,94.19,1.55,19.13,Leaf Blast
+28.54,89.04,4.11,17.87,Brown Spot
+32.69,84.92,7.64,22.4,Bacterial Leaf Blight
+32.38,99.41,31.97,29.96,Bacterial Leaf Blight
+35.85,94.03,21.43,21.4,Bacterial Leaf Blight
+29.42,93.21,6.92,27.53,Leaf Blast
+32.39,86.75,15.61,22.88,Bacterial Leaf Blight
+25.94,88.88,4.23,7.8,Brown Spot
+25.36,55.45,1.62,11.98,Healthy Rice Leaf
+23.3,82.28,8.82,16.49,Leaf scald
+29.36,82.48,15.45,20.56,Bacterial Leaf Blight
+32.53,89.61,7.34,10.27,Brown Spot
+27.16,96.83,11.6,13.46,Leaf Blast
+26.67,82.36,14.97,13.34,Leaf scald
+29.26,88.47,24.43,22.69,Bacterial Leaf Blight
+30.08,90.93,7.13,19.8,Sheath Blight
+33.02,96.81,2.14,14.54,Sheath Blight
+30.43,88.23,9.79,16.68,Bacterial Leaf Blight
+30.93,81.84,16.72,28.18,Bacterial Leaf Blight
+21.58,95.46,9.4,12.52,Leaf Blast
+26.16,85.61,12.66,25.31,Bacterial Leaf Blight
+25.0,91.94,12.17,23.93,Leaf Blast
+31.97,100.0,17.22,17.15,Sheath Blight
+31.04,87.58,15.75,23.65,Bacterial Leaf Blight
+29.55,85.36,16.59,16.39,Bacterial Leaf Blight
+22.76,92.52,14.38,20.98,Leaf Blast
+21.55,89.26,1.18,12.08,Brown Spot
+31.15,92.3,8.75,12.47,Sheath Blight
+28.07,90.23,7.31,13.76,Brown Spot
+29.73,96.5,4.67,11.26,Sheath Blight
+21.89,82.74,13.4,6.72,Leaf scald
+24.2,90.92,5.87,8.76,Brown Spot
+21.32,93.37,16.01,20.79,Leaf Blast
+27.06,58.98,2.36,10.97,Healthy Rice Leaf
+29.71,86.52,5.01,17.72,Leaf scald
+20.93,93.82,15.02,17.59,Leaf Blast
+26.95,60.55,1.72,4.12,Healthy Rice Leaf
+28.94,58.22,4.37,9.75,Healthy Rice Leaf
+25.76,89.67,9.38,26.83,Leaf scald
+25.17,65.13,2.76,9.16,Healthy Rice Leaf
+25.42,86.69,3.63,19.26,Brown Spot
+30.61,99.7,8.05,2.58,Sheath Blight
+25.11,95.19,7.7,16.4,Leaf Blast
+31.57,94.42,7.08,18.95,Brown Spot
+28.08,96.63,5.95,13.02,Sheath Blight
+27.22,68.97,2.08,8.48,Healthy Rice Leaf
+22.04,89.35,5.45,11.21,Brown Spot
+28.03,66.82,1.67,6.7,Healthy Rice Leaf
+30.88,84.4,16.45,13.74,Leaf scald
+22.57,86.68,12.98,17.13,Bacterial Leaf Blight
+26.63,59.17,3.54,11.46,Healthy Rice Leaf
+23.04,90.91,14.66,19.31,Leaf Blast
+23.8,84.55,4.74,15.66,Leaf scald
+30.26,55.69,0.0,11.81,Healthy Rice Leaf
+24.92,81.86,8.54,9.31,Leaf scald
+28.13,49.51,0.0,7.13,Healthy Rice Leaf
+29.88,94.91,0.53,15.88,Brown Spot
+27.37,84.02,6.66,27.96,Leaf scald
+24.35,90.2,5.66,6.59,Brown Spot
+23.89,96.13,12.37,18.38,Leaf Blast
+30.29,87.29,22.36,12.68,Bacterial Leaf Blight
+21.39,85.46,8.53,23.75,Leaf scald
+27.29,87.54,10.86,18.24,Leaf scald
+29.26,84.13,14.71,24.27,Bacterial Leaf Blight
+36.21,92.89,1.56,12.74,Sheath Blight
+25.26,67.94,0.91,8.7,Healthy Rice Leaf
+25.68,67.42,2.35,13.65,Healthy Rice Leaf
+24.86,93.9,8.78,26.45,Leaf Blast
+28.35,59.45,6.37,8.63,Healthy Rice Leaf
+27.6,93.7,10.21,14.18,Leaf Blast
+27.04,90.37,18.97,21.57,Bacterial Leaf Blight
+26.95,84.37,10.34,17.08,Leaf scald
+24.28,57.39,1.16,5.98,Healthy Rice Leaf
+30.4,75.47,2.58,17.0,Leaf scald
+30.1,92.12,1.32,11.12,Sheath Blight
+32.0,88.5,6.77,5.3,Sheath Blight
+23.88,60.26,0.95,13.42,Healthy Rice Leaf
+25.18,55.53,2.49,9.0,Healthy Rice Leaf
+24.16,94.13,15.06,16.91,Leaf Blast
+28.6,93.75,4.98,5.0,Brown Spot
+23.33,91.65,13.63,8.44,Leaf Blast
+26.77,88.87,11.54,19.0,Leaf scald
+32.08,91.19,5.21,7.96,Leaf Blast
+32.45,90.87,6.64,14.71,Sheath Blight
+24.39,63.31,0.36,10.55,Healthy Rice Leaf
+27.46,86.73,25.6,27.85,Bacterial Leaf Blight
+26.39,53.11,2.39,14.71,Healthy Rice Leaf
+22.84,90.03,6.69,12.6,Leaf Blast
+24.32,90.24,5.78,15.84,Leaf scald
+24.5,90.82,7.39,19.89,Brown Spot
+24.85,96.32,10.37,24.51,Leaf Blast
+24.74,97.69,9.83,9.5,Leaf Blast
+27.83,91.26,20.54,30.88,Bacterial Leaf Blight
+26.63,59.24,0.0,12.35,Healthy Rice Leaf
+23.92,49.15,0.0,14.23,Healthy Rice Leaf
+26.07,61.66,0.0,8.72,Healthy Rice Leaf
+21.38,60.51,1.3,12.25,Healthy Rice Leaf
+28.0,88.57,6.15,9.46,Sheath Blight
+30.08,94.04,28.26,25.58,Bacterial Leaf Blight
+30.87,79.75,1.36,24.78,Leaf scald
+22.86,96.93,13.88,25.21,Leaf Blast
+26.55,92.04,8.8,6.59,Leaf Blast
+21.28,94.06,0.0,8.79,Brown Spot
+28.83,82.41,9.89,15.84,Leaf scald
+29.05,86.06,15.01,22.32,Bacterial Leaf Blight
+30.06,94.26,9.3,21.64,Leaf scald
+29.52,86.34,8.09,21.2,Leaf scald
+25.02,93.3,11.0,3.31,Leaf Blast
+22.72,93.81,8.93,20.55,Leaf Blast
+28.64,83.84,2.3,21.24,Leaf scald
+33.95,89.18,16.56,20.73,Bacterial Leaf Blight
+27.77,85.02,15.73,14.49,Bacterial Leaf Blight
+30.44,84.89,3.09,13.04,Leaf scald
+28.31,67.4,0.0,7.75,Healthy Rice Leaf
+28.01,57.08,0.0,11.01,Healthy Rice Leaf
+27.16,86.86,7.57,17.09,Bacterial Leaf Blight
+33.19,88.68,10.55,9.3,Sheath Blight
+24.87,82.57,8.53,22.26,Leaf scald
+26.79,99.18,1.14,10.12,Brown Spot
+20.85,85.74,2.77,19.17,Brown Spot
+33.59,91.49,4.03,4.27,Sheath Blight
+42.1,97.96,5.27,14.06,Brown Spot
+28.6,68.93,2.98,5.66,Healthy Rice Leaf
+30.08,90.43,9.75,6.59,Sheath Blight
+26.89,50.69,0.0,10.29,Healthy Rice Leaf
+25.32,66.25,3.89,12.89,Healthy Rice Leaf
+25.96,83.93,8.51,14.72,Leaf scald
+21.44,82.53,12.82,12.19,Leaf scald
+33.19,93.63,11.22,14.43,Sheath Blight
+27.92,91.67,8.92,14.3,Brown Spot
+27.24,87.07,0.0,17.29,Leaf scald
+30.23,92.15,12.11,8.7,Sheath Blight
+28.7,87.48,9.86,14.27,Brown Spot
+30.25,92.24,0.56,14.93,Sheath Blight
+32.93,93.82,14.53,10.99,Sheath Blight
+31.65,88.63,10.96,12.69,Leaf scald
+23.66,93.62,13.37,17.35,Leaf Blast
+34.19,92.34,1.24,8.57,Sheath Blight
+28.49,89.7,3.87,11.5,Brown Spot
+32.36,80.17,16.71,23.94,Bacterial Leaf Blight
+22.35,84.87,9.6,11.88,Leaf scald
+30.6,94.41,1.74,18.93,Brown Spot
+28.87,59.18,0.0,10.21,Healthy Rice Leaf
+26.32,86.39,1.92,8.71,Sheath Blight
+31.2,91.49,5.74,12.72,Sheath Blight
+25.28,83.07,12.9,18.73,Bacterial Leaf Blight
+31.48,88.82,5.14,8.41,Sheath Blight
+25.09,87.29,3.01,3.92,Leaf scald
+32.58,92.11,4.49,13.51,Sheath Blight
+25.11,83.63,5.63,23.06,Leaf scald
+25.47,60.59,0.0,17.6,Healthy Rice Leaf
+24.79,94.19,8.78,30.66,Leaf Blast
+25.82,90.0,3.96,7.42,Brown Spot
+24.01,60.06,1.26,8.52,Healthy Rice Leaf
+33.03,82.56,22.04,24.85,Bacterial Leaf Blight
+32.33,83.19,10.86,10.34,Sheath Blight
+30.28,83.66,6.65,24.2,Leaf scald
+24.77,94.45,1.97,13.45,Brown Spot
+25.24,98.01,2.95,7.12,Brown Spot
+27.72,96.53,2.02,12.23,Sheath Blight
+28.13,54.58,4.2,6.86,Healthy Rice Leaf
+26.83,63.13,2.62,7.7,Healthy Rice Leaf
+33.25,95.99,5.36,8.27,Sheath Blight
+28.85,87.33,7.31,12.08,Brown Spot
+19.76,97.03,13.58,18.79,Leaf Blast
+32.14,86.76,19.31,26.25,Bacterial Leaf Blight
+32.03,89.49,29.82,14.28,Bacterial Leaf Blight
+33.5,84.25,3.34,8.04,Sheath Blight
+30.9,90.96,16.01,28.75,Bacterial Leaf Blight
+21.98,92.25,6.26,18.59,Leaf Blast
+29.99,80.48,13.26,22.9,Bacterial Leaf Blight
+26.14,56.03,0.24,5.68,Healthy Rice Leaf
+27.51,93.32,6.14,8.79,Brown Spot
+28.26,92.87,6.49,16.06,Sheath Blight
+25.21,94.67,3.31,11.97,Brown Spot
+27.08,63.98,0.0,4.57,Healthy Rice Leaf
+26.77,57.59,0.0,16.62,Healthy Rice Leaf
+19.73,96.34,15.93,24.73,Leaf Blast
+30.96,90.31,9.0,12.63,Sheath Blight
+23.49,89.62,10.63,21.76,Leaf scald
+23.94,88.52,3.34,12.78,Brown Spot
+33.04,85.25,20.93,21.46,Bacterial Leaf Blight
+24.33,66.38,0.0,9.06,Healthy Rice Leaf
+30.74,88.74,9.3,21.29,Bacterial Leaf Blight
+35.72,89.22,11.17,25.94,Bacterial Leaf Blight
+29.56,93.6,12.53,5.74,Sheath Blight
+32.17,88.39,0.0,12.4,Sheath Blight
+31.62,84.99,20.48,26.86,Bacterial Leaf Blight
+25.06,87.49,5.24,14.32,Brown Spot
+25.43,88.99,7.04,9.45,Brown Spot
+28.43,89.52,16.68,12.42,Sheath Blight
+23.52,95.57,4.27,15.58,Brown Spot
+31.85,90.15,1.75,16.34,Sheath Blight
+26.66,56.72,2.47,8.66,Healthy Rice Leaf
+26.07,88.85,6.19,20.09,Brown Spot
+33.54,83.9,20.04,23.12,Bacterial Leaf Blight
+26.84,86.18,0.0,19.79,Leaf scald
+27.75,81.42,24.56,22.24,Bacterial Leaf Blight
+21.71,51.48,2.36,4.43,Healthy Rice Leaf
+24.06,55.01,3.29,9.16,Healthy Rice Leaf
+28.0,91.98,14.07,15.2,Leaf Blast
+27.18,76.94,6.03,13.98,Leaf scald
+28.85,88.33,4.06,12.47,Brown Spot
+29.64,60.34,1.33,9.68,Healthy Rice Leaf
+27.24,85.12,23.4,20.17,Bacterial Leaf Blight
+30.31,90.13,24.39,23.06,Bacterial Leaf Blight
+21.45,94.85,6.01,10.05,Brown Spot
+31.49,93.31,7.99,12.97,Sheath Blight
+29.74,84.09,0.38,20.7,Leaf scald
+32.15,97.24,8.93,18.84,Leaf Blast
+23.47,84.12,1.03,15.73,Leaf scald
+26.77,92.53,15.0,16.09,Leaf Blast
+31.15,86.46,11.27,11.08,Sheath Blight
+30.52,88.62,11.58,18.17,Leaf scald
+31.65,90.7,8.2,9.17,Brown Spot
+30.64,96.33,3.97,11.11,Sheath Blight
+29.58,98.77,7.67,5.75,Sheath Blight
+34.59,87.41,3.27,14.4,Sheath Blight
+24.8,94.45,16.4,17.89,Leaf Blast
+28.24,82.99,0.0,18.14,Leaf scald
+25.03,90.76,12.94,11.71,Leaf Blast
+23.75,88.97,5.26,6.85,Brown Spot
+27.92,94.28,8.18,11.43,Brown Spot
+25.83,72.29,1.61,10.98,Healthy Rice Leaf
+24.68,61.39,0.37,12.77,Healthy Rice Leaf
+35.08,85.49,19.01,20.33,Bacterial Leaf Blight
+30.28,95.15,0.0,11.18,Sheath Blight
+19.76,95.34,25.82,20.58,Leaf Blast
+28.24,91.86,0.0,18.39,Leaf scald
+31.88,91.26,5.1,16.43,Leaf scald
+23.34,93.15,15.58,11.0,Leaf Blast
+24.96,61.15,3.63,12.91,Healthy Rice Leaf
+32.35,94.24,2.82,0.0,Brown Spot
+30.92,95.75,6.07,9.19,Brown Spot
+27.05,96.81,16.25,14.69,Leaf Blast
+22.85,94.2,12.24,13.89,Leaf Blast
+24.66,95.91,17.53,18.0,Leaf Blast
+26.44,56.24,0.0,9.72,Healthy Rice Leaf
+27.68,61.22,2.16,10.2,Healthy Rice Leaf
+33.32,86.62,15.58,21.03,Bacterial Leaf Blight
+26.7,54.51,5.4,7.3,Healthy Rice Leaf
+28.42,84.75,18.2,28.14,Bacterial Leaf Blight
+26.65,95.57,12.12,21.95,Leaf Blast
+30.57,93.51,7.43,13.11,Sheath Blight
+29.51,86.78,17.78,35.06,Bacterial Leaf Blight
+25.87,62.32,1.97,12.09,Healthy Rice Leaf
+25.92,83.18,24.27,23.96,Bacterial Leaf Blight
+27.53,89.07,6.56,21.15,Leaf scald
+36.21,92.93,0.83,14.59,Brown Spot
+30.68,86.24,20.02,13.57,Bacterial Leaf Blight
+29.49,53.18,2.49,6.73,Healthy Rice Leaf
+24.23,95.13,11.61,13.28,Leaf Blast
+24.37,89.57,11.25,12.12,Leaf Blast
+29.98,87.6,6.94,6.04,Sheath Blight
+28.67,91.36,4.54,18.56,Brown Spot
+23.91,99.29,4.26,10.99,Brown Spot
+29.06,87.59,4.82,5.42,Brown Spot
+32.66,96.1,3.86,9.05,Sheath Blight
+29.8,84.78,28.1,17.16,Bacterial Leaf Blight
+22.14,93.23,17.72,14.64,Leaf Blast
+26.38,91.61,9.42,8.89,Leaf Blast
+25.06,62.79,1.43,9.97,Healthy Rice Leaf
+25.66,86.43,29.79,18.06,Bacterial Leaf Blight
+27.01,91.5,4.1,21.79,Leaf scald
+26.06,86.82,9.24,25.91,Leaf scald
+30.62,84.01,20.4,22.97,Bacterial Leaf Blight
+23.85,84.79,5.52,13.64,Brown Spot
+26.97,87.85,4.4,14.87,Leaf scald
+28.5,95.94,11.52,13.31,Leaf Blast
+26.23,83.08,8.55,18.78,Leaf scald
+26.36,93.82,20.26,23.69,Bacterial Leaf Blight
+24.08,87.22,9.28,11.83,Leaf Blast
+29.9,83.89,1.05,14.38,Leaf scald
+25.06,64.7,0.0,11.48,Healthy Rice Leaf
+22.38,87.75,6.56,18.61,Leaf scald
+23.24,59.24,1.23,12.01,Healthy Rice Leaf
+25.36,93.47,7.4,12.37,Brown Spot
+20.01,90.35,6.3,12.93,Brown Spot
+23.95,96.59,11.84,23.44,Leaf Blast
+23.29,93.2,3.6,16.91,Leaf Blast
+33.68,90.16,0.84,10.93,Sheath Blight
+27.22,90.69,3.71,16.15,Brown Spot
+26.32,94.24,16.84,15.39,Leaf Blast
+24.64,88.65,10.73,16.34,Leaf scald
+31.32,96.88,9.93,6.1,Sheath Blight
+22.86,62.22,2.22,11.09,Healthy Rice Leaf
+32.14,91.53,11.12,28.05,Bacterial Leaf Blight
+29.89,85.74,27.89,12.76,Bacterial Leaf Blight
+23.57,94.24,12.98,18.77,Leaf Blast
+27.12,83.18,2.28,21.66,Leaf scald
+26.61,59.45,3.75,8.53,Healthy Rice Leaf
+25.72,55.77,1.41,14.2,Healthy Rice Leaf
+27.07,89.76,13.24,13.67,Sheath Blight
+25.14,93.85,14.31,15.34,Leaf Blast
+19.71,94.14,8.7,19.76,Leaf Blast
+26.75,91.52,7.99,15.77,Leaf Blast
+30.53,83.82,3.9,6.05,Sheath Blight
+24.93,92.23,10.88,10.45,Brown Spot
+22.79,92.89,10.95,16.31,Leaf Blast
+24.43,100.0,15.62,19.54,Leaf Blast
+30.85,94.0,6.61,13.64,Sheath Blight
+24.55,82.09,8.19,22.82,Leaf scald
+21.03,97.4,7.2,15.36,Leaf scald
+25.92,79.49,7.18,7.45,Leaf scald
+31.41,79.9,15.59,21.3,Bacterial Leaf Blight
+28.76,80.71,7.69,21.37,Leaf scald
+25.89,89.02,11.79,15.52,Leaf Blast
+18.26,94.98,4.19,15.83,Brown Spot
+25.14,62.1,0.0,9.24,Healthy Rice Leaf
+23.19,87.02,4.67,24.53,Leaf scald
+29.27,94.27,8.32,7.13,Sheath Blight
+21.14,87.56,8.79,22.96,Leaf scald
+33.11,100.0,5.33,10.88,Sheath Blight
+25.73,98.26,8.89,13.09,Leaf Blast
+21.83,90.1,9.61,25.5,Leaf scald
+24.7,93.44,13.22,14.87,Leaf Blast
+28.83,93.95,6.68,7.89,Brown Spot
+35.44,96.33,4.07,9.83,Sheath Blight
+25.91,86.82,11.06,5.17,Leaf scald
+24.41,64.03,0.0,12.44,Healthy Rice Leaf
+33.17,93.32,7.9,11.28,Sheath Blight
+33.19,93.51,10.08,8.85,Sheath Blight
+30.49,86.73,1.4,10.26,Sheath Blight
+24.37,91.14,4.04,16.5,Brown Spot
+29.4,93.86,2.82,13.4,Sheath Blight
+21.47,93.66,6.62,21.23,Leaf Blast
+24.86,73.78,7.37,14.39,Leaf scald
+23.25,85.09,4.19,8.05,Brown Spot
+30.2,84.11,5.75,29.17,Leaf scald
+30.93,84.85,10.59,15.35,Bacterial Leaf Blight
+24.79,86.29,7.24,10.56,Brown Spot
+22.84,89.38,14.13,18.75,Leaf Blast
+21.72,97.72,6.94,6.64,Brown Spot
+25.68,66.62,1.08,12.05,Healthy Rice Leaf
+28.9,83.73,22.44,23.65,Bacterial Leaf Blight
+30.2,92.48,1.9,13.66,Sheath Blight
+24.29,87.94,5.5,16.33,Brown Spot
+28.22,94.85,10.59,13.25,Bacterial Leaf Blight
+28.11,97.73,5.79,13.47,Sheath Blight
+31.0,83.57,12.12,18.95,Bacterial Leaf Blight
+27.26,90.58,15.29,26.16,Bacterial Leaf Blight
+23.37,78.73,4.22,18.16,Leaf scald
+24.42,89.06,12.12,11.79,Leaf Blast
+30.72,89.66,2.26,11.99,Brown Spot
+28.66,90.31,9.78,14.2,Sheath Blight
+28.93,53.49,0.7,12.33,Healthy Rice Leaf
+34.46,86.34,2.54,9.41,Sheath Blight
+28.52,92.76,16.71,22.97,Bacterial Leaf Blight
+26.47,63.78,0.35,11.49,Healthy Rice Leaf
+24.53,94.02,14.29,16.02,Leaf Blast
+28.27,82.77,18.18,8.16,Bacterial Leaf Blight
+23.77,94.56,13.2,21.34,Leaf Blast
+27.34,91.76,13.08,19.85,Brown Spot
+29.29,80.76,8.97,18.9,Leaf scald
+28.37,90.28,4.97,9.18,Brown Spot
+28.0,54.89,2.42,13.77,Healthy Rice Leaf
+20.59,97.63,2.41,8.68,Brown Spot
+21.87,60.65,3.91,11.11,Healthy Rice Leaf
+30.15,87.54,7.36,9.67,Sheath Blight
+25.3,82.11,9.85,21.3,Leaf scald
+26.23,100.0,12.27,18.56,Leaf Blast
+29.85,87.97,6.77,15.97,Sheath Blight
+33.61,92.4,11.78,12.51,Sheath Blight
+27.76,58.29,1.7,12.39,Healthy Rice Leaf
+30.47,88.46,7.71,15.58,Sheath Blight
+20.1,94.93,7.98,12.36,Brown Spot
+35.0,87.66,10.55,21.96,Bacterial Leaf Blight
+20.45,93.93,12.78,17.73,Leaf Blast
+27.44,91.01,5.04,11.86,Leaf scald
+22.63,62.58,3.77,18.57,Healthy Rice Leaf
+24.15,68.99,1.87,8.11,Healthy Rice Leaf
+28.28,98.56,3.96,13.57,Brown Spot
+32.58,91.62,13.11,6.91,Sheath Blight
+29.51,89.46,7.72,17.07,Leaf scald
+28.17,86.59,10.43,17.04,Brown Spot
+30.92,81.93,15.57,32.71,Bacterial Leaf Blight
+23.16,86.91,16.76,19.2,Leaf scald
+27.26,93.8,6.5,12.29,Sheath Blight
+25.1,93.15,8.56,14.11,Brown Spot
+27.36,89.93,7.88,14.77,Sheath Blight
+25.22,85.97,18.46,26.8,Bacterial Leaf Blight
+27.03,95.38,15.75,20.35,Bacterial Leaf Blight
+27.34,58.18,3.83,10.11,Healthy Rice Leaf
+32.09,93.22,14.83,23.54,Bacterial Leaf Blight
+26.59,94.54,3.43,11.34,Brown Spot
+27.24,94.05,9.2,14.09,Leaf Blast
+30.24,91.92,15.8,15.87,Leaf scald
+25.86,95.21,13.35,15.07,Leaf Blast
+27.12,94.24,2.98,17.98,Leaf Blast
+30.28,90.71,7.85,12.0,Sheath Blight
+28.63,92.07,1.16,9.21,Brown Spot
+28.71,58.85,2.15,10.13,Healthy Rice Leaf
+26.73,93.09,5.07,18.57,Leaf Blast
+28.81,88.95,7.11,14.99,Sheath Blight
+23.72,55.53,0.52,7.05,Healthy Rice Leaf
+20.54,96.26,4.34,7.2,Brown Spot
+28.35,95.15,13.28,14.14,Sheath Blight
+27.92,86.08,25.03,21.23,Bacterial Leaf Blight
+31.3,89.97,5.15,10.62,Sheath Blight
+30.26,87.48,22.32,27.49,Bacterial Leaf Blight
+28.18,84.22,3.05,10.88,Sheath Blight
+25.87,93.49,6.02,15.91,Leaf Blast
+26.3,89.9,2.35,9.62,Brown Spot
+32.68,95.41,1.91,8.99,Sheath Blight
+27.7,89.68,17.26,18.27,Bacterial Leaf Blight
+29.13,89.95,4.14,14.02,Leaf scald
+28.25,93.33,11.02,14.91,Brown Spot
+25.92,92.5,7.16,8.93,Brown Spot
+21.97,92.93,9.74,17.5,Leaf Blast
+28.22,88.91,4.7,14.17,Brown Spot
+25.36,83.49,3.22,16.48,Leaf scald
+25.3,93.74,14.05,20.04,Leaf Blast
+32.0,90.33,4.37,5.99,Sheath Blight
+30.43,87.26,0.85,14.58,Leaf scald
+25.21,87.59,3.59,11.83,Brown Spot
+26.91,82.13,5.11,19.05,Leaf scald
+23.34,89.96,19.38,12.19,Leaf Blast
+29.18,95.3,25.29,19.93,Bacterial Leaf Blight
+27.64,93.97,5.58,11.18,Brown Spot
+23.43,63.25,3.54,9.78,Healthy Rice Leaf
+27.84,85.35,19.89,18.82,Bacterial Leaf Blight
+28.33,89.94,4.13,8.3,Leaf scald
+32.79,84.52,5.62,14.08,Leaf scald
+20.86,88.37,11.35,25.88,Leaf scald
+28.97,92.98,9.1,14.16,Brown Spot
+30.04,92.07,8.55,19.83,Sheath Blight
+31.84,86.19,22.56,20.02,Bacterial Leaf Blight
+27.29,79.95,6.81,13.35,Leaf scald
+23.25,60.06,0.0,10.59,Healthy Rice Leaf
+28.21,85.11,16.3,22.22,Leaf scald
+26.32,62.24,1.75,8.61,Healthy Rice Leaf
+29.98,87.33,4.24,14.05,Brown Spot
+22.77,91.99,21.54,19.34,Leaf Blast
+29.03,88.87,17.95,26.38,Bacterial Leaf Blight
+30.46,89.57,11.47,25.74,Bacterial Leaf Blight
+25.99,83.8,9.48,13.88,Leaf scald
+34.27,90.73,15.42,18.42,Sheath Blight
+24.72,86.63,5.8,25.99,Leaf scald
+34.61,95.07,23.84,26.21,Bacterial Leaf Blight
+29.48,95.28,14.02,17.84,Bacterial Leaf Blight
+27.83,88.09,16.07,26.19,Bacterial Leaf Blight
+29.46,98.58,5.53,13.77,Brown Spot
+27.32,84.21,6.17,20.03,Leaf scald
+28.79,92.26,10.52,18.14,Leaf scald
+31.62,96.63,13.05,12.94,Sheath Blight
+30.66,59.98,0.46,8.53,Healthy Rice Leaf
+29.87,90.35,24.9,18.87,Bacterial Leaf Blight
+23.97,52.98,1.69,13.61,Healthy Rice Leaf
+31.28,93.23,7.77,14.72,Sheath Blight
+30.54,91.47,4.99,13.83,Sheath Blight
+28.58,91.74,3.1,13.44,Brown Spot
+30.72,84.17,24.05,17.62,Bacterial Leaf Blight
+20.19,96.0,13.43,13.44,Leaf Blast
+27.62,85.93,15.78,15.81,Leaf scald
+31.91,100.0,7.97,18.47,Brown Spot
+34.07,85.86,1.22,9.97,Sheath Blight
+25.51,98.08,4.02,12.53,Brown Spot
+24.09,86.05,12.76,26.41,Leaf scald
+26.53,81.29,12.76,26.95,Bacterial Leaf Blight
+27.56,63.08,0.0,4.05,Healthy Rice Leaf
+31.18,81.75,13.21,14.99,Bacterial Leaf Blight
+33.78,75.38,4.81,22.93,Leaf scald
+24.27,85.47,0.07,1.85,Brown Spot
+25.64,89.39,1.83,10.58,Brown Spot
+30.39,92.3,24.55,24.62,Bacterial Leaf Blight
+30.13,99.19,2.14,14.19,Brown Spot
+25.52,56.89,0.25,5.54,Healthy Rice Leaf
+34.03,94.81,5.15,17.36,Sheath Blight
+26.46,90.89,8.64,5.46,Brown Spot
+25.23,92.33,10.73,21.97,Leaf Blast
+20.83,98.32,11.14,18.51,Leaf Blast
+22.53,100.0,8.34,14.98,Brown Spot
+21.21,97.35,3.53,12.17,Brown Spot
+29.99,53.75,1.78,7.59,Healthy Rice Leaf
+32.78,80.61,21.11,23.22,Bacterial Leaf Blight
+27.26,97.26,28.34,16.59,Bacterial Leaf Blight
+27.15,82.66,15.06,21.02,Bacterial Leaf Blight
+23.64,61.12,3.7,8.36,Healthy Rice Leaf
+22.99,91.47,10.05,17.46,Leaf Blast
+28.3,90.78,10.41,9.22,Brown Spot
+30.48,87.53,6.66,9.75,Sheath Blight
+23.51,57.55,2.43,14.31,Healthy Rice Leaf
+25.44,89.78,8.24,14.43,Brown Spot
+24.81,51.08,3.46,5.78,Healthy Rice Leaf
+24.12,59.95,1.61,12.45,Healthy Rice Leaf
+26.18,58.9,2.83,6.99,Healthy Rice Leaf
+26.99,93.51,9.09,15.52,Leaf Blast
+31.18,88.62,13.58,5.66,Sheath Blight
+26.65,87.28,6.56,10.42,Leaf scald
+29.76,89.12,25.02,24.69,Bacterial Leaf Blight
+27.91,86.55,6.74,5.79,Brown Spot
+32.99,85.43,9.54,23.69,Sheath Blight
+28.5,88.23,0.0,12.5,Sheath Blight
+30.13,87.52,28.31,24.7,Bacterial Leaf Blight
+24.51,80.12,4.41,19.5,Leaf scald
+24.77,99.78,17.66,15.26,Leaf Blast
+28.92,75.89,0.23,7.46,Healthy Rice Leaf
+33.57,81.39,17.14,18.61,Bacterial Leaf Blight
+29.49,81.48,9.1,11.51,Sheath Blight
+24.6,91.56,9.02,13.98,Leaf Blast
+24.18,95.0,4.29,6.95,Brown Spot
+28.79,90.66,6.95,15.21,Brown Spot
+28.86,90.13,16.2,18.18,Bacterial Leaf Blight
+26.04,68.64,4.1,9.9,Healthy Rice Leaf
+25.72,54.21,2.37,13.54,Healthy Rice Leaf
+29.58,82.98,16.75,23.2,Bacterial Leaf Blight
+27.88,55.65,1.48,9.19,Healthy Rice Leaf
+26.28,63.84,3.84,8.81,Healthy Rice Leaf
+29.23,91.03,17.78,19.38,Bacterial Leaf Blight
+29.87,62.25,4.56,16.32,Healthy Rice Leaf
+23.4,66.06,3.21,7.8,Healthy Rice Leaf
+23.64,93.49,15.55,15.1,Leaf Blast
+22.42,92.12,12.38,15.26,Leaf Blast
+28.29,92.34,7.75,12.34,Sheath Blight
+24.29,64.74,5.01,8.59,Healthy Rice Leaf
+25.5,93.3,10.23,9.92,Leaf Blast
+28.73,92.66,10.41,15.22,Sheath Blight
+22.48,65.25,2.83,9.47,Healthy Rice Leaf
+30.59,97.33,2.59,10.3,Sheath Blight
+21.38,96.27,14.44,22.47,Leaf Blast
+29.35,87.62,6.64,17.36,Sheath Blight
+22.01,85.5,14.29,13.25,Leaf scald
+34.95,83.95,4.76,10.01,Brown Spot
+32.82,93.67,3.7,8.48,Sheath Blight
+28.84,89.45,7.14,23.35,Bacterial Leaf Blight
+31.52,84.76,14.44,20.98,Bacterial Leaf Blight
+28.99,81.43,12.8,17.67,Leaf scald
+22.05,85.93,6.96,15.28,Leaf scald
+27.56,96.44,7.83,16.88,Sheath Blight
+31.48,87.21,6.34,10.49,Sheath Blight
+28.47,77.69,13.23,14.91,Leaf scald
+23.83,92.72,1.76,10.25,Brown Spot
+21.69,89.86,8.09,13.18,Leaf scald
+25.16,87.39,6.87,21.43,Brown Spot
+16.13,90.56,1.41,12.1,Brown Spot
+31.16,82.54,17.45,20.41,Bacterial Leaf Blight
+24.78,89.8,22.7,27.91,Bacterial Leaf Blight
+30.59,93.37,6.66,15.18,Sheath Blight
+26.19,83.77,29.96,17.72,Bacterial Leaf Blight
+24.51,82.95,8.13,19.42,Leaf scald
+22.0,89.8,0.0,6.18,Brown Spot
+31.29,91.46,3.08,16.93,Sheath Blight
+26.54,60.12,3.3,12.9,Healthy Rice Leaf
+31.57,98.78,6.04,13.65,Sheath Blight
+29.49,78.5,21.06,27.66,Bacterial Leaf Blight
+26.87,63.18,5.34,9.41,Healthy Rice Leaf
+23.91,88.21,5.19,8.12,Brown Spot
+31.08,85.06,12.35,13.6,Leaf scald
+22.68,94.91,12.26,22.81,Leaf Blast
+25.84,86.44,4.13,19.11,Leaf scald
+26.63,61.44,0.6,7.21,Healthy Rice Leaf
+25.3,54.89,2.61,5.58,Healthy Rice Leaf
+27.16,84.17,11.56,16.02,Leaf scald
+16.46,90.6,6.59,4.68,Brown Spot
+19.83,86.64,6.68,9.8,Brown Spot
+24.92,59.3,3.32,16.63,Healthy Rice Leaf
+26.71,60.3,0.61,13.07,Healthy Rice Leaf
+30.33,92.39,0.34,11.06,Brown Spot
+21.94,100.0,11.83,19.93,Leaf Blast
+29.63,95.25,13.97,14.88,Sheath Blight
+25.09,89.04,8.43,16.58,Brown Spot
+29.15,84.87,3.88,11.93,Sheath Blight
+32.01,99.61,8.07,15.28,Sheath Blight
+29.67,93.1,4.04,13.09,Brown Spot
+25.89,60.19,0.0,12.22,Healthy Rice Leaf
+28.49,83.79,14.12,23.0,Bacterial Leaf Blight
+23.01,81.59,10.33,18.56,Leaf scald
+28.96,89.09,4.28,13.25,Sheath Blight
+30.25,89.52,13.84,12.34,Leaf scald
+31.72,92.9,5.6,8.2,Sheath Blight
+23.63,78.89,18.24,19.06,Bacterial Leaf Blight
+33.35,87.46,2.4,10.05,Brown Spot
+24.12,89.88,15.24,14.21,Leaf scald
+23.16,89.82,4.64,17.16,Leaf Blast
+26.44,86.83,27.34,15.39,Bacterial Leaf Blight
+23.38,93.2,4.65,24.96,Leaf Blast
+27.96,97.16,16.47,9.66,Leaf Blast
+27.24,95.83,12.12,16.61,Leaf Blast
+29.68,87.81,33.56,21.07,Bacterial Leaf Blight
+30.53,97.73,14.65,6.46,Sheath Blight
+34.45,85.87,12.11,16.79,Sheath Blight
+32.19,92.66,0.0,11.85,Sheath Blight
+25.75,58.63,1.87,10.04,Healthy Rice Leaf
+32.6,95.42,6.42,10.2,Brown Spot
+26.73,64.08,2.41,10.6,Healthy Rice Leaf
+26.37,68.86,4.19,6.95,Healthy Rice Leaf
+25.11,61.83,2.09,9.7,Healthy Rice Leaf
+20.79,97.41,11.74,19.53,Leaf Blast
+24.72,58.89,3.37,14.77,Healthy Rice Leaf
+27.16,57.8,1.43,10.86,Healthy Rice Leaf
+27.73,66.85,1.67,7.65,Healthy Rice Leaf
+31.62,95.29,11.35,14.98,Sheath Blight
+25.61,80.16,3.73,18.31,Leaf scald
+25.86,95.69,15.19,19.31,Leaf Blast
+26.56,82.06,1.86,8.99,Leaf scald
+26.94,68.1,0.0,11.02,Healthy Rice Leaf
+21.75,93.62,1.7,11.22,Brown Spot
+21.62,90.36,7.97,2.65,Leaf Blast
+23.82,93.73,15.06,13.12,Leaf Blast
+24.66,57.59,0.0,12.78,Healthy Rice Leaf
+26.45,65.56,2.53,9.72,Healthy Rice Leaf
+24.1,62.21,0.0,9.48,Healthy Rice Leaf
+25.87,93.69,4.13,13.18,Brown Spot
+22.41,95.7,13.04,18.85,Leaf Blast
+26.46,87.14,5.02,14.79,Brown Spot
+28.11,80.6,1.46,10.64,Brown Spot
+27.13,98.63,9.64,9.05,Leaf Blast
+30.55,86.74,7.73,8.43,Sheath Blight
+23.47,89.71,1.88,10.86,Brown Spot
+28.92,90.73,8.29,6.68,Sheath Blight
+28.51,79.87,24.52,25.73,Bacterial Leaf Blight
+31.43,85.93,17.24,24.16,Bacterial Leaf Blight
+27.45,97.85,14.27,18.27,Leaf Blast
+24.25,88.86,6.72,9.78,Brown Spot
+32.15,93.25,7.47,11.72,Sheath Blight
+25.29,94.32,3.72,17.28,Leaf scald
+25.62,56.19,1.66,10.65,Healthy Rice Leaf
+30.01,94.57,5.41,13.21,Brown Spot
+32.59,94.33,15.26,5.13,Sheath Blight
+33.93,83.17,7.56,21.06,Bacterial Leaf Blight
+30.38,94.93,5.75,18.0,Sheath Blight
+25.25,89.56,3.5,17.94,Leaf scald
+24.74,63.87,2.65,13.98,Healthy Rice Leaf
+28.09,86.35,26.51,28.96,Bacterial Leaf Blight
+33.68,87.11,4.78,12.26,Sheath Blight
+27.26,80.3,10.05,8.91,Leaf scald
+22.63,59.94,0.31,11.43,Healthy Rice Leaf
+27.56,85.39,9.88,22.23,Leaf scald
+24.73,92.53,9.45,25.97,Leaf Blast
+25.15,64.65,2.86,6.33,Healthy Rice Leaf
+24.11,92.99,7.77,17.94,Leaf Blast
+27.66,89.05,18.74,16.46,Bacterial Leaf Blight
+26.96,68.24,0.0,9.09,Healthy Rice Leaf
+30.47,86.97,17.89,20.95,Bacterial Leaf Blight
+25.7,57.5,0.96,16.7,Healthy Rice Leaf
+23.65,93.15,16.04,17.9,Leaf Blast
+26.36,92.95,0.9,9.73,Brown Spot
+27.92,91.65,3.84,17.63,Brown Spot
+31.33,97.77,0.0,11.87,Sheath Blight
+21.78,91.58,13.76,16.79,Leaf Blast
+22.88,87.95,3.74,12.47,Brown Spot
+26.74,85.86,10.38,13.92,Leaf scald
+24.67,56.09,3.37,8.0,Healthy Rice Leaf
+28.98,94.82,6.17,20.23,Brown Spot
+21.9,62.12,2.1,11.9,Healthy Rice Leaf
+32.26,88.75,17.13,24.1,Bacterial Leaf Blight
+25.76,84.39,7.77,15.58,Brown Spot
+32.32,88.87,5.61,14.2,Sheath Blight
+27.72,65.64,1.96,2.19,Healthy Rice Leaf
+30.63,85.2,16.0,24.28,Bacterial Leaf Blight
+29.63,89.73,5.81,9.29,Sheath Blight
+24.76,92.39,8.13,17.34,Sheath Blight
+27.33,91.48,0.79,11.2,Brown Spot
+27.68,56.27,4.16,12.61,Healthy Rice Leaf
+21.51,92.47,5.83,17.35,Leaf Blast
+31.11,91.3,6.53,17.74,Brown Spot
+29.18,95.79,7.19,6.4,Brown Spot
+24.9,95.26,9.51,19.95,Leaf Blast
+24.35,69.67,0.32,11.66,Healthy Rice Leaf
+22.97,92.26,12.86,14.29,Leaf Blast
+30.36,83.37,1.31,12.58,Sheath Blight
+24.19,61.37,3.69,9.92,Healthy Rice Leaf
+31.81,60.51,0.0,11.31,Healthy Rice Leaf
+30.32,85.44,18.47,28.2,Bacterial Leaf Blight
+25.12,89.19,3.77,9.85,Brown Spot
+28.13,66.21,1.02,5.06,Healthy Rice Leaf
+25.33,97.2,3.42,11.96,Brown Spot
+31.0,85.9,15.48,17.99,Bacterial Leaf Blight
+31.55,90.9,3.05,12.9,Sheath Blight
+21.61,96.04,2.64,9.74,Brown Spot
+29.77,90.86,16.34,21.15,Bacterial Leaf Blight
+23.05,79.8,7.48,23.03,Leaf scald
+28.69,92.21,8.76,19.18,Sheath Blight
+27.53,79.25,13.56,20.13,Leaf scald
+35.08,88.42,3.35,13.83,Brown Spot
+27.86,52.28,1.42,10.93,Healthy Rice Leaf
+24.08,100.0,8.93,10.45,Brown Spot
+28.5,57.25,2.15,7.4,Healthy Rice Leaf
+33.8,92.58,5.49,14.32,Sheath Blight
+31.07,95.66,11.6,7.7,Sheath Blight
+25.41,89.66,4.27,16.81,Leaf scald
+23.57,79.87,6.0,18.83,Leaf scald
+21.6,87.42,7.77,16.14,Brown Spot
+27.51,91.75,14.64,26.16,Bacterial Leaf Blight
+27.72,85.89,8.37,21.23,Leaf Blast
+26.55,64.87,0.13,7.92,Healthy Rice Leaf
+24.69,47.49,3.26,10.52,Healthy Rice Leaf
+23.96,82.68,11.77,11.05,Leaf scald
+25.95,95.08,4.53,16.17,Brown Spot
+26.7,58.41,1.98,10.45,Healthy Rice Leaf
+21.34,91.22,11.02,9.17,Leaf Blast
+30.36,84.78,1.96,14.72,Brown Spot
+23.86,57.02,0.03,8.67,Healthy Rice Leaf
+24.36,85.75,14.57,16.96,Leaf Blast
+23.66,59.26,1.06,11.83,Healthy Rice Leaf
+26.3,91.47,8.54,7.06,Brown Spot
+27.81,81.67,15.94,22.26,Bacterial Leaf Blight
+24.95,95.66,9.51,11.93,Brown Spot
+28.52,95.94,0.52,16.01,Brown Spot
+28.78,90.33,8.14,10.41,Leaf scald
+27.82,90.11,5.97,17.58,Leaf scald
+28.62,83.81,7.7,9.39,Leaf scald
+28.23,63.07,3.65,8.94,Healthy Rice Leaf
+30.47,83.81,21.85,31.19,Bacterial Leaf Blight
+25.41,92.67,14.81,4.81,Leaf Blast
+29.84,88.78,2.51,7.44,Sheath Blight
+23.41,86.03,7.09,23.29,Leaf scald
+21.85,90.99,4.71,18.8,Brown Spot
+28.01,82.89,15.24,23.05,Bacterial Leaf Blight
+30.06,89.9,1.41,9.62,Sheath Blight
+25.53,96.28,13.0,7.57,Leaf Blast
+25.27,60.79,2.5,11.98,Healthy Rice Leaf
+27.74,96.0,8.98,11.01,Sheath Blight
+31.0,93.21,3.81,19.71,Sheath Blight
+25.68,90.12,25.29,26.59,Bacterial Leaf Blight
+32.34,90.3,3.54,13.75,Sheath Blight
+27.32,86.72,25.75,18.89,Bacterial Leaf Blight
+29.41,89.19,24.3,22.56,Bacterial Leaf Blight
+31.93,92.92,6.64,10.62,Sheath Blight
+25.76,90.79,8.19,11.17,Brown Spot
+25.32,58.78,2.14,9.27,Healthy Rice Leaf
+24.62,54.25,2.97,3.91,Healthy Rice Leaf
+31.72,84.57,7.14,24.99,Leaf scald
+27.04,62.06,1.13,11.44,Healthy Rice Leaf
+22.8,57.21,1.2,9.43,Healthy Rice Leaf
+29.35,84.37,4.05,15.37,Leaf scald
+30.46,92.13,8.01,12.86,Brown Spot
+31.46,86.43,29.23,14.59,Bacterial Leaf Blight
+23.58,92.08,6.45,24.33,Leaf scald
+23.22,96.31,11.02,12.9,Leaf Blast
+30.28,95.18,0.0,12.97,Sheath Blight
+32.54,90.79,5.28,11.42,Sheath Blight
+23.45,91.68,10.74,25.03,Leaf Blast
+26.33,53.92,3.87,7.63,Healthy Rice Leaf
+23.59,93.01,9.96,12.59,Leaf Blast
+21.55,78.75,6.18,19.97,Leaf scald
+27.58,97.14,4.05,10.54,Sheath Blight
+24.71,88.38,10.72,16.59,Leaf Blast
+23.83,59.94,2.93,4.41,Healthy Rice Leaf
+34.21,90.62,2.69,6.7,Brown Spot
+27.68,49.1,1.58,10.78,Healthy Rice Leaf
+25.17,85.99,21.73,19.9,Bacterial Leaf Blight
+31.94,82.27,8.07,17.01,Leaf scald
+26.39,88.14,16.62,20.68,Leaf scald
+24.26,81.5,6.62,16.71,Leaf scald
+29.58,92.69,8.69,16.64,Leaf scald
+30.69,93.2,3.72,13.18,Sheath Blight
+24.29,55.49,4.75,8.71,Healthy Rice Leaf
+31.35,86.89,3.96,19.06,Brown Spot
+23.2,92.37,11.82,18.48,Brown Spot
+24.88,79.66,26.55,16.17,Bacterial Leaf Blight
+23.82,100.0,12.83,19.23,Leaf Blast
+27.55,60.35,2.21,7.4,Healthy Rice Leaf
+34.54,95.14,7.41,12.37,Sheath Blight
+31.72,88.76,22.18,25.48,Bacterial Leaf Blight
+23.17,63.49,2.62,14.51,Healthy Rice Leaf
+31.32,95.21,12.05,28.85,Bacterial Leaf Blight
+26.11,92.9,5.88,9.36,Sheath Blight
+27.35,93.82,17.82,9.22,Leaf Blast
+28.49,90.79,3.74,15.92,Leaf scald
+23.47,93.32,13.16,18.16,Leaf scald
+24.74,93.25,4.38,10.07,Brown Spot
+29.44,89.96,7.69,12.86,Brown Spot
+32.11,89.57,8.84,14.71,Sheath Blight
+25.91,94.55,11.01,23.52,Leaf Blast
+34.06,99.54,1.68,11.34,Brown Spot
+21.37,90.81,3.41,14.84,Brown Spot
+25.48,88.34,8.02,20.71,Leaf Blast
+27.49,48.74,2.49,16.64,Healthy Rice Leaf
+29.31,89.76,4.94,15.37,Leaf Blast
+31.23,89.98,6.97,12.67,Sheath Blight
+24.43,58.72,0.0,8.36,Healthy Rice Leaf
+31.54,93.12,4.39,10.23,Sheath Blight
+29.45,89.76,4.9,13.36,Sheath Blight
+33.09,100.0,4.07,13.47,Sheath Blight
+28.15,88.84,18.98,15.1,Bacterial Leaf Blight
+24.32,91.98,7.45,8.74,Leaf Blast
+26.1,93.81,18.04,11.49,Leaf Blast
+27.71,58.18,0.91,5.34,Healthy Rice Leaf
+27.88,94.32,14.51,13.48,Leaf Blast
+31.38,87.13,6.42,19.71,Sheath Blight
+26.54,53.83,4.7,9.14,Healthy Rice Leaf
+26.5,96.15,17.11,23.42,Leaf Blast
+30.19,96.37,4.39,14.31,Sheath Blight
+31.85,90.77,10.59,16.74,Sheath Blight
+30.84,91.04,17.59,13.77,Bacterial Leaf Blight
+23.29,97.68,10.13,20.07,Leaf Blast
+30.13,89.96,5.79,8.87,Sheath Blight
+26.7,58.82,0.0,15.47,Healthy Rice Leaf
+29.29,86.64,11.36,28.06,Leaf scald
+26.4,91.75,3.93,25.87,Bacterial Leaf Blight
+27.17,85.74,8.23,13.36,Leaf scald
+31.44,90.51,9.7,17.31,Bacterial Leaf Blight
+25.67,91.57,12.92,16.0,Leaf Blast
+24.56,90.73,5.5,6.64,Brown Spot
+31.03,82.21,26.96,28.6,Bacterial Leaf Blight
+28.24,82.72,4.63,8.75,Leaf scald
+23.13,99.55,9.93,15.83,Leaf Blast
+33.56,90.39,23.52,22.74,Bacterial Leaf Blight
+24.35,87.0,13.56,20.98,Leaf Blast
+23.82,87.2,0.0,25.27,Leaf scald
+31.51,89.8,15.09,16.55,Leaf scald
+31.5,89.29,6.61,9.8,Sheath Blight
+25.38,62.74,2.14,7.02,Healthy Rice Leaf
+22.83,97.51,6.93,16.74,Leaf Blast
+24.09,99.01,11.4,23.6,Leaf Blast
+35.93,87.04,20.42,20.67,Bacterial Leaf Blight
+24.53,92.9,1.63,17.12,Brown Spot
+29.47,86.18,12.79,12.05,Sheath Blight
+28.42,86.76,10.7,11.13,Leaf scald
+25.97,89.84,2.81,5.22,Brown Spot
+25.56,60.22,3.68,10.4,Healthy Rice Leaf
+25.98,92.88,11.28,15.5,Leaf Blast
+24.26,95.15,6.67,22.71,Leaf Blast
+24.85,94.12,9.76,19.9,Leaf Blast
+25.75,94.35,15.56,13.75,Leaf Blast
+25.45,90.42,13.69,22.82,Bacterial Leaf Blight
+24.6,94.48,3.37,17.2,Leaf Blast
+20.07,67.36,0.0,6.43,Healthy Rice Leaf
+24.84,85.09,13.71,19.09,Leaf scald
+34.75,89.91,3.94,11.16,Brown Spot
+25.85,94.76,3.16,11.87,Brown Spot
+22.72,97.88,6.73,15.33,Brown Spot
+31.96,97.54,3.57,13.08,Brown Spot
+29.85,85.55,12.7,22.67,Bacterial Leaf Blight
+25.11,94.8,14.93,13.96,Leaf Blast
+24.36,93.65,13.5,14.04,Leaf Blast
+21.38,81.52,10.59,19.13,Leaf scald
+24.33,97.4,6.43,17.53,Brown Spot
+29.34,87.15,14.76,25.82,Bacterial Leaf Blight
+26.09,78.81,4.27,18.72,Leaf scald
+32.16,88.19,7.4,13.91,Leaf scald
+31.0,99.53,7.94,24.11,Sheath Blight
+29.34,47.6,1.57,12.47,Healthy Rice Leaf
+25.09,60.15,1.41,17.01,Healthy Rice Leaf
+24.35,58.77,0.45,9.73,Healthy Rice Leaf
+28.06,83.49,7.75,13.24,Leaf scald
+23.34,95.45,12.46,22.22,Leaf Blast
+27.33,50.7,2.9,6.63,Healthy Rice Leaf
+31.15,86.2,8.44,17.43,Leaf scald
+22.89,96.52,14.12,6.4,Leaf Blast
+31.95,92.9,3.61,11.04,Sheath Blight
+33.08,93.48,8.14,11.52,Sheath Blight
+27.48,89.94,7.37,13.82,Leaf scald
+31.0,88.12,3.87,21.93,Bacterial Leaf Blight
+25.22,91.82,13.9,12.33,Leaf Blast
+30.07,81.68,19.59,19.27,Bacterial Leaf Blight
+27.08,59.77,1.65,10.16,Healthy Rice Leaf
+22.88,52.46,3.0,10.05,Healthy Rice Leaf
+30.43,87.14,11.55,22.04,Bacterial Leaf Blight
+23.01,61.36,0.0,4.47,Healthy Rice Leaf
+32.3,94.01,7.87,10.69,Sheath Blight
+28.34,84.68,10.72,22.02,Bacterial Leaf Blight
+27.31,93.21,22.52,23.26,Bacterial Leaf Blight
+32.56,91.1,12.98,18.97,Bacterial Leaf Blight
+21.93,95.26,3.59,9.99,Brown Spot
+25.58,86.44,5.15,21.04,Leaf scald
+29.98,100.0,4.74,9.4,Brown Spot
+31.33,89.18,8.12,20.6,Bacterial Leaf Blight
+26.66,94.8,12.41,21.24,Leaf Blast
+31.32,96.45,5.35,3.55,Sheath Blight
+30.91,86.77,5.1,21.24,Leaf scald
+29.73,95.56,3.83,11.29,Sheath Blight
+28.32,86.39,12.26,25.01,Bacterial Leaf Blight
+25.71,89.01,0.78,15.48,Brown Spot
+25.23,87.04,13.19,10.89,Leaf scald
+23.98,82.19,15.66,27.45,Bacterial Leaf Blight
+31.18,92.57,7.98,17.36,Leaf Blast
+29.51,90.03,14.15,30.15,Bacterial Leaf Blight
+30.1,96.53,4.26,12.27,Sheath Blight
+23.97,94.04,4.89,12.12,Brown Spot
+24.5,98.82,16.82,17.87,Leaf Blast
+34.68,98.31,7.43,12.11,Sheath Blight
+34.18,98.64,4.98,12.37,Sheath Blight
+24.22,96.35,10.98,26.95,Leaf Blast
+32.46,89.83,7.19,10.43,Sheath Blight
+24.54,57.84,1.61,10.11,Healthy Rice Leaf
+21.92,94.85,8.68,15.54,Leaf Blast
+26.99,75.05,9.54,16.96,Leaf scald
+26.37,97.9,9.23,14.45,Leaf Blast
+27.59,83.39,8.06,20.56,Leaf scald
+20.84,98.11,4.29,15.04,Brown Spot
+29.79,87.03,6.24,21.44,Sheath Blight
+22.21,93.34,10.31,14.61,Leaf Blast
+24.07,91.28,8.54,22.98,Leaf Blast
+19.61,93.82,8.22,14.06,Brown Spot
+28.25,95.04,13.66,10.42,Leaf Blast
+33.32,98.38,3.83,7.75,Sheath Blight
+24.39,92.67,7.35,21.12,Leaf Blast
+27.43,85.02,17.31,27.92,Bacterial Leaf Blight
+33.76,95.18,5.97,15.46,Sheath Blight
+28.96,91.14,9.6,11.13,Sheath Blight
+29.87,97.0,4.78,10.52,Sheath Blight
+35.79,88.83,3.91,12.43,Sheath Blight
+26.33,93.33,14.23,18.26,Leaf Blast
+26.54,64.98,1.11,7.86,Healthy Rice Leaf
+22.68,86.29,6.88,11.24,Leaf scald
+21.06,92.88,10.08,14.2,Leaf Blast
+30.18,93.74,3.38,14.4,Sheath Blight
+28.41,92.48,16.95,14.61,Leaf Blast
+28.42,87.9,6.23,16.21,Leaf scald
+27.84,94.15,5.01,11.35,Brown Spot
+26.94,62.65,2.04,7.62,Healthy Rice Leaf
+27.38,54.3,0.0,10.34,Healthy Rice Leaf
+27.01,84.02,3.84,8.42,Brown Spot
+26.28,55.22,1.26,6.44,Healthy Rice Leaf
+27.53,85.64,5.76,19.1,Leaf scald
+20.36,89.04,5.4,14.58,Brown Spot
+29.14,94.78,2.41,6.88,Sheath Blight
+24.71,74.01,4.43,22.14,Leaf scald
+27.52,62.19,2.21,3.44,Healthy Rice Leaf
+29.62,82.85,20.71,20.24,Bacterial Leaf Blight
+30.53,94.3,5.38,12.3,Sheath Blight
+28.63,91.33,21.34,27.18,Bacterial Leaf Blight
+25.15,59.14,3.61,11.17,Healthy Rice Leaf
+22.75,98.2,2.35,14.41,Brown Spot
+30.74,91.5,16.43,24.19,Bacterial Leaf Blight
+28.55,83.32,16.77,17.22,Bacterial Leaf Blight
+26.95,100.0,11.12,5.8,Leaf Blast
+29.1,83.57,6.65,18.02,Leaf scald
+21.37,79.37,9.58,13.38,Leaf scald
+23.45,92.03,3.27,20.35,Brown Spot
+30.76,86.76,8.89,21.15,Bacterial Leaf Blight
+25.77,57.88,2.66,11.18,Healthy Rice Leaf
+30.35,93.09,6.82,9.32,Sheath Blight
+27.76,96.21,5.66,10.68,Leaf scald
+25.35,91.48,3.83,13.39,Brown Spot
+30.72,79.72,10.37,6.2,Leaf scald
+20.08,96.18,17.56,23.0,Leaf Blast
+26.78,82.39,11.9,15.85,Bacterial Leaf Blight
+21.73,91.42,14.08,26.5,Leaf Blast
+30.63,93.57,2.21,9.18,Sheath Blight
+25.25,87.22,4.72,3.47,Brown Spot
+30.5,90.52,7.79,12.97,Sheath Blight
+28.46,87.62,4.35,5.46,Brown Spot
+32.37,88.69,26.95,26.51,Bacterial Leaf Blight
+27.35,93.06,5.91,12.43,Leaf Blast
+26.95,92.41,12.1,9.18,Sheath Blight
+32.86,87.75,8.03,22.41,Sheath Blight
+23.9,93.06,3.99,14.71,Leaf Blast
+24.64,59.7,2.91,9.28,Healthy Rice Leaf
+30.48,86.5,5.62,4.72,Sheath Blight
+28.71,87.19,8.03,24.72,Bacterial Leaf Blight
+30.51,84.94,11.08,20.53,Bacterial Leaf Blight
+25.46,94.41,13.6,10.58,Leaf Blast
+27.43,62.97,0.0,11.14,Healthy Rice Leaf
+26.14,57.22,1.67,9.22,Healthy Rice Leaf
+28.66,59.02,4.88,11.51,Healthy Rice Leaf
+30.02,96.23,4.75,13.27,Sheath Blight
+34.27,90.78,28.41,15.29,Bacterial Leaf Blight
+29.38,94.83,2.57,14.35,Sheath Blight
+34.25,99.04,11.97,11.71,Sheath Blight
+20.56,91.39,5.35,15.24,Leaf scald
+26.89,54.9,4.79,10.31,Healthy Rice Leaf
+30.27,90.79,5.83,11.9,Sheath Blight
+28.72,84.38,11.94,9.56,Leaf scald
+30.98,100.0,5.92,14.3,Brown Spot
+24.31,94.77,13.31,14.25,Leaf Blast
+27.82,93.46,7.46,16.04,Brown Spot
+23.61,88.96,26.29,22.09,Bacterial Leaf Blight
+27.56,59.59,2.56,9.29,Healthy Rice Leaf
+21.98,87.27,7.33,16.08,Brown Spot
+23.78,59.56,0.0,12.83,Healthy Rice Leaf
+24.53,94.01,17.13,18.61,Leaf Blast
+25.18,99.47,13.47,22.48,Leaf Blast
+27.48,90.06,11.11,22.2,Bacterial Leaf Blight
+23.99,82.29,7.8,23.39,Leaf scald
+23.97,84.62,7.49,17.5,Leaf scald
+32.53,92.73,5.53,6.42,Sheath Blight
+25.24,76.54,7.16,12.56,Leaf scald
+35.22,88.42,28.41,16.89,Bacterial Leaf Blight
+26.65,89.7,5.93,4.62,Brown Spot
+29.42,100.0,9.26,9.07,Sheath Blight
+27.16,82.65,5.39,14.34,Leaf scald
+30.34,91.04,17.23,29.35,Bacterial Leaf Blight
+22.91,97.32,10.42,22.55,Leaf Blast
+32.92,91.25,2.16,13.73,Brown Spot
+22.45,94.27,8.0,17.84,Leaf Blast
+22.34,65.15,1.54,10.27,Healthy Rice Leaf
+34.56,86.01,6.9,13.6,Brown Spot
+33.87,78.38,12.95,25.42,Bacterial Leaf Blight
+23.57,58.49,2.75,13.49,Healthy Rice Leaf
+33.06,97.68,17.21,18.93,Sheath Blight
+34.72,88.48,5.16,12.1,Sheath Blight
+26.69,57.94,3.15,7.28,Healthy Rice Leaf
+26.16,89.93,14.03,16.28,Bacterial Leaf Blight
+24.8,96.36,7.81,21.68,Leaf Blast
+28.87,92.53,12.85,12.71,Sheath Blight
+29.0,80.4,13.37,10.23,Leaf scald
+25.36,89.22,8.42,22.76,Leaf scald
+31.14,86.38,12.33,7.88,Sheath Blight
+30.83,93.42,14.1,9.61,Leaf scald
+24.67,80.97,4.04,22.86,Leaf scald
+31.23,90.9,8.22,23.38,Bacterial Leaf Blight
+34.57,91.34,14.3,11.97,Sheath Blight
+25.71,89.49,16.0,25.77,Bacterial Leaf Blight
+25.09,97.11,2.96,14.49,Brown Spot
+26.47,61.89,1.85,11.1,Healthy Rice Leaf
+24.81,82.76,1.72,12.59,Leaf scald
+27.11,82.96,28.33,27.2,Bacterial Leaf Blight
+28.0,90.57,28.61,36.02,Bacterial Leaf Blight
+26.77,59.49,1.75,9.08,Healthy Rice Leaf
+19.03,90.6,2.79,12.32,Brown Spot
+31.24,94.33,3.09,15.54,Brown Spot
+25.23,85.44,6.88,5.46,Brown Spot
+29.37,92.61,6.77,11.33,Brown Spot
+29.42,86.5,9.74,16.36,Sheath Blight
+22.05,96.88,14.36,9.82,Leaf Blast
+24.81,81.03,0.0,11.25,Leaf scald
+31.7,88.28,10.61,10.9,Sheath Blight
+28.44,91.77,11.88,19.9,Leaf Blast
+29.48,88.49,11.84,19.99,Bacterial Leaf Blight
+28.38,90.59,4.23,7.91,Brown Spot
+22.8,100.0,14.4,17.48,Leaf Blast
+29.82,97.65,0.58,7.49,Sheath Blight
+22.16,94.8,24.1,7.89,Leaf Blast
+29.14,88.32,12.37,14.7,Leaf scald
+29.37,87.08,4.84,13.89,Sheath Blight
+26.41,78.33,4.28,9.28,Leaf scald
+21.95,92.36,7.23,13.78,Leaf Blast
+29.83,83.93,18.3,27.67,Bacterial Leaf Blight
+25.03,59.34,2.54,12.73,Healthy Rice Leaf
+28.4,87.57,9.89,9.68,Sheath Blight
+27.06,81.03,7.76,31.24,Leaf scald
+32.36,87.07,7.16,14.11,Sheath Blight
+30.57,92.22,9.66,6.36,Sheath Blight
+21.18,60.43,0.4,11.89,Healthy Rice Leaf
+30.5,86.66,19.34,20.55,Bacterial Leaf Blight
+23.63,95.33,7.77,19.51,Leaf Blast
+26.22,86.12,8.15,15.61,Leaf Blast
+28.44,93.29,13.43,21.27,Leaf Blast
+26.86,68.59,1.55,8.87,Healthy Rice Leaf
+24.22,59.07,2.24,11.67,Healthy Rice Leaf
+21.96,94.21,11.45,13.52,Leaf Blast
+21.35,93.56,8.42,19.93,Leaf Blast
+32.84,88.91,5.11,11.28,Sheath Blight
+26.2,55.7,2.73,8.7,Healthy Rice Leaf
+22.13,53.37,0.8,11.41,Healthy Rice Leaf
+26.2,92.79,0.76,22.5,Leaf scald
+25.98,84.45,20.31,25.76,Bacterial Leaf Blight
+24.37,96.42,14.56,11.0,Leaf Blast
+23.96,85.59,3.88,7.55,Brown Spot
+22.47,95.9,11.47,10.65,Leaf Blast
+29.0,94.52,7.01,13.94,Sheath Blight
+30.98,83.56,1.38,15.65,Leaf scald
+26.47,68.41,2.59,6.14,Healthy Rice Leaf
+22.35,92.81,7.82,17.22,Leaf Blast
+29.4,91.9,7.18,9.98,Leaf scald
+27.76,97.31,9.41,11.64,Brown Spot
+27.65,89.92,13.34,15.68,Leaf Blast
+30.47,85.62,20.16,21.9,Bacterial Leaf Blight
+23.38,91.06,14.85,18.47,Leaf Blast
+25.52,61.28,0.63,3.53,Healthy Rice Leaf
+22.8,94.56,16.94,16.2,Leaf Blast
+32.72,81.43,13.83,13.06,Leaf scald
+28.96,84.94,3.24,14.71,Leaf scald
+24.73,77.65,8.63,15.49,Leaf scald
+25.43,70.02,2.14,5.18,Healthy Rice Leaf
+27.69,62.05,0.0,10.51,Healthy Rice Leaf
+26.11,55.66,0.0,11.74,Healthy Rice Leaf
+29.93,95.83,6.45,7.1,Sheath Blight
+33.5,92.87,9.26,9.54,Sheath Blight
+32.05,95.9,11.3,15.1,Sheath Blight
+30.75,96.52,11.34,14.17,Sheath Blight
+27.74,58.99,0.06,13.37,Healthy Rice Leaf
+26.14,85.87,8.71,11.57,Leaf scald
+21.58,94.93,18.88,27.19,Leaf Blast
+24.23,96.81,19.4,21.5,Leaf Blast
+28.82,94.09,13.01,18.57,Leaf Blast
+26.07,92.42,13.7,12.08,Leaf Blast
+26.35,94.84,6.14,18.38,Leaf Blast
+22.1,60.89,0.23,9.29,Healthy Rice Leaf
+29.09,92.57,9.97,14.29,Sheath Blight
+24.86,85.66,28.99,21.8,Bacterial Leaf Blight
+28.82,85.8,12.56,11.86,Sheath Blight
+23.07,97.24,4.35,7.34,Brown Spot
+28.31,97.99,8.18,11.12,Sheath Blight
+28.65,78.66,8.35,18.79,Leaf scald
+19.78,96.0,11.75,11.78,Brown Spot
+33.18,90.28,6.92,14.32,Sheath Blight
+24.85,95.46,12.04,20.5,Leaf Blast
+25.9,89.18,12.73,22.4,Leaf Blast
+25.97,88.25,7.84,7.74,Leaf Blast
+30.51,90.98,0.0,20.04,Bacterial Leaf Blight
+29.69,92.53,1.2,13.57,Brown Spot
+33.17,92.18,12.56,12.34,Sheath Blight
+22.73,94.47,4.43,12.61,Brown Spot
+25.27,90.0,0.97,11.61,Brown Spot
+24.83,91.73,3.19,18.51,Leaf Blast
+32.96,87.73,2.71,24.75,Leaf scald
+26.38,57.12,3.09,10.44,Healthy Rice Leaf
+26.58,59.72,1.44,11.88,Healthy Rice Leaf
+23.45,92.74,16.43,14.08,Leaf Blast
+26.74,93.99,3.72,16.75,Brown Spot
+31.61,88.57,8.17,14.89,Sheath Blight
+27.02,81.51,15.97,22.59,Bacterial Leaf Blight
+22.54,95.14,12.98,16.39,Leaf Blast
+27.67,93.57,11.68,17.74,Leaf Blast
+25.89,88.64,8.31,16.15,Leaf Blast
+29.05,90.68,8.34,13.74,Brown Spot
+33.63,81.47,10.24,15.59,Bacterial Leaf Blight
+22.63,98.14,3.84,11.56,Leaf Blast
+33.06,87.76,14.24,12.53,Sheath Blight
+24.59,60.55,4.85,13.63,Healthy Rice Leaf
+22.9,87.53,3.62,14.12,Brown Spot
+28.7,81.16,1.75,1.96,Brown Spot
+25.9,56.43,3.45,14.73,Healthy Rice Leaf
+22.11,87.67,21.69,17.11,Leaf Blast
+28.26,57.71,2.64,10.26,Healthy Rice Leaf
+34.86,85.48,3.4,20.12,Sheath Blight
+31.74,74.56,10.24,14.78,Leaf scald
+29.89,87.82,2.57,15.37,Sheath Blight
+28.81,60.74,3.12,9.89,Healthy Rice Leaf
+29.62,97.79,6.59,11.79,Brown Spot
+25.49,97.23,19.98,23.14,Leaf Blast
+31.0,92.02,26.67,21.59,Bacterial Leaf Blight
+30.31,80.98,22.6,23.15,Bacterial Leaf Blight
+28.3,67.66,0.0,9.63,Healthy Rice Leaf
+29.37,88.97,6.46,11.27,Sheath Blight
+32.85,87.58,26.3,28.12,Bacterial Leaf Blight
+21.58,83.47,2.55,18.8,Leaf scald
+28.88,89.72,4.37,21.25,Sheath Blight
+26.12,80.85,13.7,25.39,Leaf scald
+23.43,62.39,0.91,13.24,Healthy Rice Leaf
+32.43,91.6,6.77,14.7,Sheath Blight
+20.06,93.16,13.03,12.82,Leaf Blast
+31.68,87.21,22.08,25.1,Bacterial Leaf Blight
+20.35,86.6,3.82,16.67,Brown Spot
+25.89,53.78,3.44,10.6,Healthy Rice Leaf
+32.05,94.15,10.67,8.82,Sheath Blight
+31.97,85.48,14.3,23.69,Bacterial Leaf Blight
+31.85,90.8,13.59,11.76,Sheath Blight
+27.92,85.18,9.01,13.87,Leaf scald
+24.93,61.82,1.39,11.38,Healthy Rice Leaf
+32.24,90.76,9.1,12.99,Sheath Blight
+25.14,86.52,9.82,21.48,Leaf scald
+27.0,88.92,16.51,21.43,Bacterial Leaf Blight
+26.38,62.05,0.0,13.25,Healthy Rice Leaf
+24.92,82.15,4.84,9.88,Leaf scald
+30.68,90.71,15.75,24.1,Bacterial Leaf Blight
+30.46,89.2,22.6,19.71,Bacterial Leaf Blight
+30.77,91.09,3.61,10.1,Brown Spot
+23.62,59.74,0.0,9.71,Healthy Rice Leaf
+23.11,75.15,11.25,20.44,Leaf scald
+21.69,79.36,15.38,14.55,Leaf scald
+21.56,90.5,8.78,11.13,Brown Spot
+31.01,86.65,13.18,14.2,Sheath Blight
+22.62,93.78,15.55,11.99,Leaf Blast
+20.3,89.98,7.3,13.77,Leaf scald
+29.45,59.53,2.48,10.38,Healthy Rice Leaf
+29.53,100.0,13.79,15.71,Leaf Blast
+26.39,100.0,10.45,8.19,Leaf Blast
+24.05,92.52,15.16,20.22,Leaf Blast
+22.46,86.51,11.47,14.75,Leaf scald
+27.53,57.59,2.83,7.18,Healthy Rice Leaf
+28.61,58.1,3.32,13.78,Healthy Rice Leaf
+22.93,56.44,2.29,2.87,Healthy Rice Leaf
+22.77,86.86,6.83,10.57,Brown Spot
+24.19,94.58,13.87,15.04,Leaf scald
+19.39,96.16,9.28,21.14,Leaf Blast
+24.27,84.66,3.81,18.95,Leaf scald
+34.62,91.24,10.36,14.83,Leaf scald
+31.1,93.84,0.0,9.87,Brown Spot
+22.4,92.71,10.95,20.42,Leaf Blast
+26.71,87.3,5.25,12.32,Brown Spot
+32.32,96.15,0.0,12.99,Brown Spot
+23.73,95.73,13.19,17.18,Leaf Blast
+27.49,91.36,4.71,18.87,Leaf scald
+26.74,47.18,1.97,12.31,Healthy Rice Leaf
+29.3,88.32,7.29,14.76,Sheath Blight
+26.33,83.25,13.58,10.93,Leaf scald
+26.41,54.71,1.55,12.76,Healthy Rice Leaf
+26.83,93.87,12.22,8.31,Leaf Blast
+23.84,82.32,4.33,16.12,Leaf scald
+31.33,85.37,0.0,8.77,Sheath Blight
+28.58,88.4,3.57,10.21,Leaf scald
+34.49,86.79,19.19,24.3,Bacterial Leaf Blight
+21.95,97.1,13.6,14.64,Leaf Blast
+37.25,95.31,7.28,16.23,Sheath Blight
+30.99,97.63,1.15,8.1,Brown Spot
+26.1,90.78,8.45,13.89,Leaf Blast
+25.74,80.43,2.64,23.96,Leaf scald
+26.46,59.48,2.46,4.78,Healthy Rice Leaf
+22.99,84.73,4.55,11.16,Brown Spot
+26.46,77.63,10.08,17.1,Leaf scald
+30.45,81.99,18.69,28.33,Bacterial Leaf Blight
+25.19,100.0,7.57,10.35,Brown Spot
+34.89,88.82,9.2,17.12,Leaf scald
+14.41,91.36,3.98,15.82,Brown Spot
+24.45,92.14,3.96,4.7,Brown Spot
+29.07,86.31,6.12,27.25,Bacterial Leaf Blight
+32.33,86.49,3.86,16.96,Sheath Blight
+23.84,94.71,13.58,20.93,Leaf Blast
+24.08,56.25,2.45,9.95,Healthy Rice Leaf
+18.91,97.15,12.32,5.21,Leaf Blast
+24.02,88.82,7.52,15.49,Leaf scald
+27.55,93.23,3.68,10.43,Sheath Blight
+25.37,94.53,11.39,14.47,Leaf scald
+27.05,58.03,0.0,4.26,Healthy Rice Leaf
+33.78,96.65,9.57,13.1,Leaf scald
+24.94,93.09,7.69,13.57,Leaf Blast
+24.12,92.1,10.48,21.42,Leaf Blast
+29.81,89.3,0.99,23.02,Bacterial Leaf Blight
+28.11,90.99,14.47,17.94,Leaf scald
+27.17,81.65,29.8,20.88,Bacterial Leaf Blight
+25.03,85.05,12.02,15.92,Leaf scald
+25.8,87.82,27.23,24.05,Bacterial Leaf Blight
+23.6,89.35,11.08,14.57,Leaf scald
+29.15,89.75,8.71,8.75,Sheath Blight
+27.06,85.7,28.71,15.1,Bacterial Leaf Blight
+24.07,57.48,0.07,12.32,Healthy Rice Leaf
+30.77,83.67,14.88,18.85,Bacterial Leaf Blight
+29.36,95.71,21.42,16.26,Leaf Blast
+27.01,88.52,8.02,21.32,Leaf scald
+33.55,95.06,7.63,12.08,Sheath Blight
+26.0,77.82,15.12,25.19,Leaf scald
+25.89,89.36,10.59,21.07,Leaf Blast
+28.8,92.44,21.13,23.28,Bacterial Leaf Blight
+34.68,95.19,4.73,7.22,Sheath Blight
+31.67,83.42,20.93,21.67,Bacterial Leaf Blight
+32.37,90.69,5.1,16.93,Brown Spot
+26.8,58.5,1.13,4.57,Healthy Rice Leaf
+25.64,82.32,14.87,14.23,Leaf scald
+25.12,91.72,1.54,13.71,Brown Spot
+30.24,95.16,0.0,17.9,Sheath Blight
+25.68,82.42,7.57,21.85,Leaf scald
+24.03,58.87,1.78,13.88,Healthy Rice Leaf
+27.48,55.4,2.77,10.82,Healthy Rice Leaf
+29.84,89.65,8.38,17.24,Bacterial Leaf Blight
+33.28,79.64,21.51,22.89,Bacterial Leaf Blight
+30.56,85.2,17.81,18.24,Bacterial Leaf Blight
+23.65,67.76,0.29,8.54,Healthy Rice Leaf
+28.73,65.97,3.94,10.25,Healthy Rice Leaf
+30.73,86.12,9.73,24.23,Bacterial Leaf Blight
+31.03,93.52,4.67,13.74,Sheath Blight
+30.25,84.06,8.08,12.91,Brown Spot
+22.72,92.38,6.43,11.77,Brown Spot
+25.21,60.75,1.75,8.94,Healthy Rice Leaf
+26.45,96.7,13.25,14.9,Leaf Blast
+22.28,95.0,3.67,14.61,Brown Spot
+33.11,87.96,5.68,9.34,Sheath Blight
+26.49,82.66,18.27,16.47,Bacterial Leaf Blight
+34.16,94.92,7.48,17.88,Sheath Blight
+25.43,84.01,12.38,25.71,Leaf scald
+25.97,89.95,0.0,16.41,Brown Spot
+31.7,96.31,9.7,20.94,Sheath Blight
+29.55,86.6,5.82,18.91,Leaf scald
+28.89,89.1,13.5,9.16,Sheath Blight
+29.9,63.5,0.45,14.73,Healthy Rice Leaf
+32.52,89.66,12.4,5.24,Brown Spot
+29.78,79.44,25.73,15.46,Bacterial Leaf Blight
+32.66,88.09,7.39,7.5,Sheath Blight
+27.87,94.86,6.36,8.79,Brown Spot
+24.69,95.65,17.11,16.44,Leaf Blast
+27.66,90.91,7.35,21.86,Leaf scald
+24.76,57.0,3.1,9.74,Healthy Rice Leaf
+21.38,93.4,8.27,8.39,Brown Spot
+27.38,87.47,10.38,19.58,Leaf scald
+25.52,88.13,26.42,20.9,Bacterial Leaf Blight
+26.46,65.79,3.09,7.69,Healthy Rice Leaf
+30.38,87.68,17.71,17.44,Bacterial Leaf Blight
+26.89,81.19,12.34,15.79,Leaf scald
+30.49,82.35,25.51,25.82,Bacterial Leaf Blight
+28.5,90.52,3.2,6.21,Brown Spot
+25.9,91.15,5.12,13.7,Brown Spot
+27.88,96.22,2.3,6.96,Brown Spot
+30.22,84.76,15.37,25.21,Bacterial Leaf Blight
+23.01,49.35,0.87,13.11,Healthy Rice Leaf
+26.71,87.42,4.39,5.93,Leaf scald
+27.4,95.07,2.85,12.83,Brown Spot
+32.59,89.96,10.04,12.17,Sheath Blight
+30.13,78.45,13.7,18.47,Leaf scald
+28.6,91.33,6.03,8.9,Brown Spot
+32.44,91.48,7.01,15.51,Sheath Blight
+24.3,48.4,0.0,8.63,Healthy Rice Leaf
+27.01,86.02,21.36,27.9,Bacterial Leaf Blight
+30.3,90.46,18.88,21.73,Bacterial Leaf Blight
+34.09,90.45,11.61,11.17,Sheath Blight
+29.45,95.83,0.0,20.42,Leaf scald
+24.78,60.19,1.84,8.46,Healthy Rice Leaf
+31.05,93.48,22.87,21.41,Bacterial Leaf Blight
+24.87,96.64,13.59,21.64,Brown Spot
+31.67,85.85,34.8,38.47,Bacterial Leaf Blight
+28.1,91.9,2.36,13.13,Brown Spot
+27.0,83.12,10.66,17.85,Leaf scald
+30.87,91.88,11.38,12.71,Sheath Blight
+28.64,88.37,9.59,7.48,Sheath Blight
+22.57,89.78,8.08,11.72,Leaf Blast
+29.07,92.94,16.62,20.23,Bacterial Leaf Blight
+33.86,84.08,4.82,10.06,Leaf scald
+27.61,91.99,4.39,13.84,Brown Spot
+29.38,84.9,13.46,7.82,Leaf scald
+26.37,58.32,1.07,7.92,Healthy Rice Leaf
+26.4,89.24,15.5,12.92,Leaf Blast
+24.13,85.82,7.27,18.48,Leaf scald
+22.63,60.49,3.79,11.32,Healthy Rice Leaf
+17.23,99.22,6.57,18.11,Brown Spot
+31.37,100.0,6.12,5.51,Sheath Blight
+28.61,95.78,0.0,9.94,Brown Spot
+31.3,90.0,5.76,8.45,Sheath Blight
+25.21,58.19,2.5,11.0,Healthy Rice Leaf
+32.7,94.69,16.3,16.31,Sheath Blight
+25.15,85.89,5.96,9.01,Brown Spot
+20.87,61.68,0.4,12.03,Healthy Rice Leaf
+23.57,94.5,9.24,20.94,Leaf Blast
+25.64,72.23,1.32,14.71,Healthy Rice Leaf
+26.44,61.01,2.98,11.16,Healthy Rice Leaf
+25.08,80.49,8.2,19.04,Leaf scald
+26.18,60.07,5.0,7.17,Healthy Rice Leaf
+22.37,88.36,3.6,10.92,Leaf scald
+27.25,99.63,9.39,20.58,Leaf Blast
+28.18,89.87,3.91,15.6,Brown Spot
+27.58,82.51,26.92,18.53,Bacterial Leaf Blight
+30.65,87.04,14.49,19.23,Bacterial Leaf Blight
+30.12,81.69,15.6,22.6,Bacterial Leaf Blight
+32.18,94.13,15.82,14.29,Leaf scald
+29.19,86.75,28.65,16.89,Bacterial Leaf Blight
+26.71,84.46,2.94,23.85,Leaf scald
+28.54,89.0,19.78,18.76,Leaf Blast
+27.48,82.86,18.39,18.4,Bacterial Leaf Blight
+26.12,95.52,10.42,16.66,Leaf scald
+19.19,82.29,5.27,12.99,Brown Spot
+26.86,94.62,7.52,24.63,Leaf scald
+35.84,82.36,9.71,24.97,Bacterial Leaf Blight
+23.17,96.94,15.44,25.18,Leaf Blast
+29.0,90.11,14.49,15.29,Bacterial Leaf Blight
+25.47,97.59,0.34,11.41,Brown Spot
+27.4,61.29,0.64,8.37,Healthy Rice Leaf
+23.92,62.94,3.85,10.49,Healthy Rice Leaf
+32.94,93.68,4.92,17.11,Brown Spot
+22.12,94.83,15.55,10.72,Leaf Blast
+30.6,86.99,12.09,9.73,Leaf scald
+26.73,91.17,7.93,14.22,Sheath Blight
+30.97,81.12,9.61,20.63,Bacterial Leaf Blight
+30.79,88.82,12.09,11.69,Sheath Blight
+29.04,81.25,13.32,10.94,Leaf scald
+24.39,89.89,7.49,11.6,Leaf scald
+29.62,84.09,17.71,27.31,Bacterial Leaf Blight
+27.68,85.28,9.07,20.26,Leaf scald
+26.77,98.5,6.5,15.48,Brown Spot
+27.83,80.96,11.44,27.26,Bacterial Leaf Blight
+25.73,88.53,11.33,21.17,Bacterial Leaf Blight
+21.67,94.74,9.61,20.9,Leaf Blast
+29.18,90.01,9.15,19.37,Leaf scald
+24.78,79.08,15.48,13.82,Leaf scald
+28.98,92.14,15.88,22.92,Bacterial Leaf Blight
+26.67,82.44,0.91,12.92,Leaf scald
+20.22,88.34,6.6,13.05,Brown Spot
+28.34,92.06,7.14,22.2,Leaf Blast
+22.08,96.88,17.41,19.82,Leaf Blast
+21.21,95.77,12.24,13.46,Leaf Blast
+22.13,92.46,3.76,13.49,Leaf scald
+24.61,58.59,3.76,6.17,Healthy Rice Leaf
+26.33,49.58,2.32,9.41,Healthy Rice Leaf
+33.15,84.23,11.93,22.37,Bacterial Leaf Blight
+29.97,85.42,17.63,26.53,Bacterial Leaf Blight
+24.45,96.82,16.8,16.49,Leaf Blast
+29.81,90.58,7.77,18.42,Leaf scald
+22.37,95.21,14.42,22.39,Leaf Blast
+34.3,82.41,26.14,23.63,Bacterial Leaf Blight
+26.67,99.03,13.27,12.94,Leaf Blast
+34.91,98.22,7.11,17.26,Sheath Blight
+31.16,96.69,9.08,18.92,Sheath Blight
+26.75,91.47,26.52,10.61,Bacterial Leaf Blight
+31.76,93.7,27.43,30.95,Bacterial Leaf Blight
+27.62,86.04,21.9,21.46,Bacterial Leaf Blight
+26.44,93.54,15.83,13.26,Leaf scald
+26.4,92.12,2.7,13.13,Brown Spot
+27.41,98.13,11.71,24.96,Leaf scald
+29.36,85.74,14.07,24.11,Bacterial Leaf Blight
+24.71,91.9,2.27,25.74,Leaf scald
+27.57,94.02,4.88,15.61,Brown Spot
+33.51,87.36,1.76,22.24,Bacterial Leaf Blight
+29.1,88.15,15.91,29.22,Bacterial Leaf Blight
+27.72,91.29,17.83,23.76,Bacterial Leaf Blight
+27.22,82.68,6.0,14.09,Leaf scald
+24.52,84.45,9.35,11.2,Leaf scald
+29.69,93.7,13.38,19.65,Bacterial Leaf Blight
+30.4,93.18,10.49,18.78,Leaf Blast
+27.2,89.35,6.57,12.66,Leaf Blast
+27.86,95.13,1.6,9.14,Sheath Blight
+32.84,92.73,10.01,18.18,Sheath Blight
+31.06,88.86,23.51,19.8,Bacterial Leaf Blight
+29.69,93.39,7.81,11.31,Sheath Blight
+29.39,100.0,4.61,12.75,Sheath Blight
+30.49,98.34,2.16,8.27,Sheath Blight
+28.17,86.75,23.71,16.07,Bacterial Leaf Blight
+35.1,91.75,7.17,12.98,Sheath Blight
+30.5,84.68,10.04,9.74,Leaf scald
+26.86,84.23,18.07,20.98,Bacterial Leaf Blight
+23.93,91.28,17.71,6.36,Leaf Blast
+33.09,93.49,11.87,13.04,Sheath Blight
+25.45,96.56,9.14,15.31,Leaf Blast
+22.63,63.75,2.05,13.7,Healthy Rice Leaf
+26.47,86.82,9.56,24.38,Leaf scald
+26.47,87.98,15.23,28.24,Bacterial Leaf Blight
+30.44,98.66,9.53,12.36,Sheath Blight
+29.49,92.81,2.36,16.77,Leaf scald
+26.19,90.08,12.46,10.44,Leaf scald
+23.61,90.53,4.93,14.99,Brown Spot
+29.58,87.88,11.69,19.7,Bacterial Leaf Blight
+21.45,85.79,5.92,14.93,Brown Spot
+23.11,58.14,1.51,11.1,Healthy Rice Leaf
+30.25,92.61,14.0,18.36,Leaf Blast
+24.47,50.95,2.35,9.36,Healthy Rice Leaf
+19.9,88.28,9.89,11.62,Leaf scald
+30.65,88.95,3.81,10.91,Sheath Blight
+26.19,94.71,21.11,18.24,Leaf Blast
+30.66,86.02,11.98,11.41,Leaf scald
+27.83,92.99,17.81,21.49,Bacterial Leaf Blight
+31.64,93.32,0.63,11.91,Sheath Blight
+23.16,87.49,11.32,18.68,Leaf scald
+30.96,88.29,18.91,6.99,Bacterial Leaf Blight
+30.33,97.57,10.09,14.77,Leaf Blast
+24.31,63.33,3.34,13.74,Healthy Rice Leaf
+25.06,55.7,0.0,11.86,Healthy Rice Leaf
+28.41,88.51,18.32,6.87,Sheath Blight
+30.73,89.86,15.27,15.54,Leaf Blast
+26.46,53.79,0.0,10.45,Healthy Rice Leaf
+33.7,93.59,8.31,17.79,Sheath Blight
+30.21,84.83,12.87,23.62,Leaf scald
+25.2,84.18,0.0,18.22,Leaf scald
+28.47,92.12,15.92,22.9,Leaf Blast
+31.76,97.91,4.08,11.95,Sheath Blight
+26.53,86.17,24.63,22.51,Bacterial Leaf Blight
+30.75,94.69,5.57,11.34,Sheath Blight
+26.78,88.89,10.53,13.64,Leaf Blast
+30.29,89.88,27.69,16.84,Bacterial Leaf Blight
+31.55,88.66,0.0,15.79,Sheath Blight
+27.38,88.54,16.43,19.29,Bacterial Leaf Blight
+29.08,93.38,2.6,15.05,Sheath Blight
+24.09,96.41,7.87,14.25,Brown Spot
+26.72,93.22,10.15,21.43,Leaf Blast
+27.79,94.25,16.65,8.81,Bacterial Leaf Blight
+26.6,91.69,4.07,22.51,Leaf scald
+33.11,89.95,0.0,9.13,Brown Spot
+24.56,60.55,2.06,6.06,Healthy Rice Leaf
+33.12,94.32,7.84,18.88,Sheath Blight
+29.89,97.54,16.11,12.66,Sheath Blight
+29.92,81.89,4.41,11.21,Sheath Blight
+30.65,89.57,10.73,24.6,Leaf Blast
+29.88,91.3,16.14,20.09,Bacterial Leaf Blight
+26.68,60.16,0.0,7.77,Healthy Rice Leaf
+32.58,94.16,6.94,9.0,Brown Spot
+30.48,95.15,4.26,11.65,Sheath Blight
+26.05,86.21,5.62,11.21,Brown Spot
+33.99,93.85,6.18,11.33,Sheath Blight
+22.09,90.21,5.76,15.66,Brown Spot
+27.25,87.66,12.23,17.8,Leaf scald
+28.67,84.76,19.23,14.71,Bacterial Leaf Blight
+29.21,61.01,1.04,12.5,Healthy Rice Leaf
+19.09,91.99,2.59,20.57,Brown Spot
+25.86,54.43,3.69,7.9,Healthy Rice Leaf
+26.14,86.44,19.23,26.2,Bacterial Leaf Blight
+26.11,56.19,5.56,11.95,Healthy Rice Leaf
+30.03,92.11,5.81,8.58,Sheath Blight
+30.45,86.34,26.25,17.75,Bacterial Leaf Blight
+24.96,92.51,18.39,11.78,Leaf Blast
+30.53,91.33,9.22,9.08,Sheath Blight
+24.66,87.97,14.79,24.78,Bacterial Leaf Blight
+30.46,89.03,7.39,12.24,Sheath Blight
+23.69,97.85,0.74,11.47,Brown Spot
+27.54,92.9,6.7,25.37,Leaf Blast
+30.42,84.57,25.51,18.15,Bacterial Leaf Blight
+25.62,92.83,9.68,17.49,Brown Spot
+27.42,63.43,0.0,9.79,Healthy Rice Leaf
+34.49,100.0,6.18,4.47,Brown Spot
+29.43,95.64,12.98,12.88,Leaf Blast
+30.2,88.55,1.99,8.56,Sheath Blight
+25.43,63.45,1.15,8.79,Healthy Rice Leaf
+25.08,57.5,2.96,13.15,Healthy Rice Leaf
+26.78,91.6,4.99,6.7,Brown Spot
+20.16,92.14,13.13,26.2,Leaf Blast
+26.82,92.88,9.19,16.34,Brown Spot
+25.48,93.78,10.72,19.13,Leaf Blast
+25.72,94.41,9.62,8.64,Leaf Blast
+25.08,93.09,15.1,16.76,Leaf Blast
+26.62,64.35,2.97,17.72,Healthy Rice Leaf
+30.07,94.49,13.87,6.38,Sheath Blight
+23.94,90.62,1.68,11.59,Brown Spot
+25.29,93.88,8.99,19.89,Leaf Blast
+23.29,94.95,6.77,19.07,Leaf Blast
+22.67,88.89,3.25,10.18,Leaf scald
+26.32,66.52,0.83,13.33,Healthy Rice Leaf
+17.95,77.83,5.29,10.6,Leaf scald
+23.43,95.48,11.87,18.91,Leaf Blast
+30.14,93.12,9.95,16.99,Brown Spot
+19.18,91.6,25.08,9.67,Leaf Blast
+23.25,89.31,2.12,10.8,Brown Spot
+28.81,61.39,1.94,8.44,Healthy Rice Leaf
+24.55,56.86,0.0,11.67,Healthy Rice Leaf
+29.49,95.22,19.11,24.66,Bacterial Leaf Blight
+29.06,94.08,7.77,11.18,Sheath Blight
+29.35,100.0,5.78,17.09,Brown Spot
+22.75,95.86,8.98,15.86,Leaf Blast
+29.84,93.45,9.98,24.36,Bacterial Leaf Blight
+24.89,96.81,15.38,9.2,Leaf Blast
+30.93,96.7,10.17,10.19,Sheath Blight
+24.62,76.59,6.51,14.23,Leaf scald
+24.28,88.44,9.49,13.86,Leaf Blast
+28.58,89.76,2.76,16.1,Sheath Blight
+26.38,84.71,1.65,12.35,Leaf scald
+25.49,88.45,6.53,23.0,Bacterial Leaf Blight
+24.71,93.81,3.99,10.9,Brown Spot
+31.7,93.5,9.12,9.56,Sheath Blight
+28.98,90.36,6.84,12.03,Brown Spot
+27.23,67.49,0.8,12.9,Healthy Rice Leaf
+24.44,94.91,13.09,1.28,Leaf Blast
+28.18,86.68,5.57,6.28,Brown Spot
+26.34,85.43,11.04,23.86,Leaf scald
+32.33,87.01,11.51,24.13,Bacterial Leaf Blight
+31.36,86.51,7.23,13.1,Sheath Blight
+33.07,94.9,21.65,15.74,Bacterial Leaf Blight
+21.49,97.43,5.64,17.27,Brown Spot
+32.03,91.8,17.76,21.05,Bacterial Leaf Blight
+30.25,91.3,5.36,10.65,Sheath Blight
+31.8,91.05,14.01,10.08,Sheath Blight
+24.54,77.43,8.55,12.35,Leaf scald
+30.19,96.66,10.11,13.33,Sheath Blight
+27.89,94.97,3.1,11.99,Brown Spot
+25.81,58.44,0.8,8.38,Healthy Rice Leaf
+34.28,92.81,3.38,13.65,Brown Spot
+20.82,93.2,2.08,15.0,Brown Spot
+27.03,61.51,2.05,14.47,Healthy Rice Leaf
+31.12,96.94,4.38,12.78,Brown Spot
+27.94,83.03,12.57,26.68,Bacterial Leaf Blight
+22.59,97.6,7.76,19.96,Brown Spot
+29.41,91.18,7.82,9.31,Sheath Blight
+31.03,96.56,7.38,12.97,Brown Spot
+27.23,55.17,0.0,7.31,Healthy Rice Leaf
+30.75,86.35,12.51,17.14,Leaf scald
+23.06,89.49,8.18,24.07,Leaf scald
+28.83,88.99,32.66,20.77,Bacterial Leaf Blight
+29.31,88.3,11.8,15.12,Sheath Blight
+22.21,90.36,13.29,18.32,Leaf Blast
+23.04,83.08,4.14,13.64,Leaf scald
+35.53,91.67,18.47,26.63,Bacterial Leaf Blight
+26.1,53.11,1.44,15.35,Healthy Rice Leaf
+28.14,89.51,10.64,16.96,Leaf scald
+34.43,98.17,0.68,11.26,Sheath Blight
+33.03,93.48,6.42,7.87,Sheath Blight
+29.3,68.77,0.34,8.91,Healthy Rice Leaf
+29.03,82.68,17.45,21.04,Bacterial Leaf Blight
+22.61,95.47,14.16,6.93,Leaf Blast
+30.52,89.41,0.0,7.26,Sheath Blight
+26.45,81.52,9.9,22.99,Leaf scald
+28.6,86.63,5.44,7.08,Brown Spot
+26.28,96.84,3.63,23.32,Leaf scald
+26.95,87.33,5.77,10.92,Brown Spot
+24.2,99.92,2.49,13.22,Leaf Blast
+27.24,59.51,3.21,10.31,Healthy Rice Leaf
+24.63,89.46,14.64,9.64,Leaf scald
+27.53,90.82,13.17,6.12,Sheath Blight
+25.5,92.96,9.33,11.3,Leaf Blast
+31.52,96.94,3.58,5.7,Brown Spot
+24.64,64.18,0.0,10.51,Healthy Rice Leaf
+25.88,78.45,7.3,9.72,Leaf scald
+25.95,54.24,1.78,11.85,Healthy Rice Leaf
+25.14,95.38,11.46,23.86,Leaf Blast
+26.4,94.21,6.8,14.4,Brown Spot
+25.39,91.72,6.33,26.4,Leaf Blast
+26.44,93.7,11.85,19.08,Leaf Blast
+27.99,93.56,0.79,15.75,Brown Spot
+29.86,87.39,5.89,7.47,Sheath Blight
+22.17,87.1,6.21,13.87,Leaf scald
+29.47,90.05,12.21,14.19,Bacterial Leaf Blight
+23.7,89.0,10.2,24.18,Brown Spot
+29.1,94.65,16.05,8.2,Leaf Blast
+26.45,72.7,5.43,25.92,Leaf scald
+33.79,79.23,18.8,20.37,Bacterial Leaf Blight
+25.22,64.47,1.34,11.4,Healthy Rice Leaf
+28.9,79.81,8.88,15.8,Leaf scald
+32.93,91.1,5.59,7.55,Sheath Blight
+31.86,93.23,3.03,9.98,Sheath Blight
+26.27,92.68,0.83,25.15,Leaf scald
+23.03,92.83,1.52,5.12,Brown Spot
+24.45,81.39,21.5,19.63,Bacterial Leaf Blight
+29.02,63.68,0.0,5.26,Healthy Rice Leaf
+23.98,100.0,14.15,11.89,Leaf Blast
+25.41,55.06,0.06,13.4,Healthy Rice Leaf
+28.37,91.55,6.08,7.83,Brown Spot
+27.58,86.92,30.43,19.09,Bacterial Leaf Blight
+33.25,93.34,6.78,12.52,Sheath Blight
+21.25,85.9,9.9,16.14,Leaf scald
+23.37,100.0,6.02,17.4,Leaf Blast
+26.92,96.73,10.55,16.67,Leaf Blast
+27.31,87.11,11.2,20.73,Bacterial Leaf Blight
+26.61,96.16,5.14,12.47,Leaf Blast
+24.39,90.31,6.86,14.19,Leaf scald
+34.11,92.75,11.18,12.01,Sheath Blight

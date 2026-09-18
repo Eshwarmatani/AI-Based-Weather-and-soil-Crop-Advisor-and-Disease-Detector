@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block title %}Prediction History — AI Crop Advisor{% endblock %}
+{% block content %}
+
+<div class="section-header">
+    <h1><i class="fas fa-clock-rotate-left" style="font-size:1.8rem;margin-right:.5rem"></i> Prediction History</h1>
+    <p>Stored local advisory and diagnosis log with instant CSV export and management</p>
+</div>
+
+<div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:.75rem">
+        <h2 class="card-title" style="margin-bottom:0">Recent Predictions Log</h2>
+        <div style="display:flex;gap:.5rem">
+            <a href="/api/history/export" class="btn btn-outline" style="font-size:.85rem">
+                <i class="fas fa-file-csv"></i> Export CSV
+            </a>
+            <button class="btn btn-outline" onclick="loadHistory()" id="refreshBtn" style="font-size:.85rem">
+                <i class="fas fa-rotate"></i> Refresh
+            </button>
+            <button class="btn btn-outline" onclick="clearHistory()" style="font-size:.85rem;color:#f87171;border-color:rgba(248,113,113,0.3)">
+                <i class="fas fa-trash-can"></i> Clear
+            </button>
+        </div>
+    </div>
+
+    <div id="historyLoading" style="text-align:center;padding:2rem">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="table-wrap" id="historyTable" style="display:none">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th><th>Time</th><th>Type</th>
+                    <th>Crop Prediction</th><th>Disease Prediction</th><th>Weather Risk</th><th>Confidence</th>
+                </tr>
+            </thead>
+            <tbody id="historyBody"></tbody>
+        </table>
+    </div>
+
+    <div id="historyEmpty" class="alert alert-info" style="display:none">
+        <i class="fas fa-circle-info"></i>
+        No predictions recorded yet. Run tests in the Crop Advisor, Disease Detection, or Weather Risk modules to record entries.
+    </div>
+
+    <div id="historyError" class="alert alert-error" style="display:none"></div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function loadHistory() {
+    document.getElementById('historyLoading').style.display = 'block';
+    document.getElementById('historyTable').style.display  = 'none';
+    document.getElementById('historyEmpty').style.display  = 'none';
+    document.getElementById('historyError').style.display  = 'none';
+
+    try {
+        const resp = await fetch('/api/history');
+        const data = await resp.json();
+
+        document.getElementById('historyLoading').style.display = 'none';
+
+        if (!Array.isArray(data) || !data.length) {
+            document.getElementById('historyEmpty').style.display = 'block';
+            return;
+        }
+
+        const typeColors = {
+            crop: 'var(--green-400)',
+            disease: '#4dc95a',
+            weather: 'var(--amber-400)',
+            combined: 'var(--blue-500)'
+        };
+
+        document.getElementById('historyBody').innerHTML = data.map(p => {
+            const ts = p.timestamp ? new Date(p.timestamp).toLocaleString() : '—';
+            return `<tr>
+                <td>${p.id}</td>
+                <td style="white-space:nowrap;font-size:.82rem">${ts}</td>
+                <td><span class="badge" style="background:rgba(34,136,42,0.18);color:${typeColors[p.prediction_type]||'var(--text-muted)'}">
+                    ${p.prediction_type}</span></td>
+                <td><strong>${p.crop_prediction ? p.crop_prediction.replace(/_/g,' ') : '—'}</strong></td>
+                <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
+                    ${p.disease_prediction ? p.disease_prediction.replace(/__/g,' — ').replace(/_/g,' ') : '—'}</td>
+                <td>${p.risk_prediction || '—'}</td>
+                <td>${p.confidence !== null && p.confidence !== undefined
+                    ? (p.confidence*100).toFixed(1)+'%' : '—'}</td>
+            </tr>`;
+        }).join('');
+
+        document.getElementById('historyTable').style.display = 'block';
+    } catch(e) {
+        document.getElementById('historyLoading').style.display = 'none';
+        document.getElementById('historyError').textContent = 'Failed to load history: ' + e.message;
+        document.getElementById('historyError').style.display = 'block';
+    }
+}
+
+async function clearHistory() {
+    if (!confirm('Are you sure you want to clear all prediction history?')) return;
+    try {
+        const resp = await fetch('/api/history/clear', { method: 'POST' });
+        const res = await resp.json();
+        if (res.success) {
+            loadHistory();
+        } else {
+            alert('Failed to clear: ' + (res.error || 'Unknown error'));
+        }
+    } catch(e) {
+        alert('Network error: ' + e.message);
+    }
+}
+
+loadHistory();
+</script>
+{% endblock %}

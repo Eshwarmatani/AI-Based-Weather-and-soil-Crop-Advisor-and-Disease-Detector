@@ -1,0 +1,10 @@
+{
+  "venvPath": ".",
+  "venv": ".venv",
+  "extraPaths": [
+    "AI_Crop_Advisor",
+    "."
+  ],
+  "reportMissingTypeStubs": "none",
+  "reportMissingImports": "none"
+}

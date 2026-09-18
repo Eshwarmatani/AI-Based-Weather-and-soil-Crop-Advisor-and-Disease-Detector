@@ -1,0 +1,439 @@
+{% extends "base.html" %}
+{% block title %}Crop Advisor — AI Crop Advisor{% endblock %}
+{% block content %}
+
+<div class="section-header">
+    <h1><i class="fas fa-wheat-awn" style="font-size:1.8rem;margin-right:.5rem"></i> Crop Advisor &amp; What-If Simulator</h1>
+    <p>Enter soil and environmental conditions to predict optimal crops with real-time SHAP explainability and agronomic guidance</p>
+</div>
+
+<!-- Preset Profiles & Simulator Toggle -->
+<div class="card" style="margin-bottom:1.5rem;padding:1rem 1.5rem">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+        <div>
+            <span style="font-size:.85rem;color:var(--text-muted);font-weight:600;margin-right:.75rem">
+                <i class="fas fa-sliders"></i> Quick Soil Presets:
+            </span>
+            <button type="button" class="btn btn-outline" style="font-size:.78rem;padding:.35rem .7rem"
+                    onclick="applyPreset({N:90, P:42, K:43, temperature:20.8, humidity:82.0, ph:6.5, rainfall:202.9})">
+                <i class="fas fa-bowl-rice"></i> Rice
+            </button>
+            <button type="button" class="btn btn-outline" style="font-size:.78rem;padding:.35rem .7rem"
+                    onclick="applyPreset({N:78, P:45, K:20, temperature:24.0, humidity:65.0, ph:6.5, rainfall:85.0})">
+                <i class="fas fa-seedling"></i> Maize
+            </button>
+            <button type="button" class="btn btn-outline" style="font-size:.78rem;padding:.35rem .7rem"
+                    onclick="applyPreset({N:118, P:46, K:20, temperature:25.5, humidity:79.0, ph:6.9, rainfall:75.0})">
+                <i class="fas fa-shirt"></i> Cotton
+            </button>
+            <button type="button" class="btn btn-outline" style="font-size:.78rem;padding:.35rem .7rem"
+                    onclick="applyPreset({N:24, P:138, K:200, temperature:22.5, humidity:92.0, ph:5.9, rainfall:112.0})">
+                <i class="fas fa-apple-whole"></i> Apple
+            </button>
+            <button type="button" class="btn btn-primary" id="cropLiveWeatherBtn" style="font-size:.78rem;padding:.35rem .75rem"
+                    onclick="detectAndFillCropWeather()">
+                <i class="fas fa-location-crosshairs"></i> 📍 Detect Live Weather
+            </button>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:.5rem">
+            <label for="simulatorToggle" style="font-size:.85rem;font-weight:600;cursor:pointer">
+                <i class="fas fa-wand-magic-sparkles" style="color:var(--green-400)"></i> Real-Time What-If Mode:
+            </label>
+            <input type="checkbox" id="simulatorToggle" style="cursor:pointer;width:1.2rem;height:1.2rem">
+        </div>
+    </div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start">
+
+<!-- Input Form -->
+<div class="card">
+    <h2 class="card-title"><i class="fas fa-flask"></i> Soil &amp; Weather Parameters</h2>
+
+    <form id="cropForm">
+        <div class="form-grid">
+            <div class="form-group">
+                <div style="display:flex;justify-content:space-between">
+                    <label for="N">Nitrogen (N)</label>
+                    <span id="val_N" style="font-size:.82rem;color:var(--green-400);font-weight:600">90.0</span>
+                </div>
+                <input type="range" id="slider_N" min="0" max="140" step="1" value="90" style="display:none" oninput="syncField('N', this.value)">
+                <input type="number" id="N" name="N" min="0" max="140" step="0.1" value="90" placeholder="0 – 140" required oninput="syncSlider('N', this.value)">
+                <span class="form-hint">mg/kg (0–140)</span>
+            </div>
+
+            <div class="form-group">
+                <div style="display:flex;justify-content:space-between">
+                    <label for="P">Phosphorus (P)</label>
+                    <span id="val_P" style="font-size:.82rem;color:var(--green-400);font-weight:600">42.0</span>
+                </div>
+                <input type="range" id="slider_P" min="0" max="145" step="1" value="42" style="display:none" oninput="syncField('P', this.value)">
+                <input type="number" id="P" name="P" min="0" max="145" step="0.1" value="42" placeholder="0 – 145" required oninput="syncSlider('P', this.value)">
+                <span class="form-hint">mg/kg (0–145)</span>
+            </div>
+
+            <div class="form-group">
+                <div style="display:flex;justify-content:space-between">
+                    <label for="K">Potassium (K)</label>
+                    <span id="val_K" style="font-size:.82rem;color:var(--green-400);font-weight:600">43.0</span>
+                </div>
+                <input type="range" id="slider_K" min="0" max="205" step="1" value="43" style="display:none" oninput="syncField('K', this.value)">
+                <input type="number" id="K" name="K" min="0" max="205" step="0.1" value="43" placeholder="0 – 205" required oninput="syncSlider('K', this.value)">
+                <span class="form-hint">mg/kg (0–205)</span>
+            </div>
+
+            <div class="form-group">
+                <div style="display:flex;justify-content:space-between">
+                    <label for="temperature">Temperature (°C)</label>
+                    <span id="val_temperature" style="font-size:.82rem;color:var(--green-400);font-weight:600">20.8°C</span>
+                </div>
+                <input type="range" id="slider_temperature" min="0" max="50" step="0.5" value="20.8" style="display:none" oninput="syncField('temperature', this.value)">
+                <input type="number" id="temperature" name="temperature" min="0" max="50" step="0.1" value="20.8" placeholder="0 – 50" required oninput="syncSlider('temperature', this.value)">
+                <span class="form-hint">0–50 °C</span>
+            </div>
+
+            <div class="form-group">
+                <div style="display:flex;justify-content:space-between">
+                    <label for="humidity">Humidity (%)</label>
+                    <span id="val_humidity" style="font-size:.82rem;color:var(--green-400);font-weight:600">82.0%</span>
+                </div>
+                <input type="range" id="slider_humidity" min="0" max="100" step="1" value="82" style="display:none" oninput="syncField('humidity', this.value)">
+                <input type="number" id="humidity" name="humidity" min="0" max="100" step="0.1" value="82.0" placeholder="0 – 100" required oninput="syncSlider('humidity', this.value)">
+                <span class="form-hint">0–100 %</span>
+            </div>
+
+            <div class="form-group">
+                <div style="display:flex;justify-content:space-between">
+                    <label for="ph">Soil pH</label>
+                    <span id="val_ph" style="font-size:.82rem;color:var(--green-400);font-weight:600">6.50</span>
+                </div>
+                <input type="range" id="slider_ph" min="3" max="10" step="0.1" value="6.5" style="display:none" oninput="syncField('ph', this.value)">
+                <input type="number" id="ph" name="ph" min="3" max="10" step="0.01" value="6.5" placeholder="3.0 – 10.0" required oninput="syncSlider('ph', this.value)">
+                <span class="form-hint">3.0–10.0</span>
+            </div>
+
+            <div class="form-group" style="grid-column:1/-1">
+                <div style="display:flex;justify-content:space-between">
+                    <label for="rainfall">Rainfall (mm)</label>
+                    <span id="val_rainfall" style="font-size:.82rem;color:var(--green-400);font-weight:600">202.9 mm</span>
+                </div>
+                <input type="range" id="slider_rainfall" min="0" max="300" step="1" value="202.9" style="display:none" oninput="syncField('rainfall', this.value)">
+                <input type="number" id="rainfall" name="rainfall" min="0" max="300" step="0.1" value="202.9" placeholder="0 – 300" required oninput="syncSlider('rainfall', this.value)">
+                <span class="form-hint">0–300 mm</span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="cropBtn" style="margin-top:1.5rem;width:100%;justify-content:center">
+            <i class="fas fa-seedling"></i> Predict Suitable Crop
+        </button>
+    </form>
+
+    <div class="loading-overlay" id="cropLoading">
+        <div class="spinner"></div>
+        <p style="margin-top:1rem">Evaluating conditions against Random Forest model…</p>
+    </div>
+</div>
+
+<!-- Results -->
+<div id="cropResults" style="display:none">
+    <div class="result-card">
+        <div class="result-header">
+            <div class="result-icon"><i class="fas fa-seedling"></i></div>
+            <div>
+                <div class="result-title">Top Recommendation</div>
+                <div class="result-value" id="topCrop">—</div>
+            </div>
+        </div>
+
+        <div id="top3Container" class="top3-list"></div>
+
+        <!-- Agronomic Guidance -->
+        <div id="guidanceBox" class="card" style="margin-top:1.5rem;background:rgba(255,255,255,0.02);border:1px solid var(--border)">
+            <h3 class="card-title" style="font-size:1rem;margin-bottom:.75rem">
+                <i class="fas fa-book-open-reader" style="color:var(--green-400)"></i>
+                Agronomic Profile &amp; Soil Advice
+            </h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;font-size:.85rem;margin-bottom:.75rem">
+                <div><strong>Optimum pH:</strong> <span id="guidePh">—</span></div>
+                <div><strong>Water Need:</strong> <span id="guideWater">—</span></div>
+            </div>
+            <div style="font-size:.85rem;margin-bottom:.75rem">
+                <strong>Nutritional Requirement:</strong> <span id="guideNpk">—</span>
+            </div>
+            <div style="font-size:.85rem;margin-bottom:.75rem">
+                <strong>Cultivation Tip:</strong> <span id="guideTips">—</span>
+            </div>
+            <div>
+                <strong>Soil Adjustment Suggestions:</strong>
+                <ul id="guideAdjustments" style="margin:.35rem 0 0 1.25rem;padding:0;font-size:.85rem;line-height:1.4"></ul>
+            </div>
+        </div>
+
+        <div class="alert alert-info" style="margin-top:1.25rem;font-size:.82rem">
+            <i class="fas fa-circle-info"></i>
+            Predictions computed via Random Forest (99.5% test F1). Probability indicates model alignment with training distributions.
+        </div>
+    </div>
+
+    <!-- Input summary -->
+    <div class="card" style="margin-top:1.5rem">
+        <h3 class="card-title" style="font-size:.95rem"><i class="fas fa-list"></i> Input Summary</h3>
+        <div class="factors-grid" id="inputSummary"></div>
+    </div>
+</div>
+
+</div>
+
+<!-- Error display -->
+<div id="cropError" class="alert alert-error" style="display:none;margin-top:1rem"></div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+let debounceTimer = null;
+
+function syncField(name, val) {
+    document.getElementById(name).value = val;
+    updateDisplayVal(name, val);
+    triggerSimulator();
+}
+
+function syncSlider(name, val) {
+    const s = document.getElementById('slider_' + name);
+    if (s) s.value = val;
+    updateDisplayVal(name, val);
+    triggerSimulator();
+}
+
+function updateDisplayVal(name, val) {
+    const label = document.getElementById('val_' + name);
+    if (!label) return;
+    const units = {temperature:'°C', humidity:'%', rainfall:' mm', N:'', P:'', K:'', ph:''};
+    label.textContent = val + (units[name] || '');
+}
+
+function applyPreset(data) {
+    Object.entries(data).forEach(([k, v]) => {
+        document.getElementById(k).value = v;
+        syncSlider(k, v);
+    });
+    runPrediction();
+}
+
+const simToggle = document.getElementById('simulatorToggle');
+simToggle.addEventListener('change', function() {
+    const isSim = this.checked;
+    ['N','P','K','temperature','humidity','ph','rainfall'].forEach(field => {
+        const slider = document.getElementById('slider_' + field);
+        if (slider) slider.style.display = isSim ? 'block' : 'none';
+    });
+    document.getElementById('cropBtn').style.display = isSim ? 'none' : 'flex';
+    if (isSim) runPrediction();
+});
+
+function triggerSimulator() {
+    if (!document.getElementById('simulatorToggle').checked) return;
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+        runPrediction(true);
+    }, 250);
+}
+
+document.getElementById('cropForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    runPrediction();
+});
+
+async function runPrediction(isSilent = false) {
+    const btn = document.getElementById('cropBtn');
+    const loading = document.getElementById('cropLoading');
+    const results = document.getElementById('cropResults');
+    const errorEl = document.getElementById('cropError');
+
+    if (!isSilent) {
+        btn.disabled = true;
+        loading.classList.add('active');
+        errorEl.style.display = 'none';
+    }
+
+    const formEl = document.getElementById('cropForm');
+    const data = Object.fromEntries(new FormData(formEl));
+
+    try {
+        const resp = await fetch('/api/crop/predict', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+        });
+        const json = await resp.json();
+
+        if (!json.success) throw new Error(json.error || "Prediction request failed.");
+
+        const resultsList = Array.isArray(json.results) ? json.results : (Array.isArray(json.result) ? json.result : []);
+        if (!resultsList.length) throw new Error("No crop recommendations returned from model.");
+
+        document.getElementById('topCrop').textContent =
+            resultsList[0].crop.replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+
+        // Top-3 list
+        const container = document.getElementById('top3Container');
+        container.innerHTML = resultsList.map(r => `
+            <div class="top3-item">
+                <div class="top3-rank">#${r.rank}</div>
+                <div class="top3-info">
+                    <div class="top3-crop">${r.crop.replace(/_/g,' ')}</div>
+                    <div class="top3-prob">${(r.probability*100).toFixed(1)}% confidence — ${r.confidence}</div>
+                </div>
+                <div class="top3-bar-wrap">
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width:${(r.probability*100).toFixed(1)}%"></div>
+                    </div>
+                </div>
+            </div>`).join('');
+
+        // Agronomic Guidance
+        if (json.guidance) {
+            const g = json.guidance;
+            const prof = g.profile || {};
+            document.getElementById('guidePh').textContent = prof.optimum_ph || '—';
+            document.getElementById('guideWater').textContent = prof.water_req || '—';
+            document.getElementById('guideNpk').textContent = prof.npk_profile || '—';
+            document.getElementById('guideTips').textContent = prof.tips || '—';
+            document.getElementById('guideAdjustments').innerHTML =
+                (g.soil_adjustments || []).map(a => `<li>${a}</li>`).join('');
+        }
+
+        // Input summary
+        const fields = {N:'Nitrogen (N)', P:'Phosphorus (P)', K:'Potassium (K)',
+            temperature:'Temperature', humidity:'Humidity', ph:'Soil pH', rainfall:'Rainfall'};
+        const units  = {N:'mg/kg', P:'mg/kg', K:'mg/kg', temperature:'°C', humidity:'%', ph:'', rainfall:'mm'};
+        document.getElementById('inputSummary').innerHTML =
+            Object.entries(data).map(([k, v]) =>
+                `<div class="factor-row">
+                    <span class="factor-name">${fields[k]||k}</span>
+                    <span class="factor-val">${parseFloat(v).toFixed(2)} ${units[k]||''}</span>
+                </div>`).join('');
+
+        // SHAP Explainability
+        if (json.explanation && !json.explanation.error && Array.isArray(json.explanation.feature_names) && Array.isArray(json.explanation.shap_values)) {
+            let shapHtml = `<div class="card" style="margin-top:1.5rem">
+                <h3 class="card-title" style="font-size:.95rem"><i class="fas fa-brain"></i> AI Decision Explainability (SHAP)</h3>
+                <p style="font-size:.8rem;color:var(--text-muted);margin-bottom:1rem">${json.explanation.note}</p>
+                <div class="factors-grid">`;
+
+            const feats = json.explanation.feature_names;
+            const vals = json.explanation.shap_values;
+            const maxVal = vals.length ? (Math.max(...vals.map(Math.abs)) || 1) : 1;
+
+            feats.forEach((f, i) => {
+                const val = vals[i];
+                const width = Math.abs(val) / maxVal * 100;
+                const color = val >= 0 ? 'var(--green-500)' : '#f87171';
+                const icon = val >= 0 ? 'fa-arrow-up' : 'fa-arrow-down';
+                shapHtml += `
+                    <div class="factor-row" style="display:flex; flex-direction:column; align-items:stretch; gap:0.25rem;">
+                        <div style="display:flex; justify-content:space-between; font-size:.85rem;">
+                            <span>${fields[f]||f}</span>
+                            <span style="color:${color}"><i class="fas ${icon}"></i> ${Math.abs(val).toFixed(2)}</span>
+                        </div>
+                        <div style="width:100%; height:4px; background:var(--border); border-radius:2px;">
+                            <div style="width:${width}%; height:100%; background:${color}; border-radius:2px; ${val < 0 ? 'margin-left:auto;' : ''}"></div>
+                        </div>
+                    </div>`;
+            });
+            shapHtml += `</div></div>`;
+
+            const existingShap = document.getElementById('shapContainer');
+            if (existingShap) existingShap.remove();
+
+            const shapContainer = document.createElement('div');
+            shapContainer.id = 'shapContainer';
+            shapContainer.innerHTML = shapHtml;
+            document.getElementById('cropResults').appendChild(shapContainer);
+        }
+
+        results.style.display = 'block';
+    } catch(err) {
+        errorEl.textContent = 'Error: ' + err.message;
+        errorEl.style.display = 'block';
+    } finally {
+        if (!isSilent) {
+            btn.disabled = false;
+            loading.classList.remove('active');
+        }
+    }
+}
+
+function detectAndFillCropWeather() {
+    const btn = document.getElementById('cropLiveWeatherBtn');
+    if (!navigator.geolocation) {
+        alert("Geolocation is not supported by your browser.");
+        return;
+    }
+    if (btn) btn.innerHTML = "<i class='fas fa-spinner fa-spin'></i> Detecting...";
+    navigator.geolocation.getCurrentPosition(
+        async (pos) => {
+            try {
+                const resp = await fetch("/weather", {
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify({
+                        latitude: pos.coords.latitude,
+                        longitude: pos.coords.longitude
+                    })
+                });
+                const data = await resp.json();
+                if (data.error) throw new Error(data.error);
+                const cur = data.current;
+                
+                document.getElementById('temperature').value = cur.temperature_2m;
+                syncSlider('temperature', cur.temperature_2m);
+
+                document.getElementById('humidity').value = cur.relative_humidity_2m;
+                syncSlider('humidity', cur.relative_humidity_2m);
+
+                document.getElementById('rainfall').value = cur.precipitation;
+                syncSlider('rainfall', cur.precipitation);
+
+                if (btn) btn.innerHTML = "<i class='fas fa-circle-check'></i> 📍 Live Weather Applied";
+                setTimeout(() => {
+                    if (btn) btn.innerHTML = "<i class='fas fa-location-crosshairs'></i> 📍 Detect Live Weather";
+                }, 3000);
+                runPrediction();
+            } catch(e) {
+                alert("Failed to fetch live weather: " + e.message);
+                if (btn) btn.innerHTML = "<i class='fas fa-location-crosshairs'></i> 📍 Detect Live Weather";
+            }
+        },
+        (err) => {
+            alert("Could not detect location: " + err.message);
+            if (btn) btn.innerHTML = "<i class='fas fa-location-crosshairs'></i> 📍 Detect Live Weather";
+        }
+    );
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("autofill") === "true") {
+        const t = parseFloat(params.get("temperature"));
+        const h = parseFloat(params.get("humidity"));
+        const r = parseFloat(params.get("rainfall"));
+        if (!isNaN(t)) {
+            document.getElementById('temperature').value = t;
+            syncSlider('temperature', t);
+        }
+        if (!isNaN(h)) {
+            document.getElementById('humidity').value = h;
+            syncSlider('humidity', h);
+        }
+        if (!isNaN(r)) {
+            document.getElementById('rainfall').value = r;
+            syncSlider('rainfall', r);
+        }
+        runPrediction();
+    }
+});
+</script>
+{% endblock %}

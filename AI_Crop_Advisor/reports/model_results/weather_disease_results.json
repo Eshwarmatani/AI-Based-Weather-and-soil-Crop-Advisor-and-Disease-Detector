@@ -1,0 +1,45 @@
+{
+  "best_model": "Support Vector Machine",
+  "results": [
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.8016,
+      "precision": 0.8022,
+      "recall": 0.8016,
+      "f1": 0.7998,
+      "train_time_sec": 0.03
+    },
+    {
+      "model": "Decision Tree",
+      "accuracy": 0.7128,
+      "precision": 0.7129,
+      "recall": 0.7128,
+      "f1": 0.7118,
+      "train_time_sec": 0.02
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.7768,
+      "precision": 0.7788,
+      "recall": 0.7768,
+      "f1": 0.7744,
+      "train_time_sec": 0.69
+    },
+    {
+      "model": "Support Vector Machine",
+      "accuracy": 0.8029,
+      "precision": 0.8072,
+      "recall": 0.8029,
+      "f1": 0.8006,
+      "train_time_sec": 0.52
+    },
+    {
+      "model": "Gradient Boosting",
+      "accuracy": 0.7859,
+      "precision": 0.7866,
+      "recall": 0.7859,
+      "f1": 0.784,
+      "train_time_sec": 5.99
+    }
+  ]
+}

@@ -46,4 +46,9 @@ desktop.ini
 
 # Secrets / API keys
 *.env
+.env
 kaggle.json
+
+# Scratchpad files
+scratchpad*.md
+

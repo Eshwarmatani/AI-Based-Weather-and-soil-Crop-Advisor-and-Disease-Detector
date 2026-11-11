@@ -36,8 +36,21 @@ if data.get('success') and data.get('result'):
 
 # Performance APIs
 for m in ['crop', 'disease', 'weather', 'rice-disease']:
-    r = requests.get(base + '/api/performance/' + m, timeout=5)
-    print(f'  /api/performance/{m:<12s} -> {r.status_code}')
+    try:
+        r = requests.get(base + '/api/performance/' + m, timeout=5)
+        data = r.json()
+        print(f'  /api/performance/{m:<12s} -> {r.status_code} classes={data.get("n_classes")} samples={data.get("total_test_samples")}')
+    except Exception as e:
+        print(f'  /api/performance/{m:<12s} -> FAIL: {e}')
+
+# Chatbot APIs
+r = requests.get(base + '/api/chat/status', timeout=5)
+data = r.json()
+print(f'  /api/chat/status     -> {r.status_code}  active_provider={data.get("active_provider")}')
+
+r = requests.post(base + '/api/chat', json={'message': 'What is soil pH?'}, timeout=10)
+data = r.json()
+print(f'  /api/chat            -> {r.status_code}  success={data.get("success")} provider={data.get("provider")}')
 
 print()
 print('ALL ROUTES VERIFIED!')

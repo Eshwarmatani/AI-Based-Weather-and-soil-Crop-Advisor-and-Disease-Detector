@@ -41,11 +41,17 @@ class Prediction(db.Model):
             setattr(self, key, value)
 
     def to_dict(self):
+        parsed_input = {}
+        if self.input_data:
+            try:
+                parsed_input = json.loads(self.input_data)
+            except Exception:
+                parsed_input = {"raw": self.input_data}
         return {
             "id":                 self.id,
             "timestamp":          self.timestamp.isoformat() if self.timestamp else None,
             "prediction_type":    self.prediction_type,
-            "input_data":         json.loads(self.input_data) if self.input_data else {},
+            "input_data":         parsed_input,
             "crop_prediction":    self.crop_prediction,
             "disease_prediction": self.disease_prediction,
             "risk_prediction":    self.risk_prediction,

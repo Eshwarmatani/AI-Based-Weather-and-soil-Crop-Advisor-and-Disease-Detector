@@ -8,6 +8,39 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# ─── Environment Loader ────────────────────────────────────────────────────────
+def _load_dotenv():
+    """Load variables from .env if present without requiring external package."""
+    candidates = [
+        os.path.join(BASE_DIR, ".env"),
+        os.path.join(os.path.dirname(BASE_DIR), ".env")
+    ]
+    for env_path in candidates:
+        if os.path.isfile(env_path):
+            try:
+                with open(env_path, "r", encoding="utf-8") as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith("#") and "=" in line:
+                            k, v = line.split("=", 1)
+                            k = k.strip()
+                            v = v.strip().strip("'\"")
+                            if k and k not in os.environ:
+                                os.environ[k] = v
+            except Exception:
+                pass
+
+_load_dotenv()
+
+# ─── Chatbot Configuration ───────────────────────────────────────────────────
+GEMINI_API_KEY   = os.environ.get("GEMINI_API_KEY", "").strip()
+OPENAI_API_KEY   = os.environ.get("OPENAI_API_KEY", "").strip()
+OPENAI_BASE_URL  = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1").strip()
+OPENAI_MODEL     = os.environ.get("OPENAI_MODEL", "gpt-4o-mini").strip()
+CHATBOT_PROVIDER = os.environ.get("CHATBOT_PROVIDER", "auto").strip().lower()  # auto, gemini, openai, local
+CHATBOT_MODEL    = os.environ.get("CHATBOT_MODEL", "gemini-1.5-flash").strip()
+
+
 DATA_DIR           = os.path.join(BASE_DIR, "data")
 MODELS_DIR         = os.path.join(BASE_DIR, "models")
 REPORTS_DIR        = os.path.join(BASE_DIR, "reports")

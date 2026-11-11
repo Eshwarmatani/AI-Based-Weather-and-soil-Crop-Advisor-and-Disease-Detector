@@ -13,8 +13,11 @@ def history():
 
 @history_bp.route("/api/history")
 def api_history():
-    preds = Prediction.query.order_by(Prediction.created_at.desc()).limit(100).all()
-    return jsonify([p.to_dict() for p in preds])
+    try:
+        preds = Prediction.query.order_by(Prediction.created_at.desc()).limit(100).all()
+        return jsonify([p.to_dict() for p in preds])
+    except Exception:
+        return jsonify([]), 200
 
 
 @history_bp.route("/api/history/clear", methods=["POST"])

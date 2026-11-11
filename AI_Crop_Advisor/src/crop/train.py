@@ -278,6 +278,9 @@ def train_and_evaluate_all():
         "test_f1_weighted": round(float(test_f1_weighted), 4),
         "n_classes": len(classes),
         "classes": classes,
+        "total_test_samples": len(y_test),
+        "confusion_matrix": cm.tolist(),
+        "matrix_labels": classes,
         "results": results_summary,
         "validation_comparison": val_comparison,
         "classification_report": test_report

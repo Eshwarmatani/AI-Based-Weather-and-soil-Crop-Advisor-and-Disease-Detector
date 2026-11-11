@@ -103,9 +103,35 @@ def save_results(results, best_name, best_model, class_names,
     joblib.dump(best_model, config.WEATHER_MODEL_PATH)
     print(f"Best model saved: {config.WEATHER_MODEL_PATH}")
 
+    # Confusion matrix & metrics
+    cm = confusion_matrix(y_test, all_preds[best_name])
+    from sklearn.metrics import classification_report, accuracy_score, balanced_accuracy_score
+    rep = classification_report(y_test, all_preds[best_name], target_names=class_names, output_dict=True)
+    acc = accuracy_score(y_test, all_preds[best_name])
+    bal_acc = balanced_accuracy_score(y_test, all_preds[best_name])
+
+    weather_data = {
+        "best_model": best_name,
+        "test_accuracy": round(float(acc), 4),
+        "balanced_accuracy": round(float(bal_acc), 4),
+        "n_classes": len(class_names),
+        "classes": class_names,
+        "total_test_samples": int(len(y_test)),
+        "classification_report": rep,
+        "confusion_matrix": cm.tolist(),
+        "matrix_labels": class_names,
+        "test_precision_macro": round(float(rep["macro avg"]["precision"]), 4),
+        "test_recall_macro": round(float(rep["macro avg"]["recall"]), 4),
+        "test_f1_macro": round(float(rep["macro avg"]["f1-score"]), 4),
+        "test_precision_weighted": round(float(rep["weighted avg"]["precision"]), 4),
+        "test_recall_weighted": round(float(rep["weighted avg"]["recall"]), 4),
+        "test_f1_weighted": round(float(rep["weighted avg"]["f1-score"]), 4),
+        "results": results,
+    }
+
     results_path = os.path.join(config.RESULTS_DIR, "weather_disease_results.json")
     with open(results_path, "w") as f:
-        json.dump({"best_model": best_name, "results": results}, f, indent=2)
+        json.dump(weather_data, f, indent=2)
 
     pd.DataFrame(results).to_csv(
         os.path.join(config.RESULTS_DIR, "weather_disease_comparison.csv"), index=False

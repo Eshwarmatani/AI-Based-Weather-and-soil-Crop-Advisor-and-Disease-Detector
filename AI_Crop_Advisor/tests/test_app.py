@@ -14,12 +14,21 @@ class TestApp(unittest.TestCase):
         self.app.config["TESTING"] = True
         self.client = self.app.test_client()
 
+    def tearDown(self):
+        with self.app.app_context():
+            from app.app import db
+            db.session.remove()
+            db.engine.dispose()
+
     def test_routes_status(self):
         routes = [
             "/",
             "/crop-advisor",
+            "/crop",
             "/disease-detection",
+            "/disease",
             "/weather-risk",
+            "/live-weather",
             "/dashboard",
             "/history",
             "/model-performance",
@@ -33,6 +42,12 @@ class TestApp(unittest.TestCase):
         for ep in ["/api/performance/crop", "/api/performance/weather", "/api/performance/disease", "/api/performance/rice-disease"]:
             resp = self.client.get(ep)
             self.assertEqual(resp.status_code, 200, f"Endpoint {ep} failed with {resp.status_code}")
+            data = resp.get_json()
+            self.assertGreater(data.get("n_classes", 0), 0)
+            self.assertGreater(len(data.get("per_class", [])), 0)
+            self.assertGreater(len(data.get("confusion_matrix", [])), 0)
+            self.assertIsNotNone(data.get("total_test_samples"))
+            self.assertIsNotNone(data.get("test_accuracy"))
 
         crop_resp = self.client.get("/api/performance/crop").get_json()
         self.assertIn("results", crop_resp)
@@ -153,6 +168,73 @@ class TestApp(unittest.TestCase):
             self.assertEqual(data["result"]["model_type"], "rice")
             self.assertIn("advice", data)
 
+    def test_chat_status_endpoint(self):
+        resp = self.client.get("/api/chat/status")
+        self.assertEqual(resp.status_code, 200)
+        data = resp.get_json()
+        self.assertTrue(data["success"])
+        self.assertIn("active_provider", data)
+        self.assertTrue(data["offline_knowledge_ready"])
+
+    def test_chat_general_question(self):
+        resp = self.client.post("/api/chat", json={"message": "What is nitrogen used for in crops?"})
+        self.assertEqual(resp.status_code, 200)
+        data = resp.get_json()
+        self.assertTrue(data["success"])
+        self.assertIn("reply", data)
+        self.assertGreater(len(data["reply"]), 20)
+
+    def test_chat_roman_urdu(self):
+        resp = self.client.post("/api/chat", json={"message": "Meri matti ka pH 6.5 hai konsi fasal lagayein?"})
+        self.assertEqual(resp.status_code, 200)
+        data = resp.get_json()
+        self.assertTrue(data["success"])
+        self.assertIn("reply", data)
+        self.assertIn("fasal", data["reply"].lower())
+
+    def test_chat_crop_model_integration(self):
+        msg = "N=90, P=42, K=43, temp=20.8, humidity=82, ph=6.5, rainfall=202"
+        resp = self.client.post("/api/chat", json={"message": msg})
+        self.assertEqual(resp.status_code, 200)
+        data = resp.get_json()
+        self.assertTrue(data["success"])
+        self.assertTrue(data.get("is_model_prediction"))
+        self.assertEqual(data.get("prediction_type"), "crop")
+        self.assertIn("rice", data["reply"].lower())
+
+    def test_chat_weather_risk_model_integration(self):
+        msg = "What is the disease risk for temp=25, humidity=94, rainfall=12, wind=17?"
+        resp = self.client.post("/api/chat", json={"message": msg})
+        self.assertEqual(resp.status_code, 200)
+        data = resp.get_json()
+        self.assertTrue(data["success"])
+        self.assertTrue(data.get("is_model_prediction"))
+        self.assertEqual(data.get("prediction_type"), "weather")
+
+    def test_chat_image_diagnosis(self):
+        samples_dir = os.path.join(os.path.dirname(__file__), "..", "app", "static", "images", "samples")
+        tomato_path = os.path.join(samples_dir, "tomato_late_blight.jpg")
+        if os.path.exists(tomato_path):
+            with open(tomato_path, "rb") as f:
+                resp = self.client.post(
+                    "/api/chat",
+                    data={"image": (f, "leaf.jpg"), "message": "Check this tomato leaf", "model_type": "garden"},
+                    content_type="multipart/form-data"
+                )
+            self.assertEqual(resp.status_code, 200)
+            data = resp.get_json()
+            self.assertTrue(data["success"])
+            self.assertTrue(data.get("is_model_prediction"))
+            self.assertEqual(data.get("prediction_type"), "disease")
+            self.assertIn("late_blight", data["reply"].lower())
+
+    def test_chat_validation_empty(self):
+        resp = self.client.post("/api/chat", json={"message": ""})
+        self.assertEqual(resp.status_code, 400)
+        data = resp.get_json()
+        self.assertFalse(data["success"])
+
 
 if __name__ == "__main__":
     unittest.main()
+

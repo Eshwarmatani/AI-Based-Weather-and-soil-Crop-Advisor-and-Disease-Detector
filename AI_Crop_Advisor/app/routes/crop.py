@@ -76,20 +76,25 @@ def api_crop_predict():
     crop_guidance = get_crop_guidance(results[0]["crop"], values)
 
     # Store in history
-    pred = Prediction(
-        prediction_type="crop",
-        input_data=json.dumps(values),
-        crop_prediction=results[0]["crop"],
-        confidence=results[0]["probability"],
-    )
-    db.session.add(pred)
-    db.session.commit()
+    pred_id = None
+    try:
+        pred = Prediction(
+            prediction_type="crop",
+            input_data=json.dumps(values),
+            crop_prediction=results[0]["crop"],
+            confidence=results[0]["probability"],
+        )
+        db.session.add(pred)
+        db.session.commit()
+        pred_id = pred.id
+    except Exception:
+        db.session.rollback()
 
     return jsonify({
         "success": True,
         "results": results,
         "result": results,
-        "id": pred.id,
+        "id": pred_id,
         "explanation": shap_data,
         "guidance": crop_guidance
     })

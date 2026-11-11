@@ -1,6 +1,6 @@
 """app/routes/weather.py — Weather-based disease risk API and page."""
 import json
-from flask import Blueprint, render_template, request, jsonify
+from flask import Blueprint, render_template, request, jsonify, redirect
 from app.app import db
 from app.models import Prediction
 
@@ -58,16 +58,26 @@ def api_weather_predict():
     advice = get_weather_risk_advice(result["predicted_disease"])
 
     # Store in history
-    pred = Prediction(
-        prediction_type="weather",
-        input_data=json.dumps(values),
-        risk_prediction=result["predicted_disease"],
-        confidence=result["probability"],
-    )
-    db.session.add(pred)
-    db.session.commit()
+    pred_id = None
+    try:
+        pred = Prediction(
+            prediction_type="weather",
+            input_data=json.dumps(values),
+            risk_prediction=result["predicted_disease"],
+            confidence=result["probability"],
+        )
+        db.session.add(pred)
+        db.session.commit()
+        pred_id = pred.id
+    except Exception:
+        db.session.rollback()
 
-    return jsonify({"success": True, "result": result, "id": pred.id, "explanation": shap_data, "advice": advice})
+    return jsonify({"success": True, "result": result, "id": pred_id, "explanation": shap_data, "advice": advice})
+
+
+@weather_bp.route("/weather", methods=["GET"])
+def weather_get():
+    return redirect("/live-weather")
 
 
 @weather_bp.route("/weather", methods=["POST"])

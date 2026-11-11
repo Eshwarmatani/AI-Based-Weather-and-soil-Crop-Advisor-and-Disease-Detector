@@ -593,9 +593,9 @@ function renderModelView(data) {
                 <span id="chartHeading">Per-Class F1-Score</span>
             </div>
             <div class="chart-buttons">
-                <button class="chart-btn ${currentChartMode === 'f1' ? 'active' : ''}" onclick="setChartMode('f1')">F1-Score</button>
-                <button class="chart-btn ${currentChartMode === 'pr' ? 'active' : ''}" onclick="setChartMode('pr')">Precision &amp; Recall</button>
-                <button class="chart-btn ${currentChartMode === 'support' ? 'active' : ''}" onclick="setChartMode('support')">Test Samples (Support)</button>
+                <button class="chart-btn ${currentChartMode === 'f1' ? 'active' : ''}" data-mode="f1" onclick="setChartMode('f1', this)">F1-Score</button>
+                <button class="chart-btn ${currentChartMode === 'pr' ? 'active' : ''}" data-mode="pr" onclick="setChartMode('pr', this)">Precision &amp; Recall</button>
+                <button class="chart-btn ${currentChartMode === 'support' ? 'active' : ''}" data-mode="support" onclick="setChartMode('support', this)">Test Samples (Support)</button>
             </div>
         </div>
         <div class="chart-wrapper">
@@ -887,9 +887,15 @@ function renderCandidateComparison(results, bestModelName) {
 }
 
 // Switch between chart modes: F1, Precision/Recall, Support
-function setChartMode(mode) {
+function setChartMode(mode, btn) {
     currentChartMode = mode;
-    document.querySelectorAll('.chart-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.chart-buttons .chart-btn').forEach(b => b.classList.remove('active'));
+    if (btn) {
+        btn.classList.add('active');
+    } else {
+        const targetBtn = document.querySelector(`.chart-buttons .chart-btn[data-mode="${mode}"]`);
+        if (targetBtn) targetBtn.classList.add('active');
+    }
     const data = modelCache[currentModelKey];
     if (data && data.per_class) {
         buildPerformanceChart(data.per_class);
@@ -911,6 +917,15 @@ function buildPerformanceChart(perClass) {
     const labels = perClass.map(item => item.class.replace(/___/g, ' - ').replace(/__/g, ' ').replace(/_/g, ' '));
     const ctx = canvas.getContext('2d');
 
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    const tickColor = isLight ? '#475569' : '#8b949e';
+    const gridColor = isLight ? 'rgba(208, 215, 222, 0.6)' : 'rgba(48, 54, 61, 0.5)';
+    const textColor = isLight ? '#1f2328' : '#e6edf3';
+    const tooltipBg = isLight ? '#ffffff' : '#161b22';
+    const tooltipTitle = isLight ? '#1f2328' : '#e6edf3';
+    const tooltipBody = isLight ? '#475569' : '#cdd9e5';
+    const tooltipBorder = isLight ? '#cbd5e1' : '#30363d';
+
     let datasets = [];
     let yAxisConfig = {};
     const headingEl = document.getElementById('chartHeading');
@@ -930,9 +945,9 @@ function buildPerformanceChart(perClass) {
             max: 105,
             ticks: {
                 callback: val => val + '%',
-                color: '#8b949e'
+                color: tickColor
             },
-            grid: { color: 'rgba(48, 54, 61, 0.5)' }
+            grid: { color: gridColor }
         };
     } else if (currentChartMode === 'pr') {
         if (headingEl) headingEl.innerText = 'Per-Class Precision vs. Recall';
@@ -959,9 +974,9 @@ function buildPerformanceChart(perClass) {
             max: 105,
             ticks: {
                 callback: val => val + '%',
-                color: '#8b949e'
+                color: tickColor
             },
-            grid: { color: 'rgba(48, 54, 61, 0.5)' }
+            grid: { color: gridColor }
         };
     } else if (currentChartMode === 'support') {
         if (headingEl) headingEl.innerText = 'Class Distribution (Test Samples / Support)';
@@ -975,8 +990,8 @@ function buildPerformanceChart(perClass) {
         }];
         yAxisConfig = {
             beginAtZero: true,
-            ticks: { color: '#8b949e' },
-            grid: { color: 'rgba(48, 54, 61, 0.5)' }
+            ticks: { color: tickColor },
+            grid: { color: gridColor }
         };
     }
 
@@ -989,17 +1004,17 @@ function buildPerformanceChart(perClass) {
         options: {
             responsive: true,
             maintainAspectRatio: false,
-            animation: { duration: 400 },
+            animation: { duration: 350 },
             plugins: {
                 legend: {
                     display: currentChartMode === 'pr',
-                    labels: { color: '#e6edf3', font: { family: 'Inter', size: 12 } }
+                    labels: { color: textColor, font: { family: 'Inter', size: 12 } }
                 },
                 tooltip: {
-                    backgroundColor: '#161b22',
-                    titleColor: '#e6edf3',
-                    bodyColor: '#cdd9e5',
-                    borderColor: '#30363d',
+                    backgroundColor: tooltipBg,
+                    titleColor: tooltipTitle,
+                    bodyColor: tooltipBody,
+                    borderColor: tooltipBorder,
                     borderWidth: 1,
                     padding: 10
                 }
@@ -1007,7 +1022,7 @@ function buildPerformanceChart(perClass) {
             scales: {
                 x: {
                     ticks: {
-                        color: '#8b949e',
+                        color: tickColor,
                         font: { size: perClass.length > 15 ? 10 : 11 },
                         maxRotation: 45,
                         minRotation: 30
@@ -1019,6 +1034,14 @@ function buildPerformanceChart(perClass) {
         }
     });
 }
+
+// Re-render chart on theme change
+window.addEventListener('themeChanged', () => {
+    const data = modelCache[currentModelKey];
+    if (data && data.per_class) {
+        buildPerformanceChart(data.per_class);
+    }
+});
 
 // Initial load
 document.addEventListener('DOMContentLoaded', () => {

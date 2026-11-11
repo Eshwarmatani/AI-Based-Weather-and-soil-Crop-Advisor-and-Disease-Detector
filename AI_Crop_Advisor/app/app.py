@@ -38,6 +38,7 @@ def create_app() -> Flask:
     from app.routes.weather     import weather_bp
     from app.routes.history     import history_bp
     from app.routes.performance import performance_bp
+    from app.routes.chat        import chat_bp
 
     app.register_blueprint(main_bp)
     app.register_blueprint(crop_bp)
@@ -45,6 +46,7 @@ def create_app() -> Flask:
     app.register_blueprint(weather_bp)
     app.register_blueprint(history_bp)
     app.register_blueprint(performance_bp)
+    app.register_blueprint(chat_bp)
 
     with app.app_context():
         db.create_all()
